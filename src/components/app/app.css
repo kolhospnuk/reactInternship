@@ -1,0 +1,168 @@
+@import "../../style/reset.css";
+@import '../../style/fonts.css';
+/* Tittles for sections */
+/* Styles for small flower */
+.small-flower {
+  display: inline-block;
+  width: 36px;
+  height: 33px;
+  margin-top: 9px;
+}
+.small-flower-item {
+  display: inline-block;
+  width: 12.5px;
+  height: 14.3px;
+  border: 1px solid rgba(137, 121, 66, 0.5);
+  border-radius: 50% 0;
+}
+.small-flower-item:nth-child(1), .small-flower-item:nth-child(4) {
+  width: 14.3px;
+  height: 12.5px;
+  border-radius: 0 50%;
+  margin-top: 1px;
+}
+.small-flower-item:nth-child(2) {
+  margin-left: 1px;
+}
+.small-flower-item:nth-child(3) {
+  margin-left: 1px;
+}
+.small-flower-item:nth-child(4) {
+  margin-top: 0;
+  margin-left: 2px;
+}
+
+/* Styles for big flower */
+.big-flower {
+  position: absolute;
+  width: 382px;
+  height: 382px;
+  left: 523px;
+  top: 420px;
+}
+.big-flower-about {
+  left: -166px;
+  top: 412px;
+  overflow: hidden;
+  background-position: 0 50%;
+}
+.big-flower-item {
+  display: inline-block;
+  width: 159px;
+  height: 182px;
+  border: 1px solid rgba(137, 66, 66, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  border-radius: 80px 0;
+}
+.big-flower-item:nth-child(1), .big-flower-item:nth-child(4) {
+  margin-top: 4px;
+  width: 182px;
+  height: 159px;
+  border-radius: 0 80px;
+  z-index: -1;
+}
+.big-flower-item:nth-child(2) {
+  margin-top: -19px;
+  margin-bottom: 14px;
+  margin-left: 10px;
+}
+.big-flower-item:nth-child(3) {
+  margin-left: 21px;
+}
+.big-flower-item:nth-child(4) {
+  margin-top: 1px;
+  margin-left: 12px;
+}
+
+/* All orange flowers and buttons */
+.orange {
+  border-color: #DAA520;
+}
+.orange-btn {
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  color: #FFFFFF;
+  background: #DAA520;
+}
+.orange-btn:hover {
+  opacity: 80%;
+  background-color: #DAA520;
+}
+.orange-flower-header {
+  margin-top: 0;
+}
+.orange-flower-footer {
+  margin-top: -1px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  margin-top: 60px;
+  font-weight: 800;
+  font-size: 72px;
+  text-align: center;
+  color: #313235;
+}
+
+/*Describe project*/
+#describe {
+  margin: 60px auto;
+}
+#describe h2 {
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+  color: #313235;
+}
+
+/* Project work area*/
+.work-area {
+  margin-top: 120px;
+  border: 1px solid black;
+  position: relative;
+}
+
+/* Container for main part project */
+.container-global {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container {
+  max-width: 952px;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  margin: 30px 0 60px 0;
+  float: right;
+  font-weight: 600;
+  font-size: 28px;
+  color: #313235;
+}
+footer .data {
+  border-right: #DAA520;
+  text-align: center;
+}
+footer li {
+  margin-top: 15px;
+}
+footer a {
+  color: #8D8D8D;
+}
+footer a:hover {
+  color: #DAA520;
+}
+
+/*# sourceMappingURL=app.css.map */

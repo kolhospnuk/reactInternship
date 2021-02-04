@@ -1,0 +1,123 @@
+
+/* Header, navigation menu */
+
+#header {
+  height: 800px;
+}
+
+.header {
+  &-pink-bg {
+    position: absolute;
+    width: 32.2%;
+    height: 800px;
+    right: -1px;
+    top: -1px;
+    border-bottom-left-radius: 117px;
+    background: #F9BDBD;
+    z-index: -1;
+  }
+
+  &-nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-woodies {
+      margin-left: 80px;
+
+      a {
+        padding-left: 1px;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 0.25em;
+        line-height: 35px;
+        color: #3E3F43;
+
+        &:hover {
+          color: #000000;
+        }
+      }
+    }
+
+    &-menu {
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        padding-right: 28px;
+      }
+
+      &-item a {
+        margin-left: 48px;
+        font-weight: 400;
+        font-size: 16px;
+        color: rgba(34, 34, 34, 0.75);
+
+        &:hover {
+          color: #000000;
+        }
+      }
+
+      &-btn {
+        margin-left: 48px;
+        height: 40px;
+        width: 137px;
+        background: #F9BDBD;
+        border: 1px solid #3E3F43;
+        border-radius: 8px;
+        font-family: Nunito, sans-serif;
+        font-size: 16px;
+
+        &:hover {
+          background-color: #DAA520;
+        }
+      }
+    }
+  }
+
+  /* Header, promo part */
+
+  &-promo {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 85px;
+    padding-left: 102px;
+
+    &-txt {
+      padding: 52px 30px 149px 0;
+
+      &-furniture {
+        font-weight: 400;
+        font-size: 36px;
+        color: #3E3F43;
+        line-height: 49px;
+
+        span {
+          font-weight: 700;
+        }
+      }
+
+      &-place {
+        margin-top: 16px;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 98px;
+        color: #313235;
+      }
+
+      &-btn {
+        width: 175px;
+        height: 50px;
+        margin-top: 16px;
+        font-family: Nunito, sans-serif;
+      }
+    }
+
+    &-img-table {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

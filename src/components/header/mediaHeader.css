@@ -1,0 +1,139 @@
+@media (max-width: 1200px) {
+  /* Header, navigation menu */
+  .header-nav-woodies {
+    margin-left: 25px;
+  }
+  .header-nav-woodies a {
+    font-size: 22px;
+    letter-spacing: 0.22em;
+  }
+  .header-nav-menu:last-child {
+    padding-right: 10px;
+  }
+  .header-nav-menu-btn {
+    margin-left: 28px;
+    height: 35px;
+    width: 120px;
+    font-size: 14px;
+  }
+  .header-nav-menu-item a {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  /* Header, promo part */
+  .header-promo {
+    padding-top: 60px;
+    padding-left: 40px;
+  }
+  .header-promo-txt {
+    width: 52%;
+  }
+  .header-promo-txt-btn {
+    width: 155px;
+    height: 42px;
+    margin-left: 0;
+    margin-top: 14px;
+    font-size: 14px;
+  }
+  .header-promo-txt-furniture {
+    font-size: 32px;
+    line-height: 46px;
+  }
+  .header-promo-txt-place {
+    margin-top: 14px;
+    font-size: 63px;
+    line-height: 78px;
+  }
+  .header-promo-img-table img {
+    width: 107%;
+  }
+
+  /* Big flower */
+  .big-flower {
+    left: 392px;
+    top: 349px;
+  }
+  .big-flower-item {
+    width: 126px;
+    height: 146px;
+  }
+  .big-flower-item:nth-child(1), .big-flower-item:nth-child(4) {
+    width: 146px;
+    height: 126px;
+  }
+  .big-flower-about {
+    left: -130px;
+  }
+}
+@media (max-width: 992px) {
+  /* Header, navigation menu */
+  .header-pink-bg {
+    height: 800px;
+  }
+  .header-nav-woodies {
+    margin-left: 35px;
+  }
+  .header-nav-woodies a {
+    font-size: 17px;
+    letter-spacing: 0.17em;
+  }
+  .header-nav-menu:last-child {
+    padding-right: 10px;
+  }
+  .header-nav-menu-btn {
+    margin-left: 13px;
+    height: 29px;
+    width: 100px;
+    font-size: 13px;
+  }
+  .header-nav-menu-item a {
+    margin-left: 13px;
+    font-size: 13px;
+  }
+  .header-promo {
+    padding-top: 40px;
+  }
+  .header-promo-txt {
+    width: 75%;
+    padding: 52px 0 149px 0;
+  }
+  .header-promo-txt-furniture {
+    font-size: 24px;
+    line-height: 39px;
+  }
+  .header-promo-txt-place {
+    margin-top: 12px;
+    font-size: 53px;
+    line-height: 70px;
+  }
+  .header-promo-txt-btn {
+    width: 137px;
+    height: 36px;
+    margin-left: 0;
+    margin-top: 12px;
+    font-size: 12px;
+  }
+  .header-promo img {
+    width: 107%;
+  }
+
+  /* Big flower */
+  .big-flower {
+    left: 325px;
+    top: 311px;
+  }
+  .big-flower-item {
+    width: 111px;
+    height: 134px;
+  }
+  .big-flower-item:nth-child(1), .big-flower-item:nth-child(4) {
+    width: 130px;
+    height: 109px;
+  }
+  .big-flower-about {
+    left: -130px;
+  }
+}
+
+/*# sourceMappingURL=mediaHeader.css.map */
