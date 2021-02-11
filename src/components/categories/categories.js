@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {Component} from 'react';
 import './categories.css';
 import './mediaCategories.css';
 
@@ -9,53 +9,58 @@ import kitchenware from "../../img/categories/kitchenware.png";
 import shelf from "../../img/categories/shelf.png";
 import electronics from "../../img/categories/electronics.png";
 
-const Categories = () => {
+import SmallFlower from "../flowers/small";
 
-    return (
-        <div id="categories">
-            <div className="section-tittle">
-                <div className="section-tittle-subtitle">
-                    <div className="small-flower">
-                        <div className="small-flower-item"/>
-                        <div className="small-flower-item"/>
-                        <div className="small-flower-item"/>
-                        <div className="small-flower-item"/>
+export default class Categories extends Component {
+
+    state = {
+        colorFlower: "small-flower-item",
+        flowerTittle: 'What we have'
+    }
+
+    render() {
+
+        const {colorFlower, flowerTittle} = this.state;
+
+        return (
+            <div id="categories">
+                <div className="section-tittle">
+                    <div className="section-tittle-subtitle">
+                        <SmallFlower colorFlower={colorFlower}
+                                     flowerTittle={flowerTittle}/>
                     </div>
-                    <span>What we have</span>
+                    <div className="section-tittle-line categories-line">
+                        <h2>CATEGORIES</h2>
+                    </div>
                 </div>
-                <div className="section-tittle-line categories-line">
-                    <h2>CATEGORIES</h2>
+                <div className="categories-list">
+                    <div className="categories-list-item">
+                        <span>Desk</span>
+                        <img className="categories-list-item-img" src={desk} alt={"desk"}/>
+                        <button className="categories-list-item-btn">Shop Now</button>
+                    </div>
+                    <div className="categories-list-item">
+                        <span>Chair</span>
+                        <img className="categories-list-item-img" src={chair} alt={"chair"}/>
+                        <button className="categories-list-item-btn">Shop Now</button>
+                    </div>
+                    <div className="categories-list-item">
+                        <span>Kitchenware</span>
+                        <img className="categories-list-item-img" src={kitchenware} alt={"kitchenware"}/>
+                        <button className="categories-list-item-btn">Shop Now</button>
+                    </div>
+                    <div className="categories-list-item">
+                        <span>Book Shelf</span>
+                        <img className="categories-list-item-img" src={shelf} alt={"shelf"}/>
+                        <button className="categories-list-item-btn">Shop Now</button>
+                    </div>
+                    <div className="categories-list-item">
+                        <span>Electronics</span>
+                        <img className="categories-list-item-img" src={electronics} alt={"electronics"}/>
+                        <button className="categories-list-item-btn">Shop Now</button>
+                    </div>
                 </div>
             </div>
-            <div className="categories-list">
-                <div className="categories-list-item">
-                    <span>Desk</span>
-                    <img className="categories-list-item-img" src={desk} alt={"desk"}/>
-                        <button className="categories-list-item-btn">Shop Now</button>
-                </div>
-                <div className="categories-list-item">
-                    <span>Chair</span>
-                    <img className="categories-list-item-img" src={chair} alt={"chair"}/>
-                        <button className="categories-list-item-btn">Shop Now</button>
-                </div>
-                <div className="categories-list-item">
-                    <span>Kitchenware</span>
-                    <img className="categories-list-item-img" src={kitchenware} alt={"kitchenware"}/>
-                        <button className="categories-list-item-btn">Shop Now</button>
-                </div>
-                <div className="categories-list-item">
-                    <span>Book Shelf</span>
-                    <img className="categories-list-item-img" src={shelf} alt={"shelf"}/>
-                        <button className="categories-list-item-btn">Shop Now</button>
-                </div>
-                <div className="categories-list-item">
-                    <span>Electronics</span>
-                    <img className="categories-list-item-img" src={electronics} alt={"electronics"}/>
-                        <button className="categories-list-item-btn">Shop Now</button>
-                </div>
-            </div>
-        </div>
-    )
+        )
+    }
 }
-
-export default Categories;

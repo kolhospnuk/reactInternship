@@ -25,7 +25,7 @@
 .header-nav-woodies {
   margin-left: 80px;
 }
-.header-nav-woodies a {
+.header-nav-woodies h3 {
   padding-left: 1px;
   font-weight: 700;
   font-size: 24px;
@@ -33,7 +33,7 @@
   line-height: 35px;
   color: #3E3F43;
 }
-.header-nav-woodies a:hover {
+.header-nav-woodies h3:hover {
   color: #000000;
 }
 .header-nav-menu {

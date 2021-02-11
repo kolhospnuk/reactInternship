@@ -90,12 +90,6 @@
   opacity: 80%;
   background-color: #DAA520;
 }
-.orange-flower-header {
-  margin-top: 0;
-}
-.orange-flower-footer {
-  margin-top: -1px;
-}
 
 * {
   box-sizing: border-box;
