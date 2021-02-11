@@ -6,6 +6,7 @@ import './mediaHeader.css';
 import table from "../../img/header/table.png";
 import SmallFlower from "../flowers/small";
 import BigFlower from "../flowers/big";
+import NavList from "./navList/navList";
 
 export default class Header extends Component {
 
@@ -27,16 +28,7 @@ export default class Header extends Component {
                         <SmallFlower colorFlower={colorFlower}
                                      flowerTittle={flowerTittle}/>
                     </div>
-                    <ul className="header-nav-menu">
-                        <li className="header-nav-menu-item"><a href={"#header"}>Home</a></li>
-                        <li className="header-nav-menu-item"><a href={"#about"}>About Us</a></li>
-                        <li className="header-nav-menu-item"><a href={"#custom"}>How it works</a></li>
-                        <li className="header-nav-menu-item"><a href={"#categories"}>Categories</a></li>
-                        <li className="header-nav-menu-item"><a href={"#testimony"}>Testimony</a></li>
-                        <li className="header-nav-menu-item">
-                            <button className="header-nav-menu-btn orange-btn">SIGN UP</button>
-                        </li>
-                    </ul>
+                   <NavList/>
                 </nav>
                 <section className="header-promo">
                     <div className="header-promo-txt">
