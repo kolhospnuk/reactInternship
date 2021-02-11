@@ -12,22 +12,20 @@ import BigFlower from "../flowers/big";
 export default class About extends Component {
 
     state = {
-        colorFlower: "small-flower-item",
         flowerTittle: "Who we are",
-        bigFlower: "big-flower big-flower-about"
+        flowerAbout: "big-flower-about"
     }
 
     render() {
 
-        const {colorFlower, flowerTittle, bigFlower} = this.state;
+        const {flowerTittle, flowerAbout} = this.state;
 
 
         return (
             <div id="about">
                 <div className="section-tittle">
                     <div className="section-tittle-subtitle">
-                        <SmallFlower colorFlower={colorFlower}
-                                     flowerTittle={flowerTittle}/>
+                        <SmallFlower flowerTittle={flowerTittle}/>
                     </div>
                     <div className="section-tittle-line">
                         <h2>ABOUT US</h2>
@@ -51,7 +49,7 @@ export default class About extends Component {
                         <img src={spoons} alt={"spoons"}/>
                     </div>
                 </div>
-                <BigFlower bigFlower={bigFlower}/>
+                <BigFlower flowerAbout={flowerAbout}/>
             </div>
         )
     }

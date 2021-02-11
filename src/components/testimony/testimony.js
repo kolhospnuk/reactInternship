@@ -12,20 +12,18 @@ import SmallFlower from "../flowers/small";
 export default class Testimony extends Component {
 
     state = {
-        colorFlower: "small-flower-item",
         flowerTittle: 'What they say'
     }
 
     render() {
 
-        const {colorFlower, flowerTittle} = this.state;
+        const {flowerTittle} = this.state;
 
         return (
             <section id="testimony">
                 <div className="section-tittle">
                     <div className="section-tittle-subtitle">
-                        <SmallFlower colorFlower={colorFlower}
-                                     flowerTittle={flowerTittle}/>
+                        <SmallFlower flowerTittle={flowerTittle}/>
                     </div>
                     <div className="section-tittle-line testimony-line">
                         <h2>TESTIMONY</h2>

@@ -2,15 +2,21 @@
 import React from 'react';
 import './small.css';
 
-const SmallFlower = ({colorFlower, flowerTittle}) => {
+const SmallFlower = ({orangeFlower, flowerTittle}) => {
+
+    let classFlower = "small-flower-item";
+
+    if (orangeFlower) {
+        classFlower = `${classFlower} orange`;
+    }
 
             return (
                 <div>
                     <div className="small-flower">
-                        <div className={colorFlower}/>
-                        <div className={colorFlower}/>
-                        <div className={colorFlower}/>
-                        <div className={colorFlower}/>
+                        <div className={classFlower}/>
+                        <div className={classFlower}/>
+                        <div className={classFlower}/>
+                        <div className={classFlower}/>
                     </div>
                     <span>{flowerTittle}</span>
                 </div>

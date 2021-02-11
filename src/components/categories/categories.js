@@ -14,20 +14,18 @@ import SmallFlower from "../flowers/small";
 export default class Categories extends Component {
 
     state = {
-        colorFlower: "small-flower-item",
         flowerTittle: 'What we have'
     }
 
     render() {
 
-        const {colorFlower, flowerTittle} = this.state;
+        const {flowerTittle} = this.state;
 
         return (
             <div id="categories">
                 <div className="section-tittle">
                     <div className="section-tittle-subtitle">
-                        <SmallFlower colorFlower={colorFlower}
-                                     flowerTittle={flowerTittle}/>
+                        <SmallFlower flowerTittle={flowerTittle}/>
                     </div>
                     <div className="section-tittle-line categories-line">
                         <h2>CATEGORIES</h2>

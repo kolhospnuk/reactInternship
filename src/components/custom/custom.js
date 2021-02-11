@@ -8,25 +8,31 @@ import product from "../../icons/product.svg";
 import budget from "../../icons/budget.svg";
 import area from "../../icons/area.svg";
 import SmallFlower from "../flowers/small";
+import ModalPersonalized from "./modalPersonalized/modalPersonalized";
 
 
 export default class Custom extends Component {
 
     state = {
-        colorFlower: "small-flower-item",
+        modalState: false,
         flowerTittle: 'How to custom'
+    }
+
+    openModal = () => {
+        this.setState((state) => ({
+            modalState: !state.modalState
+        }))
     }
 
     render() {
 
-        const {colorFlower, flowerTittle} = this.state;
+        const {flowerTittle, modalState} = this.state;
 
         return (
             <div id="custom">
                 <div className="section-tittle">
                     <div className="section-tittle-subtitle">
-                        <SmallFlower colorFlower={colorFlower}
-                                     flowerTittle={flowerTittle}/>
+                        <SmallFlower flowerTittle={flowerTittle}/>
                     </div>
                     <div className="section-tittle-line custom-line">
                         <h2>HOW IT WORKS</h2>
@@ -59,10 +65,10 @@ export default class Custom extends Component {
                     </div>
                 </div>
                 <button className="custom-btn orange-btn"
-                    // onClick={openModal}
-                >
+                        onClick={this.openModal}>
                     Get Personalized Now
                 </button>
+                <ModalPersonalized modalState={modalState}/>
             </div>
         )
     }

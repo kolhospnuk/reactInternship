@@ -4,18 +4,21 @@ import React, {Component} from 'react';
 export default class NavListItem extends Component {
 
     state = {
-        clazz: "header-nav-menu-item",
-        tittleArr: ["#header", "#about", "#custom", "#categories", "#testimony", "SIGN UP"]
+        tittleArr: ["#header", "#about", "#custom", "#categories", "#testimony", "SIGN UP"],
+        classList: "header-nav-menu-item",
     }
 
     render() {
 
-        const {clazz, tittleArr} = this.state;
+        const {classList, tittleArr} = this.state;
+        const {openModal} = this.props;
 
         const contentList = tittleArr.map((item, i) => {
             if (i === tittleArr.length - 1) {
                 return (
-                    <button className="header-nav-menu-btn orange-btn">{tittleArr[tittleArr.length - 1]}</button>
+                    <button className="header-nav-menu-btn orange-btn"
+                            onClick={openModal}>
+                        {tittleArr[tittleArr.length - 1]}</button>
                 )
             } else {
                 return (
@@ -25,7 +28,7 @@ export default class NavListItem extends Component {
         })
 
         return (
-            <li className={clazz}>
+            <li className={classList}>
                 {contentList}
             </li>
         )

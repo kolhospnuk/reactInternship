@@ -7,13 +7,13 @@ import SmallFlower from "../flowers/small";
 export default class Footer extends Component {
 
     state = {
-        colorFlower: "small-flower-item orange",
+        orangeFlower: true,
         flowerTittle: 'WOODIES'
     }
 
     render() {
 
-        const {colorFlower, flowerTittle} = this.state;
+        const {orangeFlower, flowerTittle} = this.state;
 
         return (
             <section id="footer">
@@ -31,7 +31,7 @@ export default class Footer extends Component {
                 <div className="footer-menu">
                     <ul className="footer-menu-list">
                         <li className="footer-menu-list-item">
-                            <SmallFlower colorFlower={colorFlower}
+                            <SmallFlower orangeFlower={orangeFlower}
                                          flowerTittle={flowerTittle}/>
                         </li>
                         <li className="footer-menu-list-item"><a href="tel:0128967453">(012) 8967453</a></li>

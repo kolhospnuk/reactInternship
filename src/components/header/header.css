@@ -1,6 +1,7 @@
 /* Header, navigation menu */
 #header {
   height: 800px;
+  position: relative;
 }
 
 .header {

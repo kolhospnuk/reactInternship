@@ -1,0 +1,18 @@
+.modal {
+  display: none;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  margin: 0 auto;
+  background-color: #DAA520;
+}
+.modal h3 {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.open {
+  display: block;
+}
+
+/*# sourceMappingURL=modalPersonalized.css.map */
