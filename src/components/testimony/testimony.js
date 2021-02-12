@@ -4,20 +4,25 @@ import './meadiaTestimony.css';
 
 import room from "../../img/testimony/room.png";
 import kitchen from "../../img/testimony/kitchen.png";
-import person from "../../img/testimony/person.png";
-import star from "../../icons/star.svg";
 
 import SmallFlower from "../flowers/small";
+import ImgList from "./imgList/imgList";
+import CommentList from "./coomentList/commentList";
+import Points from "./coomentList/points";
 
 export default class Testimony extends Component {
 
     state = {
-        flowerTittle: 'What they say'
+        flowerTittle: 'What they say',
+        imgListLinks: [
+            {img: room, alt: 'room'},
+            {img: kitchen, alt: 'kitchen'}
+        ]
     }
 
     render() {
 
-        const {flowerTittle} = this.state;
+        const {flowerTittle, imgListLinks} = this.state;
 
         return (
             <section id="testimony">
@@ -30,55 +35,10 @@ export default class Testimony extends Component {
                     </div>
                 </div>
                 <div className="testimony-list">
-                    <div className="testimony-list-img">
-                        <img src={room} alt={"room"}/>
-                    </div>
-                    <div className="testimony-list-img">
-                        <img src={kitchen} alt={"kitchen"}/>
-                    </div>
-                    <div className="testimony-list-comment">
-                        <div className="testimony-list-comment-txt">
-                            <div className="testimony-list-comment-txt-stars">
-                                <img src={star} alt={"star"}/>
-                                <img src={star} alt={"star"}/>
-                                <img src={star} alt={"star"}/>
-                                <img src={star} alt={"star"}/>
-                                <img src={star} alt={"star"}/>
-                            </div>
-                            <span>
-                            My experience with WOODIES is a complete success, <br/> from customed furniture,
-                                range of product, modern <br/> design, purchasing experience, the delivery and <br/> newsletter.
-                                    Litterally everything is great. Thank you!
-                            </span>
-                            <div className="testimony-list-comment-txt-person">
-                                <img src={person} alt={"person"}/>
-                                <span>Sandra Dewi <br/> Jakarta Selatan</span>
-                            </div>
-                        </div>
-                        <div className="testimony-list-comment-slider">
-                            <div className="testimony-list-comment-slider-previous">
-                                <div className="arrow arrow-left">
-                                    <div/>
-                                </div>
-                                <span>Previous</span>
-                            </div>
-                            <div className="testimony-list-comment-slider-next">
-                                <div className="arrow arrow-right">
-                                    <div/>
-                                </div>
-                                <span>Next</span>
-                            </div>
-                        </div>
-                    </div>
+                    <ImgList imgListLinks={imgListLinks}/>
+                    <CommentList/>
                 </div>
-                <div className="testimony-points">
-                    <ul className="testimony-points-list">
-                        <li/>
-                        <li/>
-                        <li/>
-                        <li/>
-                    </ul>
-                </div>
+                <Points/>
             </section>
         )
     }
