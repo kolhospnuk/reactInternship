@@ -1,5 +1,5 @@
 @media (max-width: 1200px) {
-  /* Header, navigation menu */
+  /* Header, navigation menuList */
   .header-nav-woodies {
     margin-left: 25px;
   }
@@ -67,7 +67,7 @@
   }
 }
 @media (max-width: 992px) {
-  /* Header, navigation menu */
+  /* Header, navigation menuList */
   .header-pink-bg {
     height: 800px;
   }

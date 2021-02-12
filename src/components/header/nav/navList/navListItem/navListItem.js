@@ -5,7 +5,7 @@ export default class NavListItem extends Component {
 
     state = {
         tittleArr: ["#header", "#about", "#custom", "#categories", "#testimony", "SIGN UP"],
-        classList: "header-nav-menu-item",
+        classList: "header-nav-menuList-item",
     }
 
     render() {
