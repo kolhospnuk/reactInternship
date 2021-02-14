@@ -8,6 +8,7 @@ import Custom from "../custom/custom";
 import Categories from "../categories/categories";
 import Testimony from "../testimony/testimony";
 import Footer from "../footer/footer";
+import DataTable from "../dataTable/dataTable";
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
                     My project is a family business to make wooden furniture.
                 </h2>
             </section>
+            <DataTable/>
             <div className="work-area">
                 <Header/>
                 <div className="container">

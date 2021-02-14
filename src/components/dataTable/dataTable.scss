@@ -1,0 +1,29 @@
+
+.table {
+  height: 300px;
+  font-family: Nunito, sans-serif;
+  font-weight: 600;
+
+  table {
+    margin: 0 auto;
+
+    td {
+      text-align: center;
+    }
+
+    tr {
+      border: 1px solid;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    button {
+      margin-right: 2px;
+      background-color: #bcbccd;;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.table {
+  height: 300px;
+  font-family: Nunito, sans-serif;
+  font-weight: 600;
+}
+.table table {
+  margin: 0 auto;
+}
+.table table td {
+  text-align: center;
+}
+.table table tr {
+  border: 1px solid;
+}
+.table .btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.table .btn button {
+  margin-right: 2px;
+  background-color: #bcbccd;
+}
+
+/*# sourceMappingURL=dataTable.css.map */
