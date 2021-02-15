@@ -1,5 +1,7 @@
 
 import React,{Component} from 'react';
+import './promo.css';
+
 import BigFlower from "../../../flowers/big";
 import table from "../../../../img/header/table.png";
 import ModalFurniture from "./modalFurniture/modalFurniture";

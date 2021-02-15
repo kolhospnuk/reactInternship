@@ -80,4 +80,23 @@ footer {
   }
 }
 
+/* All orange flowers and buttons */
+
+.orange {
+  border-color: #DAA520;
+
+  &-btn {
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    color: #FFFFFF;
+    background: #DAA520;
+
+    &:hover {
+      opacity: 80%;
+      background-color: #DAA520;
+    }
+  }
+}
 

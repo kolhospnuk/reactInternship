@@ -1,22 +1,19 @@
 import React from 'react';
 
-const DataTableBtn = ({props}) => {
+const DataTableBtn = (props) => {
 
+    console.log(props)
 
-    // const btn = props.name.map((item) => {
+    // const btn = props.map((item) => {
     //
-    //         return (
-    //             <button type="button"
-    //                     onClick={{...props}}>
-    //                 {item}
-    //             </button>
-    //         )
-    //     }
-    // )
+    //     return (
+    //         console.log(item)
+    //     )
+    // })
 
     return (
         <div>
-            btn
+            btnfggbd
         </div>
     )
 }

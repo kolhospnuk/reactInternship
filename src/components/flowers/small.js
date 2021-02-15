@@ -11,7 +11,7 @@ const SmallFlower = ({orangeFlower, flowerTittle}) => {
     }
 
             return (
-                <div>
+                <>
                     <div className="small-flower">
                         <div className={classFlower}/>
                         <div className={classFlower}/>
@@ -19,7 +19,7 @@ const SmallFlower = ({orangeFlower, flowerTittle}) => {
                         <div className={classFlower}/>
                     </div>
                     <span>{flowerTittle}</span>
-                </div>
+                </>
             )
 }
 

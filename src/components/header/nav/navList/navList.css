@@ -1,3 +1,11 @@
-
+.header-nav-menu {
+  display: flex;
+  align-items: center;
+  padding-right: 28px;
+  padding-top: 23px;
+}
+.header-nav-menu:last-child {
+  padding-right: 28px;
+}
 
 /*# sourceMappingURL=navList.css.map */

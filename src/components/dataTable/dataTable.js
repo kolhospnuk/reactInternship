@@ -1,6 +1,5 @@
 import React from 'react';
 import './dataTable.css';
-import DataTableBtn from "./dataTableBtns";
 
 const DataTable = () => {
 
@@ -61,10 +60,22 @@ const DataTable = () => {
                 </td>
             </table>
             <div className='btn'>
-               <DataTable sort={sort}
-                          sortFunction={sortFunction}
-                          addItem={addItem}
-                          deleteItem={deleteItem}/>
+                <button type="button"
+                        onClick={sort}>
+                    Sort
+                </button>
+                <button type="button"
+                        onClick={sortFunction}>
+                    Sort Function
+                </button>
+                <button type="button"
+                        onClick={addItem}>
+                    Add item
+                </button>
+                <button type="button"
+                        onClick={deleteItem}>
+                    Delete Item
+                </button>
             </div>
         </div>
     )
@@ -72,19 +83,8 @@ const DataTable = () => {
 
 export default DataTable;
 
-// <button type="button"
-//         onClick={sort}>
-//     Sort
-// </button>
-// <button type="button"
-//         onClick={sortFunction}>
-//     Sort Function
-// </button>
-// <button type="button"
-//         onClick={addItem}>
-//     Add item
-// </button>
-// <button type="button"
-//         onClick={deleteItem}>
-//     Delete Item
-// </button>
+
+// <DataTableBtn sort={sort}
+//               sortFunction={sortFunction}
+//               addItem={addItem}
+//               deleteItem={deleteItem}/>

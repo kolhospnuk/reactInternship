@@ -1,3 +1,44 @@
-
+/* Tittles for sections */
+/* Styles for big flower */
+.big-flower {
+  position: absolute;
+  width: 382px;
+  height: 382px;
+  left: 523px;
+  top: 420px;
+}
+.big-flower-about {
+  left: -166px;
+  top: 412px;
+  overflow: hidden;
+  background-position: 0 50%;
+}
+.big-flower-item {
+  display: inline-block;
+  width: 159px;
+  height: 182px;
+  border: 1px solid rgba(137, 66, 66, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  border-radius: 80px 0;
+}
+.big-flower-item:nth-child(1), .big-flower-item:nth-child(4) {
+  margin-top: 4px;
+  width: 182px;
+  height: 159px;
+  border-radius: 0 80px;
+  z-index: -1;
+}
+.big-flower-item:nth-child(2) {
+  margin-top: -19px;
+  margin-bottom: 14px;
+  margin-left: 10px;
+}
+.big-flower-item:nth-child(3) {
+  margin-left: 21px;
+}
+.big-flower-item:nth-child(4) {
+  margin-top: 1px;
+  margin-left: 12px;
+}
 
 /*# sourceMappingURL=big.css.map */

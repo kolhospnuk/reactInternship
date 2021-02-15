@@ -12,15 +12,21 @@ import DataTable from "../dataTable/dataTable";
 
 const App = () => {
 
+    const headerName = 'Woodies',
+        headerDesctibe = 'My project is a family business to make wooden furniture',
+        name = 'Anton Momot',
+        gitHub = 'GitHub',
+        template = 'Template',
+        gitHubLink = "https://github.com/kolhospnuk",
+        templateLink = "https://dribbble.com/shots/11018704-Woodies-Furniture-Online-Shop-Landing-Page";
+
     return (
         <div className="container-global">
             <header>
-                <h1>Woodies</h1>
+                <h1>{headerName}</h1>
             </header>
             <section id="describe">
-                <h2>
-                    My project is a family business to make wooden furniture.
-                </h2>
+                <h2>{headerDesctibe}</h2>
             </section>
             <DataTable/>
             <div className="work-area">
@@ -35,13 +41,12 @@ const App = () => {
             </div>
             <footer>
                 <ul className="data">
-                    <li className="data-item">Anton Momot</li>
+                    <li className="data-item">{name}</li>
                     <li className="data-item">
-                        <a href="https://github.com/kolhospnuk" target="_blank">GitHub</a>
+                        <a href={gitHubLink} target="_blank">{gitHub}</a>
                     </li>
                     <li className="data-item">
-                        <a href="https://dribbble.com/shots/11018704-Woodies-Furniture-Online-Shop-Landing-Page"
-                           target="_blank">Template</a>
+                        <a href={templateLink} target="_blank">{template}</a>
                     </li>
                 </ul>
             </footer>
