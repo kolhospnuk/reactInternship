@@ -1,0 +1,22 @@
+
+.testimony-points {
+  float: right;
+  margin-top: 23px;
+
+  &-list {
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      width: 40px;
+      height: 8px;
+      margin-left: 8px;
+      border-radius: 8px;
+      background: #E5E5E5;
+
+      &:first-child {
+        background: #DAA520;
+      }
+    }
+  }
+}

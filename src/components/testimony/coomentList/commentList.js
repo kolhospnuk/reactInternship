@@ -1,35 +1,33 @@
 import React, {Component} from 'react';
-import star from "../../../icons/star.svg";
+import './commentList.css';
 import person from "../../../img/testimony/person.png";
-import Stars from "./stars";
+
 import Slider from "./slider/slider";
+import Stars from "./stars/stars";
 
 export default class CommentList extends Component {
 
     state = {
-        starsData: [
-            {num: 5, logo: star, alt: star}
-        ],
         personData: [
             {img: person, firstName: "Sandra Dewi", secondName: "Jakarta Selatan", alt: 'person'}
         ],
         sliderData: [
-            {classStep: "testimony-list-comment-slider-previous", classArrow: 'arrow', step: 'Previous'},
-            {classStep: "testimony-list-comment-slider-next", classArrow: 'arrow', step: 'Next'}
+            {classStep: "testimony-list-comment-slider-previous", classArrow: 'arrow-left', step: 'Previous'},
+            {classStep: "testimony-list-comment-slider-next", classArrow: 'arrow-right', step: 'Next'}
         ]
     }
 
 
     render() {
 
-        const {starsData, sliderData, personData} = this.state;
+        const {sliderData, personData} = this.state;
         const {img, firstName, secondName, alt} = personData[0];
 
         return (
             <div className="testimony-list-comment">
                 <div className="testimony-list-comment-txt">
                     <div className="testimony-list-comment-txt-stars">
-                        <Stars starsData={starsData}/>
+                        <Stars/>
                     </div>
                     <span>
                         My experience with WOODIES is a complete success, <br/> from customed furniture,

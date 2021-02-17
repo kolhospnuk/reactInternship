@@ -1,0 +1,34 @@
+
+@import 'arrowStyle';
+
+.testimony-list {
+  &-comment {
+    &-slider {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 14px;
+      color: #C4C4C4;
+
+      span {
+        padding-top: 3px;
+      }
+
+      &-previous {
+        width: 95px;
+        height: 19px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-next {
+        width: 95px;
+        height: 19px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 40px;
+        color: #3E3F43;
+      }
+    }
+  }
+}

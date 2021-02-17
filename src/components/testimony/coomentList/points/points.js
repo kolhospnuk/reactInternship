@@ -1,5 +1,6 @@
 
 import React, {Component} from 'react';
+import './points.css';
 
 export default class Points extends Component {
 

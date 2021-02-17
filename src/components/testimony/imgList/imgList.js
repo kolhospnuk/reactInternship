@@ -1,5 +1,6 @@
 
 import React, {Component} from 'react';
+import './imgList.css';
 
 export default class ImgList extends Component {
 

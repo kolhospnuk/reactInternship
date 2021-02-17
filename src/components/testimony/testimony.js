@@ -8,7 +8,7 @@ import kitchen from "../../img/testimony/kitchen.png";
 import SmallFlower from "../flowers/small";
 import ImgList from "./imgList/imgList";
 import CommentList from "./coomentList/commentList";
-import Points from "./coomentList/points";
+import Points from "./coomentList/points/points";
 
 export default class Testimony extends Component {
 
