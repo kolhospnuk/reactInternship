@@ -1,18 +1,33 @@
 
 .table {
-  height: 300px;
   font-family: Nunito, sans-serif;
   font-weight: 600;
 
-  table {
+  &-main {
     margin: 0 auto;
+    border: 2px solid;
 
     td {
       text-align: center;
+
+      tr {
+        border: 1px solid;
+        height: 54px;
+      }
     }
 
-    tr {
-      border: 1px solid;
+    &-in {
+
+      td {
+        width: 230px;
+        padding-top: 9px;
+        padding-left: 30px;
+        tr {
+          height: 28px;
+          border: none;
+          border-top: 1px solid;
+        }
+      }
     }
   }
 
@@ -27,3 +42,34 @@
     }
   }
 }
+
+//.table {
+//  height: 300px;
+//  font-family: Nunito, sans-serif;
+//  font-weight: 600;
+//
+//  table {
+//    margin: 0 auto;
+//    width: 400px;
+//
+//    td {
+//      text-align: center;
+//
+//      .date {
+//        height: 36px;
+//      }
+//    }
+//
+//    tr {
+//      border: 1px solid;
+//
+//      table {
+//        margin-top: 3px;
+//        td {
+//          tr {
+//            border: none;
+//          }
+//        }
+//      }
+//    }
+//  }
