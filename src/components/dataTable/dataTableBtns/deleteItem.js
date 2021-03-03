@@ -1,20 +1,19 @@
-
-import React from 'react';
-
-const DeleteItem = ({eventsArr, ageArr}) => {
-
-    const deleteItem = () => {
-        for (let i = 0; i < ageArr.length; i++) {
-            delete eventsArr[i].age;
-        }
-        console.log(eventsArr);
-    }
-
-    return (
-        <button type="button"
-                onClick={deleteItem}>
-            Delete Item
-        </button>
-    )
-}
-export default DeleteItem;
+// import React from 'react';
+//
+// const DeleteItem = ({eventsArr, copyEventsArr}) => {
+//
+//     const deleteItem = (eventsArr, copyEventsArr,) => {
+//         copyEventsArr.pop();
+//
+//         console.log(eventsArr);
+//         console.log(copyEventsArr);
+//     }
+//
+//     return (
+//         <button type="button"
+//                 onClick={() => deleteItem(eventsArr, copyEventsArr)}>
+//             Delete Item
+//         </button>
+//     )
+// }
+// export default DeleteItem;

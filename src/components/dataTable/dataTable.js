@@ -1,9 +1,13 @@
 import React from 'react';
 import './dataTable.css';
+// import AddItem from "./dataTableBtns/addItem";
+// import DeleteItem from "./dataTableBtns/deleteItem";
+// import Sort from "./dataTableBtns/sort";
+// import SortMethod from "./dataTableBtns/sortMethod";
 
 const DataTable = () => {
 
-    let eventsArr = [
+    const eventsArr = [
         {
             date: 1993,
             events: {
@@ -21,19 +25,19 @@ const DataTable = () => {
             }
         },
         {
-            date: 2010,
-            events: {
-                name: 'Enter the flight academy',
-                firstFact: 'Faculty - Search and rescue',
-                secondFact: 'Football students team'
-            }
-        },
-        {
             date: 2015,
             events: {
                 name: 'Passed the military department',
                 firstFact: "Very hard",
                 secondFact: 'I am a strong man'
+            }
+        },
+        {
+            date: 2010,
+            events: {
+                name: 'Enter the flight academy',
+                firstFact: 'Faculty - Search and rescue',
+                secondFact: 'Football students team'
             }
         },
         {
@@ -44,9 +48,7 @@ const DataTable = () => {
                 secondFact: 'I am happy'
             }
         }
-    ]
-
-    let ageArr = [0, 7, 17, 23, 25];
+    ];
 
     const datesCol = eventsArr.map((item) => {
         return (
@@ -72,23 +74,46 @@ const DataTable = () => {
         )
     })
 
-    function addItem() {
-        for (let i = 0; i < ageArr.length; i++) {
-            eventsArr[i].age = ageArr[i];
-        }
-        console.log(eventsArr);
-    }
+    function getResult(btn, copyEventsArr) {
 
-    function deleteItem() {
-        for (let i = 0; i < ageArr.length; i++) {
-            delete eventsArr[i].age;
-        }
-        console.log(eventsArr);
-    }
+        switch (btn) {
+            case 'add':
+                let speakEvent = {
+                    date: copyEventsArr[0].date,
+                    events: {...copyEventsArr.events, name: 'First words', firstFact: "Mom", secondFact: "Dad"}
+                };
+                copyEventsArr.push(speakEvent);
+                break;
 
-    function makeNewObj() {
-        let newObj = {...eventsArr[0], date: 1995};
-        console.log(newObj);
+            case 'delete':
+                copyEventsArr.pop();
+                break;
+
+            case 'sort':
+
+            function sort() {
+                copyEventsArr.forEach((item, i, arr) => {
+                    if (i + 1 < arr.length && arr[i].date > arr[i + 1].date) {
+                        arr.push(item);
+                        arr.splice(i, 1);
+                        sort(copyEventsArr);
+                    }
+                })
+            }
+
+                sort();
+                break;
+
+            case 'sortM':
+                copyEventsArr.sort((a, b) => a.date > b.date ? 1 : -1);
+                break
+
+            default:
+                console.log('error');
+        }
+
+        console.log(eventsArr);
+        console.log(copyEventsArr);
     }
 
     return (
@@ -102,17 +127,17 @@ const DataTable = () => {
                 </td>
             </table>
             <div className='btn'>
-                <button type="button"
-                        onClick={addItem}>
+                <button onClick={() => getResult('add', [...eventsArr])}>
                     Add item
                 </button>
-                <button type="button"
-                        onClick={deleteItem}>
-                    Delete Item
+                <button onClick={() => getResult('delete', [...eventsArr])}>
+                    Delete item
                 </button>
-                <button type="button"
-                        onClick={makeNewObj}>
-                    New Object
+                <button onClick={() => getResult('sort', [...eventsArr])}>
+                    Sort
+                </button>
+                <button onClick={() => getResult('sortM', [...eventsArr])}>
+                    Sort method
                 </button>
             </div>
         </div>
