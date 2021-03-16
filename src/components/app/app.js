@@ -9,6 +9,7 @@ import Categories from "../categories/categories";
 import Testimony from "../testimony/testimony";
 import Footer from "../footer/footer";
 import DataTable from "../dataTable/dataTable";
+import MakeCocktail from "../makeCocktail/makeCocktail";
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
                 <h2>My project is a family business to make wooden furniture</h2>
             </section>
             <DataTable/>
+            <MakeCocktail/>
             <div className="work-area">
                 <Header/>
                 <div className="container">

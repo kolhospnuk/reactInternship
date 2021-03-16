@@ -6,8 +6,6 @@
 //     const addItem = (eventsArr, copyEventsArr, footballArr) => {
 //         copyEventsArr.push(footballArr);
 //
-//         console.log(eventsArr);
-//         console.log(copyEventsArr);
 //     }
 //
 //     return (

@@ -1,9 +1,5 @@
 import React from 'react';
 import './dataTable.css';
-// import AddItem from "./dataTableBtns/addItem";
-// import DeleteItem from "./dataTableBtns/deleteItem";
-// import Sort from "./dataTableBtns/sort";
-// import SortMethod from "./dataTableBtns/sortMethod";
 
 const DataTable = () => {
 
