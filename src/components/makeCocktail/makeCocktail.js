@@ -1,140 +1,172 @@
-
 import React, {Component} from "react";
 import './makeCocktail.css';
 import CocktailService from "./cocktailService";
+import Form from "./addForm";
 
 export default class MakeCocktail extends Component {
 
-    /**
-     * Cocktails states
-     *
-     * @type {{name: string, ingredients: string, placeholder: boolean, list: null}}
-     */
     state = {
         name: '',
-        list: null,
-        result: '',
-        placeholder: false
+        placeholder: false,
+        cocktailList: [],
+        currentCocktail: null
     }
 
-    cocktailChange = (e) => {
-        this.setState({
-            name: e.target.value,
-            placeholder: false
+    componentDidMount() {
+        document.addEventListener('keypress', (e) => {
+
+            if (e.code === 'KeyQ' && e.ctrlKey === true) {
+                this.activatedCocktail(0);
+            }
         })
-    };
+    }
 
-    /**
-     * Get list with data about cocktails from service
-     *
-     * @param e
-     */
-    onSubmit = (e) => {
-        const {name} = this.state;
+    showError() {
+        this.setState({
+            placeholder: true
+        })
+    }
 
-        e.preventDefault();
+    addCocktail = (name) => {
+        let cocktailArr = [];
 
         if (name.length <= 3) {
             this.showError();
         } else {
             const service = new CocktailService();
-            service.getCocktail(name).then((cocktail) => {
-                this.setState({
-                    list: cocktail.drinks
+            service.getCocktail(name)
+                .then((cocktail) => {
+
+                    for (let i = 0; i < cocktail.drinks.length; i++) {
+                        const cocktailObj = {
+                            id: i,
+                            order: i,
+                            name: cocktail.drinks[i].strDrink,
+                            img: cocktail.drinks[i].strDrinkThumb,
+                            active: false
+                        }
+                        cocktailArr.push(cocktailObj);
+                    }
+
+                    this.setState({
+                        cocktailList: cocktailArr
+                    })
                 })
-            }).then(() => {
-                this.showResult();
-            })
         }
     }
 
-    showResult() {
-        const {list} = this.state;
+    showAlert = (cocktailList, item) => {
 
-        if (list === null) {
-            this.showError();
+        if (cocktailList.length === item.id + 1) {
+            alert('Images uploaded')
+        }
+    }
+
+    showAlertErr = () => {
+        alert('Error');
+    }
+
+    activatedCocktail = (id) => {
+
+        this.setState(({cocktailList}) => {
+            const before = cocktailList.slice(0, id);
+            const after = cocktailList.slice(id + 1);
+            const elem = cocktailList[id];
+            elem.active = !elem.active;
+
+            const newArr = [...before, elem, ...after];
+
+            return {
+                cocktailList: newArr
+            }
+        })
+    }
+
+    dragStartHandler(e, item) { // взяли
+
+        this.setState({
+            currentCard: item
+        })
+    }
+
+    dragOverHandler(e) { //если над другим обьектом
+        e.preventDefault();
+    }
+
+    dropHandler(e, item) { //отпустили
+
+        const {cocktailList, currentCard} = this.state;
+        e.preventDefault();
+
+        let newArr = cocktailList.map(li => {
+            if (li.id === item.id) {
+                return {...li, order: currentCard.order}
+            }
+            if (li.id === currentCard.id) {
+                return {...li, order: item.order}
+            }
+
+            return li
+        })
+        this.setState({
+            cocktailList: newArr
+        })
+    }
+
+    sortLi = (a, b) => {
+        if (a.order > b.order) {
+            return 1;
         } else {
-            if (list.length > 1) {
-                this.showCocktails(list);
-            } else {
-                this.showIngredients(list);
-            }
+            return -1;
         }
-    }
-
-    showError() {
-        this.setState({
-            result: 'Enter correct cocktail name',
-            placeholder: true
-        })
-    }
-
-    /**
-     * Search all cocktails with a similar name
-     *
-     * @param list - cocktails data
-     */
-    showCocktails(list) {
-        const cocktails = list.map((item) => {
-            return ` ${item.strDrink}`;
-        })
-
-        this.setState({
-            result: `Enter one of the suggested cocktails: ${cocktails.toString()}`
-        })
-    }
-
-    /**
-     * Search all ingredients in cocktail
-     *
-     * @param list - cocktail data
-     */
-    showIngredients(list) {
-        const ingredientsMax = 10;
-        let ingredientsList = '';
-
-        for (let i = 0; i <= ingredientsMax; i++) {
-            for (let key in list[0]) {
-                if (key === `strIngredient${i}` && list[0][key] != null) {
-                    ingredientsList += `${list[0][key]}, ` ;
-                }
-            }
-        }
-
-        this.setState({
-            result: `For making a cocktail you will need: ${ingredientsList.slice(0, -2)}`
-        });
     }
 
     render() {
+        const {cocktailList} = this.state;
 
-        const {name, placeholder, result} = this.state;
+        const cocktails = cocktailList.sort(this.sortLi).map(item => {
 
-        let inputClass = `cocktail-form-input`;
+            let activeCockClass = `cocktail-item`;
 
-        if (placeholder) {
-            inputClass = `${inputClass}-active`
-        }
+            if (item.active) {
+                activeCockClass = `${activeCockClass} active`
+            }
+
+            return (
+                <li className={activeCockClass}
+                    onClick={() => {
+                        this.activatedCocktail(item.id)
+                    }}
+                    draggable={true}
+                    onDragStart={e => this.dragStartHandler(e, item)}
+                    onDragOver={e => this.dragOverHandler(e)}
+                    onDrop={e => this.dropHandler(e, item)}>
+                    {item.name}
+                    <div className="cocktail-img">
+                        <img src={item.img}
+                             onLoad={() => {
+                                 this.showAlert(cocktailList, item)
+                             }}
+                             onError={this.showAlertErr}
+                             alt={'img'}>
+                        </img>
+                    </div>
+                </li>
+            )
+        })
 
         return (
             <div className="cocktail">
                 <div className="cocktail-header">
-                    Enter cocktail name
+                    Enter one ingredient of alcoholic cocktail(for example: martini)
                 </div>
-                <form className="cocktail-form"
-                      onSubmit={this.onSubmit}>
-                    <input className={inputClass}
-                           type="text"
-                           onChange={this.cocktailChange}
-                           placeholder="Enter cocktail..."
-                           value={name}/>
-                    <button className="cocktail-form-btn">
-                        Enter
-                    </button>
-                </form>
-                <div className="cocktail-item">
-                    {result}
-                </div>
+                <Form addCocktail={this.addCocktail}/>
+                <ul>
+                    <li>
+                        <h3>Ctrl+q, if you want select first cocktail</h3>
+                    </li>
+                    {cocktails}
+                </ul>
             </div>
         )
     }
