@@ -2,6 +2,7 @@
 import React, {Component} from 'react'
 
 import ListItem from "./listItem/listItem";
+import * as shortid from "shortid";
 
 export default class List extends Component {
 
@@ -11,7 +12,8 @@ export default class List extends Component {
 
         const elements = categoriesData.map((item, i) => {
             return (
-                <ListItem categoriesData={categoriesData}
+                <ListItem key={shortid.generate()}
+                          categoriesData={categoriesData}
                           i={i}/>
             )
         })

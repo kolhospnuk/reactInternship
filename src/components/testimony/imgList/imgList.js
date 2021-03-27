@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import './imgList.css';
+import * as shortid from "shortid";
 
 export default class ImgList extends Component {
 
@@ -13,7 +14,8 @@ export default class ImgList extends Component {
             const {img, alt} = item;
 
             return (
-                <div className="testimony-list-img">
+                <div key={shortid.generate()}
+                     className="testimony-list-img">
                     <img src={img} alt={alt}/>
                 </div>
             )

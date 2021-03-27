@@ -48,7 +48,7 @@ const DataTable = () => {
 
     const datesCol = eventsArr.map((item) => {
         return (
-            <tr className='date'>{item.date}</tr>
+            <tr key={item.date} className='date'>{item.date}</tr>
         )
     })
 
@@ -56,7 +56,7 @@ const DataTable = () => {
         const {firstFact, secondFact} = item.events;
 
         return (
-            <tr>
+            <tr key={item.events.name}>
                 {item.events.name}
                 <table className='table-main-in'>
                     <td>

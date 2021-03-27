@@ -23,7 +23,8 @@ export default class MenuList extends Component {
         const elements = listItemArr.map((item, i) => {
 
             return (
-                <ul className="footer-menu-list">
+                <ul key={item}
+                    className="footer-menu-list">
                     <MenuListItem listItemArr={listItemArr}
                               i={i}/>
                 </ul>

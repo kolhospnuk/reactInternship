@@ -22,13 +22,14 @@ export default class NavListItem extends Component {
         const contentList = tittles.map((item, i) => {
             if (i === tittles.length - 1) {
                 return (
-                    <button className="header-nav-menu-btn orange-btn"
+                    <button key={tittles[tittles.length - 1].name}
+                            className="header-nav-menu-btn orange-btn"
                             onClick={openModal}>
                         {tittles[tittles.length - 1].name}</button>
                 )
             } else {
                 return (
-                    <a href={item.link}>{item.name}</a>
+                    <a key={item.name} href={item.link}>{item.name}</a>
                 )
             }
         })

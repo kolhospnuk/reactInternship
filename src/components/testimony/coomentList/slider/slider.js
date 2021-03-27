@@ -1,30 +1,29 @@
 
-import React, {Component} from 'react';
+import React from 'react';
 import './slider.css';
 
-export default class Slider extends Component {
+const Slider = ({sliderData}) => {
 
-    render() {
-
-        const {sliderData} = this.props;
-
-        const element = sliderData.map((item) => {
-            const {classStep, classArrow, step} = item;
-
-            return (
-                <div className={classStep}>
-                    <div className={classArrow}>
-                        <div/>
-                    </div>
-                    <span>{step}</span>
-                </div>
-            )
-        })
+    const element = sliderData.map((item) => {
+        const {classStep, classArrow, step} = item;
 
         return (
-            <div className="testimony-list-comment-slider">
-                {element}
+            <div key={classStep}
+                 className={classStep}>
+                <div className={classArrow}
+                     key={classStep}>
+                    <div/>
+                </div>
+                <span key={step}>{step}</span>
             </div>
         )
-    }
+    })
+
+    return (
+        <div className="testimony-list-comment-slider">
+            {element}
+        </div>
+    )
 }
+
+export default Slider;

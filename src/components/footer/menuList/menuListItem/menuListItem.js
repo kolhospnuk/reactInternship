@@ -21,13 +21,17 @@ export default class MenuListItem extends Component {
 
             if (i === 0 && iter === 0) {
                 return (
-                    <SmallFlower orangeFlower={orangeFlower}
+                    <SmallFlower key={item}
+                                 orangeFlower={orangeFlower}
                                  flowerTittle={flowerTittle}/>
                 )
             } else {
                 return (
-                    <li className="footer-menu-list-item"
-                        onClick={this.openLink}>{item}</li>
+                    <li key={item}
+                        className="footer-menu-list-item"
+                        onClick={this.openLink}>
+                        {item}
+                    </li>
                 )
             }
         })
