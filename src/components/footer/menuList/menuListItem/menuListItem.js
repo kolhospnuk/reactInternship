@@ -4,7 +4,6 @@ import SmallFlower from "../../../flowers/small";
 export default class MenuListItem extends Component {
 
     state = {
-        orangeFlower: true,
         flowerTittle: 'WOODIES'
     }
 
@@ -15,14 +14,13 @@ export default class MenuListItem extends Component {
     render() {
 
         const {listItemArr, i} = this.props;
-        const {orangeFlower, flowerTittle} = this.state;
+        const {flowerTittle} = this.state;
 
         const elements = listItemArr[i].map((item, iter) => {
 
             if (i === 0 && iter === 0) {
                 return (
                     <SmallFlower key={item}
-                                 orangeFlower={orangeFlower}
                                  flowerTittle={flowerTittle}/>
                 )
             } else {

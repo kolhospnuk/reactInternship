@@ -13,7 +13,6 @@ import Points from "./coomentList/points/points";
 export default class Testimony extends Component {
 
     state = {
-        flowerTittle: 'What they say',
         imgListLinks: [
             {img: room, alt: 'room'},
             {img: kitchen, alt: 'kitchen'}
@@ -22,24 +21,40 @@ export default class Testimony extends Component {
 
     render() {
 
-        const {flowerTittle, imgListLinks} = this.state;
+        const {imgListLinks} = this.state;
+        const {tittleData} = this.props;
+
+        const elem = tittleData.map((item) => {
+            const {id, flowerTittle, tittle, classSmallFlower} = item;
+
+            if (id === 'testimony') {
+                return (
+                    <section id="testimony"
+                             key={id}>
+                        <div className="section-tittle">
+                            <div className="section-tittle-subtitle">
+                                <SmallFlower flowerTittle={flowerTittle}
+                                             classSmallFlower={classSmallFlower}/>
+                            </div>
+                            <div className="section-tittle-line testimony-line">
+                                <h2>{tittle}</h2>
+                            </div>
+                        </div>
+                        <div className="testimony-list">
+                            <ImgList imgListLinks={imgListLinks}/>
+                            <CommentList/>
+                        </div>
+                        <Points/>
+                    </section>
+                )
+            }
+            return null;
+        })
 
         return (
-            <section id="testimony">
-                <div className="section-tittle">
-                    <div className="section-tittle-subtitle">
-                        <SmallFlower flowerTittle={flowerTittle}/>
-                    </div>
-                    <div className="section-tittle-line testimony-line">
-                        <h2>TESTIMONY</h2>
-                    </div>
-                </div>
-                <div className="testimony-list">
-                    <ImgList imgListLinks={imgListLinks}/>
-                    <CommentList/>
-                </div>
-                <Points/>
-            </section>
+            <>
+                {elem}
+            </>
         )
     }
 }

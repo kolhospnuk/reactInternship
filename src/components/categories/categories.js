@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import './categories.css';
 import './mediaCategories.css';
@@ -15,7 +14,6 @@ import List from "./list/list";
 export default class Categories extends Component {
 
     state = {
-        flowerTittle: 'What we have',
         categoriesData: [
             {name: 'Desk', img: desk, btn: 'Shop now'},
             {name: 'Chair', img: chair, btn: 'Shop now'},
@@ -27,20 +25,36 @@ export default class Categories extends Component {
 
     render() {
 
-        const {flowerTittle, categoriesData} = this.state;
+        const {categoriesData} = this.state;
+        const {tittleData} = this.props;
+
+        const elem = tittleData.map((item) => {
+            const {id, flowerTittle, tittle, classSmallFlower} = item;
+
+            if (id === 'categories') {
+                return (
+                    <div id="categories"
+                         key={id}>
+                        <div className="section-tittle">
+                            <div className="section-tittle-subtitle">
+                                <SmallFlower flowerTittle={flowerTittle}
+                                             classSmallFlower={classSmallFlower}/>
+                            </div>
+                            <div className="section-tittle-line categories-line">
+                                <h2>{tittle}</h2>
+                            </div>
+                        </div>
+                        <List categoriesData={categoriesData}/>
+                    </div>
+                )
+            }
+            return null;
+        })
 
         return (
-            <div id="categories">
-                <div className="section-tittle">
-                    <div className="section-tittle-subtitle">
-                        <SmallFlower flowerTittle={flowerTittle}/>
-                    </div>
-                    <div className="section-tittle-line categories-line">
-                        <h2>CATEGORIES</h2>
-                    </div>
-                </div>
-                <List categoriesData={categoriesData}/>
-            </div>
+            <>
+                {elem}
+            </>
         )
     }
 }

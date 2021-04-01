@@ -1,16 +1,14 @@
 import React from 'react';
 import './big.css';
 
-const BigFlower = ({flowerAbout}) => {
-
-    let classFlower =  "big-flower";
+const BigFlower = ({flowerAbout, classBigFlower}) => {
 
     if (flowerAbout) {
-        classFlower = `${classFlower} big-flower-about`
+        classBigFlower = `${classBigFlower} big-flower-about`
     }
 
     return (
-        <div className={classFlower}>
+        <div className={classBigFlower}>
             <div className="big-flower-item"/>
             <div className="big-flower-item"/>
             <div className="big-flower-item"/>

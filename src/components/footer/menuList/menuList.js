@@ -5,7 +5,6 @@ import MenuListItem from "./menuListItem/menuListItem";
 export default class MenuList extends Component {
 
     state = {
-        orangeFlower: true,
         flowerTittle: 'WOODIES',
         listItemArr: [
             ['Product', '(012) 8967453', 'woodies@gmail.com', 'Jakarta, Indonesia'],

@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import './header.css';
 import './mediaHeader.css';
@@ -9,27 +8,36 @@ import Promo from "./nav/promo/promo";
 
 export default class Header extends Component {
 
-    state = {
-        orangeFlower: true,
-        flowerTittle: 'WOODIES'
-    }
-
     render() {
 
-        const {orangeFlower, flowerTittle} = this.state;
+        const {tittleData} = this.props;
+
+        const elem = tittleData.map((item) => {
+            const {id, flowerTittle, classSmallFlower} = item;
+
+            if (id === 'header') {
+                return (
+                    <div id="header"
+                    key={id}>
+                        <div className="header-pink-bg"/>
+                        <nav className="header-nav">
+                            <div className="header-nav-woodies">
+                                <SmallFlower flowerTittle={flowerTittle}
+                                             classSmallFlower={classSmallFlower}/>
+                            </div>
+                            <NavList/>
+                        </nav>
+                        <Promo/>
+                    </div>
+                )
+            }
+            return null;
+        })
 
         return (
-            <div id="header">
-                <div className="header-pink-bg"/>
-                <nav className="header-nav">
-                    <div className="header-nav-woodies">
-                        <SmallFlower orangeFlower={orangeFlower}
-                                     flowerTittle={flowerTittle}/>
-                    </div>
-                   <NavList/>
-                </nav>
-                <Promo/>
-            </div>
+            <>
+                {elem}
+            </>
         )
     }
 }
