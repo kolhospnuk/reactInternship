@@ -1,0 +1,36 @@
+.table {
+  font-family: Nunito, sans-serif;
+  font-weight: 600;
+}
+.table-main {
+  margin: 0 auto;
+  border: 2px solid;
+}
+.table-main td {
+  text-align: center;
+}
+.table-main td tr {
+  border: 1px solid;
+  height: 54px;
+}
+.table-main-in td {
+  width: 230px;
+  padding-top: 9px;
+  padding-left: 30px;
+}
+.table-main-in td tr {
+  height: 28px;
+  border: none;
+  border-top: 1px solid;
+}
+.table .btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.table .btn button {
+  margin-right: 2px;
+  background-color: #bcbccd;
+}
+
+/*# sourceMappingURL=DataTable.css.map */

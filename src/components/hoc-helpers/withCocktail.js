@@ -1,0 +1,130 @@
+import React, {Component} from 'react';
+import CocktailService from "../../pages/MakeCocktail/components/CocktailService";
+
+export const withCocktail = (View) => {
+    return class extends Component {
+        state = {
+            name: '',
+            placeholder: false,
+            cocktailList: [],
+            currentCocktail: null,
+            loading: false,
+            error: false
+        }
+
+        componentDidMount() {
+            document.addEventListener('keypress', (e) => {
+
+                if (e.code === 'KeyQ' && e.ctrlKey === true) {
+                    this.activatedCocktail(0);
+                }
+            })
+        }
+
+        showError = () => {
+            this.setState({
+                placeholder: true,
+                error: true,
+                loading: false
+            })
+        }
+
+        spinnerLoading = (res) => {
+            this.setState({
+                loading: res
+            })
+        }
+
+        addCocktail = (name) => {
+            let cocktailArr = [];
+
+                const service = new CocktailService();
+                service.getCocktail(name)
+                    .then((cocktail) => {
+
+                        cocktail.drinks.map((item, i) => {
+                            const cocktailObj = {
+                                key: cocktail.drinks[i].strDrink,
+                                id: i,
+                                order: i,
+                                name: cocktail.drinks[i].strDrink,
+                                img: cocktail.drinks[i].strDrinkThumb,
+                                active: false
+                            }
+                            cocktailArr.push(cocktailObj);
+                            return null;
+                        })
+
+                        this.setState({
+                            cocktailList: cocktailArr,
+                            loading: false
+                        })
+                    })
+                    .catch(this.showError)
+        }
+
+        activatedCocktail = (order) => {
+
+            this.setState(({cocktailList}) => {
+                const before = cocktailList.slice(0, order);
+                const after = cocktailList.slice(order + 1);
+                const elem = cocktailList[order];
+                elem.active = !elem.active;
+
+                const newArr = [...before, elem, ...after];
+
+                return {
+                    cocktailList: newArr
+                }
+            })
+        }
+
+        dragStartHandler = (item) => { // взяли
+
+            this.setState({
+                currentCocktail: item
+            })
+        }
+
+        dragOverHandler(e) { //если над другим обьектом
+            e.preventDefault();
+        }
+
+        dropHandler = (e, item) => { //отпустили
+
+            const {cocktailList, currentCocktail} = this.state;
+            e.preventDefault();
+
+            let newArr = cocktailList.map(li => {
+                if (li.id === item.id) {
+                    return {...li, order: currentCocktail.order}
+                }
+                if (li.id === currentCocktail.id) {
+                    return {...li, order: item.order}
+                }
+
+                return li
+            })
+            this.setState({
+                cocktailList: newArr
+            })
+        }
+
+        sortLi = (a, b) => a.order > b.order ? 1 : -1
+
+        render() {
+            const {cocktailList, loading, error} = this.state;
+
+            return <View cocktailList={cocktailList}
+                         loading={loading}
+                         activatedCocktail={this.activatedCocktail}
+                         dragStartHandler={this.dragStartHandler}
+                         dragOverHandler={this.dragOverHandler}
+                         dropHandler={this.dropHandler}
+                         sortLi={this.sortLi}
+                         addCocktail={this.addCocktail}
+                         spinnerLoading={this.spinnerLoading}
+                         error={error}/>
+        }
+    };
+}

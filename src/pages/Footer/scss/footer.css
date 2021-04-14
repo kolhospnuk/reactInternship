@@ -1,0 +1,108 @@
+/*Footer section*/
+#footer {
+  height: 455px;
+  margin-top: 120px;
+  background: url("../../../img/footer/footer-bg1.jpg") left top no-repeat, url("../../../img/footer/footer-bg2.jpg") right top no-repeat;
+}
+#footer h4 {
+  margin-top: 45px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #8D8D8D;
+  text-align: center;
+}
+
+.footer-form {
+  width: 100%;
+  height: 174px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 104px 0 107px;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+.footer-form-txt {
+  color: #000000;
+}
+.footer-form-txt h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+}
+.footer-form-txt span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.footer-form form input {
+  float: left;
+  padding-left: 16px;
+  width: 328px;
+  height: 40px;
+  border: 1px solid #DAA520;
+  border-radius: 4px 0 0 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #AFAFAF;
+}
+.footer-form form button {
+  width: 120px;
+  height: 40px;
+  background: #DAA520;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.footer-line {
+  width: 708px;
+  height: 0;
+  margin-top: 33px;
+  margin-left: 107px;
+  border: 1px solid #C4C4C4;
+}
+.footer-menu {
+  margin: 24px 336px 0 107px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-menu-list {
+  margin-left: -2px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #8D8D8D;
+}
+.footer-menu-list-item {
+  margin-top: 16px;
+}
+.footer-menu-list-item a {
+  color: #8D8D8D;
+}
+.footer-menu-list-item a:hover {
+  color: #000000;
+}
+.footer-menu-list-item:first-child {
+  margin-top: 9px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333333;
+}
+.footer-menu-list:first-child {
+  margin-top: -9px;
+  line-height: 19px;
+}
+.footer-menu-list:first-child h3 {
+  display: inline;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.25em;
+  color: #3E3F43;
+  padding-left: 3px;
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,139 @@
+
+@media (max-width: 1200px) {
+
+  /* Section About */
+
+  #about {
+    margin-top: 100px;
+  }
+
+  .dishes {
+    margin-top: 35px;
+  }
+
+  .customized-img {
+    right: -21px;
+  }
+
+  /* Big flower */
+
+  .big-flower {
+    left: 392px;
+    top: 349px;
+
+    &-item {
+      width: 126px;
+      height: 146px;
+
+      &:nth-child(1), &:nth-child(4) {
+        width: 146px;
+        height: 126px;
+      }
+    }
+
+    &-about {
+      left: -130px;
+    }
+  }
+
+  .section-tittle-line h2:before {
+    width: 265px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  /* Section About */
+
+  #about {
+    margin-top: 40px;
+    height: 750px;
+  }
+
+  .dishes {
+    margin-top: 15px;
+
+    &-txt {
+      margin-top: 70px;
+      padding-right: 0;
+
+      h3 {
+        font-size: 29px;
+        line-height: 42px;
+      }
+
+      h4 {
+        margin-top: 10px;
+        font-size: 19px;
+        line-height: 27px;
+      }
+    }
+
+    img {
+      margin: 80px 0 0 44px;
+    }
+  }
+
+  .customized {
+    margin-top: 134px;
+
+    h3 {
+      font-size: 29px;
+      line-height: 42px;
+    }
+
+    h4 {
+      margin-top: 10px;
+      font-size: 19px;
+      line-height: 27px;
+    }
+
+    &-img {
+      top: -87px;
+      right: -11px;
+    }
+  }
+
+  /* Big flower */
+
+  .big-flower {
+    left: 325px;
+    top: 311px;
+
+    &-item {
+      width: 111px;
+      height: 134px;
+
+      &:nth-child(1), &:nth-child(4) {
+        width: 130px;
+        height: 109px;
+      }
+    }
+
+    &-about {
+      left: -130px;
+    }
+  }
+
+  /* Tittles for sections */
+
+  .section {
+    &-tittle {
+      &-subtitle {
+        span {
+          font-size: 21px;
+        }
+      }
+
+      &-line {
+        h2 {
+          font-size: 39px;
+
+          &:before {
+            width: 195px;
+          }
+        }
+      }
+    }
+  }
+}
