@@ -5,6 +5,13 @@ const DataTable = () => {
 
     const eventsArr = [
         {
+            date: 'Date',
+            events: {
+                name: 'Events name',
+                firstFact: 'Facts'
+            }
+        },
+        {
             date: 1993,
             events: {
                 name: 'Birth in Kropyvnytsky',
@@ -46,36 +53,19 @@ const DataTable = () => {
         }
     ];
 
-    const datesCol = eventsArr.map((item) => {
-        return (
-            <td key={item.date} className='date'>{item.date}</td>
-        )
-    })
-
-    const eventsCol = eventsArr.map((item) => {
-        const {firstFact, secondFact} = item.events;
-
-        return (
-            <td key={item.events.name}>
-                {item.events.name}
-                <table className='table-main-in'>
-                    <td>
-                        <tr>{firstFact}</tr>
-                    </td>
-                    <td>
-                        <tr>{secondFact}</tr>
-                    </td>
-                </table>
-            </td>
-        )
-    })
+    const btnArr = [
+        {key: 'add', name: 'Add Item'},
+        {key: 'delete', name: 'Delete item'},
+        {key: 'sort', name: 'Sort'},
+        {key: 'sortM', name: ' Sort method'}
+    ]
 
     function getResult(btn, copyEventsArr) {
 
         switch (btn) {
             case 'add':
                 let speakEvent = {
-                    date: copyEventsArr[0].date,
+                    date: copyEventsArr[1].date,
                     events: {...copyEventsArr.events, name: 'First words', firstFact: "Mom", secondFact: "Dad"}
                 };
                 copyEventsArr.push(speakEvent);
@@ -112,31 +102,60 @@ const DataTable = () => {
         console.log(copyEventsArr);
     }
 
+    const table = eventsArr.map((item, i) => {
+        const {name, firstFact, secondFact} = item.events;
+
+        if (i === 0) {
+            return (
+                <thead key={name}>
+                    <tr>
+                        <th>{item.date}</th>
+                        <th>{name}</th>
+                        <th>{firstFact}</th>
+                    </tr>
+                </thead>
+            )
+        } else {
+            return (
+                <tbody key={name}>
+                    <tr>
+                        <td>{item.date}</td>
+                        <td>{name}</td>
+                        <td>
+                            <table className='table-main-second'>
+                                <tbody>
+                                <tr>
+                                    <td>{firstFact}</td>
+                                </tr>
+                                <tr>
+                                    <td>{secondFact}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            )
+        }
+    })
+
+    const btn = btnArr.map((item) => {
+        const {key, name} = item;
+        return (
+            <button key={name}
+                    onClick={() => getResult(key, [...eventsArr])}>
+                {name}
+            </button>
+        )
+    })
+
     return (
         <div className="table">
             <table className='table-main'>
-                <tbody>
-                    <tr>
-                        {datesCol}
-                    </tr>
-                    <tr>
-                        {eventsCol}
-                    </tr>
-                </tbody>
+                {table}
             </table>
             <div className='btn'>
-                <button onClick={() => getResult('add', [...eventsArr])}>
-                    Add item
-                </button>
-                <button onClick={() => getResult('delete', [...eventsArr])}>
-                    Delete item
-                </button>
-                <button onClick={() => getResult('sort', [...eventsArr])}>
-                    Sort
-                </button>
-                <button onClick={() => getResult('sortM', [...eventsArr])}>
-                    Sort method
-                </button>
+                {btn}
             </div>
         </div>
     )

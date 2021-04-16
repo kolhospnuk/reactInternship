@@ -6,7 +6,7 @@ import Form from "./components/AddForm";
 import Spinner from "../../components/spinner/spinner";
 import CocktailError from "../../components/ErrorsPlace/cocktailError";
 
-const MakeAlcoholCocktail = (props) => {
+const MakeCocktail = (props) => {
 
     const {cocktailList, spinnerLoading, loading, error, activatedCocktail,
         dragStartHandler, dragOverHandler, dropHandler, sortLi, addCocktail} = props;
@@ -59,4 +59,4 @@ const MakeAlcoholCocktail = (props) => {
     )
 }
 
-export default withCocktail(MakeAlcoholCocktail);
+export default withCocktail(MakeCocktail);

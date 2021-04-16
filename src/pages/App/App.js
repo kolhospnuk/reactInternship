@@ -9,7 +9,7 @@ import Categories from "../Categories/Categories";
 import Testimony from "../Testimony/Testimony";
 import Footer from "../Footer/Footer";
 import DataTable from "../DataTable/DataTable";
-import MakeAlcoholCocktail from "../MakeCocktail/MakeCocktail";
+import MakeCocktail from "../MakeCocktail/MakeCocktail";
 
 export default class App extends Component {
 
@@ -36,8 +36,8 @@ export default class App extends Component {
                 <section id="describe">
                     <h2>My project is a family business to make wooden furniture</h2>
                 </section>
-                {/*<DataTable/>*/}
-                <MakeAlcoholCocktail/>
+                <DataTable/>
+                <MakeCocktail/>
                 <div className="work-area">
                     <Header tittleData={tittleData}/>
                     <div className="container">
