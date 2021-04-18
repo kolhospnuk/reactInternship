@@ -2,86 +2,181 @@ import React, {Component} from 'react';
 import './scss/custom.css';
 import './scss/mediaCustom.css';
 
-import design from "../../icons/design.svg";
-import product from "../../icons/product.svg";
-import budget from "../../icons/budget.svg";
-import area from "../../icons/area.svg";
-import SmallFlower from "../../components/Flowers/Small";
-import ModalPersonalized from "./components/ModalPersonalized";
-
+import design from '../../assets/icons/design.svg';
+import product from '../../assets/icons/product.svg';
+import budget from '../../assets/icons/budget.svg';
+import area from '../../assets/icons/area.svg';
+import SmallFlower from '../../components/Flowers/SmallFlower';
+import ModalPersonalized from './components/ModalPersonalized';
 
 export default class Custom extends Component {
+  state = {
+    modalState: false,
+    planData: [
+      {
+        clazz: 'plan-num1',
+        src: design,
+        alt: 'design',
+        name: 'Choose Design'
+      },
+      {
+        clazz: 'plan-num2',
+        src: area,
+        alt: 'area',
+        name: 'Area measuring'
+      },
+      {
+        clazz: 'plan-num3',
+        src: budget,
+        alt: 'budget',
+        name: 'Budgeting'
+      },
+      {
+        clazz: 'plan-num4',
+        src: product,
+        alt: 'product',
+        name: 'Production'
+      }
+    ]
+  }
 
-    state = {
-        modalState: false
-    }
+  openModal = () => {
+    this.setState(({ modalState }) => ({ modalState: !modalState }));
+  }
 
-    openModal = () => {
-        this.setState(({modalState}) => ({modalState: !modalState}))
-    }
+  render() {
+    const { modalState, planData } = this.state;
+    const { tittleData } = this.props;
 
-    render() {
+    const planItem = planData.map((item) => {
+      const { clazz, src, alt, name } = item;
 
-        const {modalState} = this.state;
-        const {tittleData} = this.props;
+      return (
+        <div
+          className="plan-item"
+          key={name}
+        >
+          <div className={`plan-item-img ${clazz}`}>
+            <img src={src} alt={alt} />
+          </div>
+          <div className="plan-item-txt">{name}</div>
+        </div>
+      );
+    });
 
-        const elem = tittleData.map((item) => {
-            const {id, flowerTittle, tittle, classSmallFlower} = item;
+    const elem = tittleData.map((item) => {
+      const { id, flowerTittle, tittle, classSmallFlower } = item;
 
-            if (id === 'custom') {
-                return (
-                    <div id="custom"
-                         key={id}>
-                        <div className="section-tittle">
-                            <div className="section-tittle-subtitle">
-                                <SmallFlower flowerTittle={flowerTittle}
-                                             classSmallFlower={classSmallFlower}/>
-                            </div>
-                            <div className="section-tittle-line custom-line">
-                                <h2>{tittle}</h2>
-                            </div>
-                        </div>
-                        <div className="plan">
-                            <div className="plan-item">
-                                <div className="plan-item-img plan-num1">
-                                    <img src={design} alt={"design"}/>
-                                </div>
-                                <div className="plan-item-txt">Choose Design</div>
-                            </div>
-                            <div className="plan-item">
-                                <div className="plan-item-img plan-num2">
-                                    <img src={area} alt={"area"}/>
-                                </div>
-                                <div className="plan-item-txt">Area measuring</div>
-                            </div>
-                            <div className="plan-item">
-                                <div className="plan-item-img plan-num3">
-                                    <img src={budget} alt={"budget"}/>
-                                </div>
-                                <div className="plan-item-txt">Budgeting</div>
-                            </div>
-                            <div className="plan-item">
-                                <div className="plan-item-img plan-num4">
-                                    <img src={product} alt={"product"}/>
-                                </div>
-                                <div className="plan-item-txt">Production</div>
-                            </div>
-                        </div>
-                        <button className="custom-btn orange-btn"
-                                onClick={this.openModal}>
-                            Get Personalized Now
-                        </button>
-                        <ModalPersonalized modalState={modalState}/>
-                    </div>
-                )
-            }
-            return null;
-        })
-
+      if (id === 'custom') {
         return (
-            <>
-                {elem}
-            </>
-        )
-    }
+          <div
+            id="custom"
+            key={id}
+          >
+            <div className="section-tittle">
+              <div className="section-tittle-subtitle">
+                <SmallFlower
+                  flowerTittle={flowerTittle}
+                  classSmallFlower={classSmallFlower}
+                />
+              </div>
+              <div className="section-tittle-line custom-line">
+                <h2>{tittle}</h2>
+              </div>
+            </div>
+            <div className="plan">
+              {planItem}
+            </div>
+            <button
+              type="button"
+              className="custom-btn orange-btn"
+              onClick={this.openModal}
+            >
+              Get Personalized Now
+            </button>
+            <ModalPersonalized modalState={modalState} />
+          </div>
+        );
+      }
+      return null;
+    });
+
+    return (
+      <>
+        {elem}
+      </>
+    );
+  }
 }
+
+// export default class Custom extends Component {
+//
+//     state = {
+//         modalState: false,
+//         planData: [
+//             {clazz: 'plan-num1', src: design, alt: 'design', name: 'Choose Design'},
+//             {clazz: 'plan-num2', src: area, alt: 'area', name: 'Area measuring'},
+//             {clazz: 'plan-num3', src: budget, alt: 'budget', name: 'Budgeting'},
+//             {clazz: 'plan-num4', src: product, alt: 'product', name: 'Production'}
+//         ]
+//     }
+//
+//     openModal = () => {
+//         this.setState(({modalState}) => ({modalState: !modalState}))
+//     }
+//
+//     render() {
+//
+//         const {modalState, planData} = this.state;
+//         const {tittleData} = this.props;
+//
+//         const planItem = planData.map((item, i) => {
+//             const {clazz, src, alt, name} = item;
+//
+//             return (
+//                 <div className="plan-item">
+//                     <div className={`plan-item-img ${clazz}`}>
+//                         <img src={src} alt={alt}/>
+//                     </div>
+//                     <div className="plan-item-txt">{name}</div>
+//                 </div>
+//             )
+//         })
+//
+//         const elem = tittleData.map((item) => {
+//             const {id, flowerTittle, tittle, classSmallFlower} = item;
+//
+//             if (id === 'custom') {
+//                 return (
+//                     <div id="custom"
+//                          key={id}>
+//                         <div className="section-tittle">
+//                             <div className="section-tittle-subtitle">
+//                                 <SmallFlower flowerTittle={flowerTittle}
+//                                              classSmallFlower={classSmallFlower}/>
+//                             </div>
+//                             <div className="section-tittle-line custom-line">
+//                                 <h2>{tittle}</h2>
+//                             </div>
+//                         </div>
+//                         <div className="plan">
+//                             {planItem}
+//                         </div>
+//                         <button className="custom-btn orange-btn"
+//                                 onClick={this.openModal}>
+//                             Get Personalized Now
+//                         </button>
+//                         <ModalPersonalized modalState={modalState}/>
+//                     </div>
+//                 )
+//             }
+//             return null;
+//         })
+//
+//         return (
+//             <>
+//                 {elem}
+//             </>
+//         )
+//     }
+// }

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './scss/header.css';
 import './scss/mediaHeader.css';
 
-import SmallFlower from "../../components/Flowers/Small";
+import SmallFlower from "../../components/Flowers/SmallFlower";
 import NavList from "./components/NavList";
 import Promo from "./components/Promo";
 
@@ -13,7 +13,7 @@ export default class Header extends Component {
         const {tittleData} = this.props;
 
         const elem = tittleData.map((item) => {
-            const {id, flowerTittle, classSmallFlower} = item;
+            const {id, flowerTittle, classSmallFlower, flowerAbout, classBigFlower} = item;
 
             if (id === 'header') {
                 return (
@@ -27,7 +27,10 @@ export default class Header extends Component {
                             </div>
                             <NavList/>
                         </nav>
-                        <Promo/>
+                        <Promo
+                          flowerAbout={flowerAbout}
+                          classBigFlower={classBigFlower}
+                        />
                     </div>
                 )
             }

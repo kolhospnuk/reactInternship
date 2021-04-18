@@ -1,15 +1,14 @@
-
 export default class CocktailService {
+  apiBase = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 
-    _apiBase = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
+  async getResource(url) {
+    const data = await fetch(`${this.apiBase}${url}`);
+    const res = await data.json();
 
-    async getResource(url) {
-        const res = await fetch(`${this._apiBase}${url}`);
+    return res;
+  }
 
-        return await res.json();
-    }
-
-    getCocktail(name) {
-        return this.getResource(`${name}`);
-    }
+  getCocktail(name) {
+    return this.getResource(`${name}`);
+  }
 }

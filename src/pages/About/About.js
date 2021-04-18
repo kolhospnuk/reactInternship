@@ -1,23 +1,23 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './scss/about.css';
 import './scss/mediaAbout.css';
 
-import plates from "../../img/custom/plates.png";
-import spoons from "../../img/custom/spoons.png";
-import SmallFlower from "../../components/Flowers/Small";
-import BigFlower from "../../components/Flowers/Big";
+import plates from '../../assets/img/custom/plates.png';
+import spoons from '../../assets/img/custom/spoons.png';
+import SmallFlower from '../../components/Flowers/SmallFlower';
+import BigFlower from '../../components/Flowers/BigFlower';
 
 export default class About extends Component {
 
     render() {
         const flowerAbout = "big-flower-About";
 
-        const {tittleData} = this.props;
+        const { tittleData } = this.props;
 
         const elem = tittleData.map((item) => {
             const {id, flowerTittle, tittle, classSmallFlower, classBigFlower} = item;
 
-            if (id === 'about') {
+            if (id === "about") {
                 return (
                     <div id="about"
                          key={id}>

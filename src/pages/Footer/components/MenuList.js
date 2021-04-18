@@ -18,14 +18,18 @@ export default class MenuList extends Component {
     render() {
 
         const {listItemArr} = this.state;
+        const { tittleData } = this.props;
 
         const elements = listItemArr.map((item, i) => {
 
             return (
                 <ul key={item}
                     className="footer-menu-list">
-                    <MenuListItem listItemArr={listItemArr}
-                              i={i}/>
+                    <MenuListItem
+                      listItemArr={listItemArr}
+                      i={i}
+                      tittleData={tittleData}
+                    />
                 </ul>
             )
         })

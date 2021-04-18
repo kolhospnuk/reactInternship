@@ -2,7 +2,7 @@
 #footer {
   height: 455px;
   margin-top: 120px;
-  background: url("../../../img/footer/footer-bg1.jpg") left top no-repeat, url("../../../img/footer/footer-bg2.jpg") right top no-repeat;
+  background: url("../../../assets/img/footer/footer-bg1.jpg") left top no-repeat, url("../../../assets/img/footer/footer-bg2.jpg") right top no-repeat;
 }
 #footer h4 {
   margin-top: 45px;
