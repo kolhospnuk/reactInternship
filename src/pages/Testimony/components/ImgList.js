@@ -29,5 +29,5 @@ export default class ImgList extends Component {
 }
 
 ImgList.propTypes = {
-  imgListLinks: PropTypes.arrayOf(PropTypes.string).isRequired
+  imgListLinks: PropTypes.arrayOf(PropTypes.object).isRequired
 };

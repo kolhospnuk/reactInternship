@@ -75,5 +75,5 @@ export default class Testimony extends Component {
 }
 
 Testimony.propTypes = {
-  tittleData: PropTypes.arrayOf(PropTypes.string).isRequired
+  tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };

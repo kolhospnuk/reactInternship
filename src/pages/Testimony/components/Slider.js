@@ -32,5 +32,5 @@ const Slider = ({ sliderData }) => {
 export default Slider;
 
 Slider.propTypes = {
-  sliderData: PropTypes.arrayOf(PropTypes.string).isRequired
+  sliderData: PropTypes.arrayOf(PropTypes.object).isRequired
 };

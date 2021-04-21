@@ -43,5 +43,5 @@ export default class MenuList extends Component {
 }
 
 MenuList.propTypes = {
-  tittleData: PropTypes.arrayOf(PropTypes.string).isRequired
+  tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };

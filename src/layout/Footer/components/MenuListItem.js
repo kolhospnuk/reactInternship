@@ -47,7 +47,7 @@ export default class MenuListItem extends Component {
 }
 
 MenuListItem.propTypes = {
-  listItemArr: PropTypes.arrayOf(PropTypes.string).isRequired,
-  tittleData: PropTypes.arrayOf(PropTypes.string).isRequired,
+  listItemArr: PropTypes.arrayOf(PropTypes.array).isRequired,
+  tittleData: PropTypes.arrayOf(PropTypes.object).isRequired,
   i: PropTypes.number.isRequired
 };

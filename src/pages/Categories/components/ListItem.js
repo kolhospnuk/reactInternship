@@ -23,6 +23,6 @@ export default class ListItem extends Component {
 }
 
 ListItem.propTypes = {
-  categoriesData: PropTypes.arrayOf(PropTypes.string).isRequired,
+  categoriesData: PropTypes.arrayOf(PropTypes.object).isRequired,
   i: PropTypes.number.isRequired
 };

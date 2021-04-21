@@ -53,5 +53,5 @@ export default class Header extends Component {
 }
 
 Header.propTypes = {
-  tittleData: PropTypes.arrayOf(PropTypes.string).isRequired
+  tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };

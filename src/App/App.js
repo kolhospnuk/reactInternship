@@ -47,11 +47,13 @@ export default class App extends Component {
     themeNameBtn: 'Dark theme',
     // eslint-disable-next-line react/no-unused-state
     toggleTheme: () => {
-      this.setState(({ themeClass, themeNameBtn }) => ({
-        themeClass: themeClass !== 'dark' ? 'dark' : 'light',
-        // eslint-disable-next-line react/no-unused-state
-        themeNameBtn: themeNameBtn !== 'Dark theme' ? 'Dark theme' : 'Light theme'
-      }));
+      this.setState(({ themeClass, themeNameBtn }) => {
+        return {
+          themeClass: themeClass !== 'dark' ? 'dark' : 'light',
+          // eslint-disable-next-line react/no-unused-state
+          themeNameBtn: themeNameBtn !== 'Dark theme' ? 'Dark theme' : 'Light theme'
+        };
+      });
     }
   }
 

@@ -17,7 +17,7 @@ const ModalSignUp = ({ modalState }) => {
 };
 
 ModalSignUp.propTypes = {
-  modalState: PropTypes.string.isRequired
+  modalState: PropTypes.bool.isRequired
 };
 
 export default ModalSignUp;

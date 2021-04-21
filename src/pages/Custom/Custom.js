@@ -122,5 +122,5 @@ export default class Custom extends Component {
 }
 
 Custom.propTypes = {
-  tittleData: PropTypes.arrayOf(PropTypes.string).isRequired
+  tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };

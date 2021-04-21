@@ -27,5 +27,5 @@ export default class List extends Component {
 }
 
 List.propTypes = {
-  categoriesData: PropTypes.arrayOf(PropTypes.string).isRequired
+  categoriesData: PropTypes.arrayOf(PropTypes.object).isRequired
 };

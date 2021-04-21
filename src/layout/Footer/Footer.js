@@ -23,5 +23,5 @@ export default class Footer extends Component {
 }
 
 Footer.propTypes = {
-  tittleData: PropTypes.arrayOf(PropTypes.string).isRequired
+  tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };

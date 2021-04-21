@@ -89,5 +89,5 @@ export default class Categories extends Component {
 }
 
 Categories.propTypes = {
-  tittleData: PropTypes.arrayOf(PropTypes.string).isRequired
+  tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };

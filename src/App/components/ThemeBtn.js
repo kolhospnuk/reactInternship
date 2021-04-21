@@ -5,11 +5,11 @@ import { ThemeConsumer } from '../../components/Context/ThemeContext';
 const ThemeBtn = () => {
   return (
     <ThemeConsumer>
-      {({ themeClass, toggleTheme, themeNameBtn }) => (
+      {({ themeNameBtn, themeClass, toggleTheme }) => (
         <button
           type="button"
-          className={`theme-btn-${themeClass}`}
           onClick={toggleTheme}
+          className={`theme-btn-${themeClass}`}
         >
           {themeNameBtn}
         </button>

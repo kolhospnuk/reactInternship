@@ -64,5 +64,5 @@ export default class NavListItem extends Component {
 }
 
 NavListItem.propTypes = {
-  openModal: PropTypes.bool.isRequired
+  openModal: PropTypes.func.isRequired
 };

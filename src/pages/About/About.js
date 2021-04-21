@@ -93,5 +93,5 @@ export default class About extends Component {
 }
 
 About.propTypes = {
-  tittleData: PropTypes.arrayOf(PropTypes.string).isRequired
+  tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };

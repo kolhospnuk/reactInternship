@@ -17,7 +17,7 @@ const ModalFurniture = ({ modalState }) => {
 };
 
 ModalFurniture.propTypes = {
-  modalState: PropTypes.string.isRequired
+  modalState: PropTypes.bool.isRequired
 };
 
 export default ModalFurniture;
