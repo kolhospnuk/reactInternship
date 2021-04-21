@@ -5,6 +5,7 @@ import Stars from './Stars';
 import Slider from './Slider';
 
 export default class CommentList extends Component {
+  // eslint-disable-next-line react/state-in-constructor
   state = {
     personData: [
       {

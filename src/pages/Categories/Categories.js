@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './scss/categories.css';
 import './scss/mediaCategories.css';
 
@@ -12,6 +13,7 @@ import SmallFlower from '../../components/Flowers/SmallFlower';
 import List from './components/List';
 
 export default class Categories extends Component {
+  // eslint-disable-next-line react/state-in-constructor
   state = {
     categoriesData: [
       {
@@ -47,7 +49,12 @@ export default class Categories extends Component {
     const { tittleData } = this.props;
 
     const elem = tittleData.map((item) => {
-      const { id, flowerTittle, tittle, classSmallFlower } = item;
+      const {
+        id,
+        flowerTittle,
+        tittle,
+        classSmallFlower
+      } = item;
 
       if (id === 'categories') {
         return (
@@ -80,3 +87,7 @@ export default class Categories extends Component {
     );
   }
 }
+
+Categories.propTypes = {
+  tittleData: PropTypes.arrayOf(PropTypes.string).isRequired
+};

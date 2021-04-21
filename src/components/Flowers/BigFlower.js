@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './scss/big.css';
 
 const BigFlower = ({ classBigFlower }) => {
-
   return (
     <div className={classBigFlower}>
       <div className="big-flower-item" />

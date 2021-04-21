@@ -1,8 +1,6 @@
-
 .content {
   margin-bottom: 73px;
 }
-
 
 h1 {
   margin-top: 60px;
@@ -14,11 +12,12 @@ h1 {
 
 #describe {
   margin: 60px auto;
-
-  h2 {
-    font-weight: 600;
-    font-size: 32px;
-    text-align: center;
-    color: #313235;
-  }
 }
+#describe h2 {
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+  color: #313235;
+}
+
+/*# sourceMappingURL=tasks.css.map */

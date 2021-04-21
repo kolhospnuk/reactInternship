@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './scss/makeCocktail.css';
 
-import { withCocktail } from '../../components/hoc-helpers/withCocktail'
+import { withCocktail } from '../../components/hoc-helpers/withCocktail';
 import Form from './components/AddForm';
 import Spinner from '../../components/spinner/spinner';
 import CocktailError from '../../components/ErrorsPlace/cocktailError';
@@ -21,17 +21,23 @@ const MakeCocktail = (props) => {
     }
 
     return (
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
       <li
         className={activeCockClass}
         onClick={() => activatedCocktail(item.order)}
-        draggable={true}
-        onDragStart={dragStartHandler(item)}
+        onKeyDown={() => activatedCocktail(item.order)}
+        draggable
+        // draggable={true}
+        onDragStart={() => dragStartHandler(item)}
         onDragOver={(e) => dragOverHandler(e)}
         onDrop={(e) => dropHandler(e, item)}
       >
         {item.name}
         <div className="cocktail-img">
-          <img src={item.img} alt="img" />
+          <img
+            src={item.img}
+            alt="img"
+          />
         </div>
       </li>
     );
@@ -63,7 +69,7 @@ const MakeCocktail = (props) => {
 };
 
 MakeCocktail.propTypes = {
-  cocktailList: PropTypes.array.isRequired,
+  cocktailList: PropTypes.arrayOf(PropTypes.string).isRequired,
   spinnerLoading: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.bool.isRequired,

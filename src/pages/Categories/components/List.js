@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import * as shortid from 'shortid';
+import PropTypes from 'prop-types';
 
 import ListItem from './ListItem';
 
 export default class List extends Component {
-
   render() {
     const { categoriesData } = this.props;
 
@@ -25,3 +25,7 @@ export default class List extends Component {
     );
   }
 }
+
+List.propTypes = {
+  categoriesData: PropTypes.arrayOf(PropTypes.string).isRequired
+};

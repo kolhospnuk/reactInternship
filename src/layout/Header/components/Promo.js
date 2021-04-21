@@ -7,6 +7,7 @@ import ModalFurniture from './ModalFurniture';
 import table from '../../../assets/img/header/table.png';
 
 export default class Promo extends Component {
+  // eslint-disable-next-line react/state-in-constructor
   state = {
     modalState: false
   }
@@ -24,11 +25,11 @@ export default class Promo extends Component {
         <div className="header-promo-txt">
           <h3 className="header-promo-txt-furniture">
             Are you looking for
+            <br />
             <span>
-              wooden
-              <br />
-              furniture
+              wooden furniture
             </span>
+            <br />
             for your place?
           </h3>
           <h2 className="header-promo-txt-place">

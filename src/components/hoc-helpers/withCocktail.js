@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import CocktailService from '../../pages/MakeCocktail/components/CocktailService';
 
+// eslint-disable-next-line import/prefer-default-export
 export const withCocktail = (View) => {
   return class extends Component {
+    // eslint-disable-next-line react/state-in-constructor
     state = {
       cocktailList: [],
       currentCocktail: null,

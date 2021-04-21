@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../scss/modalPersonalized.css';
+import '../scss/modalFurniture.css';
 
-const ModalPersonalized = ({ modalState }) => {
+const ModalFurniture = ({ modalState }) => {
   let clazz = 'modal';
 
   if (modalState) {
@@ -16,8 +16,8 @@ const ModalPersonalized = ({ modalState }) => {
   );
 };
 
-ModalPersonalized.propTypes = {
-  modalState: PropTypes.bool.isRequired
+ModalFurniture.propTypes = {
+  modalState: PropTypes.string.isRequired
 };
 
-export default ModalPersonalized;
+export default ModalFurniture;

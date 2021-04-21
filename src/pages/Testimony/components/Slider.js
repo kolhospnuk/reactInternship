@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import '../scss/slider.css';
 
 const Slider = ({ sliderData }) => {
@@ -32,5 +32,5 @@ const Slider = ({ sliderData }) => {
 export default Slider;
 
 Slider.propTypes = {
-  sliderData: PropTypes.array.isRequired
+  sliderData: PropTypes.arrayOf(PropTypes.string).isRequired
 };

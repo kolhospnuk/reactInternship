@@ -6,9 +6,8 @@
   &-main {
     width: 100%;
     margin-bottom: 20px;
-    border: 5px solid #fff;
+    border: 4px solid #F9BDBD;
     border-collapse: collapse;
-    outline: 3px solid #F9BDBD;
 
     tr {
       border-bottom: 2px solid black;
@@ -17,7 +16,7 @@
     th {
       font-weight: bold;
       padding: 7px;
-      background: #F9BDBD;;
+      background: #F9BDBD;
       text-align: left;
     }
 
@@ -37,14 +36,22 @@
     }
   }
 
-  .btn {
+  &-btn {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 
-    button {
+    &-item {
       margin-right: 2px;
-      background-color: #bcbccd;;
+      background: #F9BDBD;
+      font-family: Nunito, sans-serif;
+      font-weight: 600;
+      border: none;
+
+      &:hover {
+        opacity: 70%;
+      }
     }
   }
 }
+

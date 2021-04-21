@@ -12,6 +12,7 @@ import CommentList from './components/CommentList';
 import Points from './components/Points';
 
 export default class Testimony extends Component {
+  // eslint-disable-next-line react/state-in-constructor
   state = {
     imgListLinks: [
       {
@@ -74,5 +75,5 @@ export default class Testimony extends Component {
 }
 
 Testimony.propTypes = {
-  tittleData: PropTypes.array.isRequired
+  tittleData: PropTypes.arrayOf(PropTypes.string).isRequired
 };

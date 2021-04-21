@@ -8,37 +8,12 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
-h1 {
-  margin-top: 60px;
-  font-weight: 800;
-  font-size: 72px;
-  text-align: center;
-  color: #313235;
-}
-
-/*Describe project*/
-#describe {
-  margin: 60px auto;
-}
-#describe h2 {
-  font-weight: 600;
-  font-size: 32px;
-  text-align: center;
-  color: #313235;
-}
-
-/* Project work area*/
-.work-area {
-  margin-top: 120px;
-  border: 1px solid black;
-  position: relative;
-}
-
-/* Container for main part project */
-.container-global {
+.app {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  border: 1px solid black;
+  position: relative;
 }
 
 .container {
@@ -83,6 +58,10 @@ footer a:hover {
 .orange-btn:hover {
   opacity: 80%;
   background-color: #DAA520;
+}
+
+.dark {
+  background-color: #7a7878;
 }
 
 /*# sourceMappingURL=app.css.map */

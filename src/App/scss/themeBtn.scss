@@ -1,0 +1,27 @@
+
+.theme-btn {
+
+  &-light {
+    padding: 5px;
+    margin: 20px;
+    border: 2px solid gray;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    &:hover {
+      opacity: 70%;
+    }
+  }
+
+  &-dark {
+    margin: 20px;
+    padding: 5px;
+    border: 2px solid gray;
+    background-color: #d1cece;
+    color: black;
+    border-radius: 4px;
+    &:hover {
+      background-color: #ece9e9;
+    }
+  }
+}

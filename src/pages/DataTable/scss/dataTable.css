@@ -5,9 +5,8 @@
 .table-main {
   width: 100%;
   margin-bottom: 20px;
-  border: 5px solid #fff;
+  border: 4px solid #F9BDBD;
   border-collapse: collapse;
-  outline: 3px solid #F9BDBD;
 }
 .table-main tr {
   border-bottom: 2px solid black;
@@ -27,14 +26,20 @@
 .table-main-second td {
   padding-left: 0;
 }
-.table .btn {
+.table-btn {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
-.table .btn button {
+.table-btn-item {
   margin-right: 2px;
-  background-color: #bcbccd;
+  background: #F9BDBD;
+  font-family: Nunito, sans-serif;
+  font-weight: 600;
+  border: none;
+}
+.table-btn-item:hover {
+  opacity: 70%;
 }
 
 /*# sourceMappingURL=dataTable.css.map */

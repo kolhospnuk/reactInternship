@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class ListItem extends Component {
-
   render() {
     const { categoriesData, i } = this.props;
 
@@ -21,3 +21,8 @@ export default class ListItem extends Component {
     );
   }
 }
+
+ListItem.propTypes = {
+  categoriesData: PropTypes.arrayOf(PropTypes.string).isRequired,
+  i: PropTypes.number.isRequired
+};
