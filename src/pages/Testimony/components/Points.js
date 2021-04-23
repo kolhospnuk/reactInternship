@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../scss/points.css';
 
-export default class Points extends Component {
-  render() {
-    return (
-      <div className="testimony-points">
-        <ul className="testimony-points-list">
-          <li />
-          <li />
-          <li />
-          <li />
-        </ul>
-      </div>
-    );
-  }
-}
+const Points = () => (
+  <div className="testimony-points">
+    <ul className="testimony-points-list">
+      <li />
+      <li />
+      <li />
+      <li />
+    </ul>
+  </div>
+);
+
+export default Points;

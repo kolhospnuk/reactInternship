@@ -1,5 +1,7 @@
 import React from 'react';
 import './scss/dataTable.css';
+import TableBtns from './components/tableBtns';
+import TableMain from './components/tableMain';
 
 const DataTable = () => {
   const eventsArr = [
@@ -118,64 +120,16 @@ const DataTable = () => {
     console.log(copyEventsArr);
   }
 
-  const table = eventsArr.map((item, i) => {
-    const { name, firstFact, secondFact } = item.events;
-
-    if (i === 0) {
-      return (
-        <thead key={name}>
-          <tr>
-            <th>{item.date}</th>
-            <th>{name}</th>
-            <th>{firstFact}</th>
-          </tr>
-        </thead>
-      );
-    }
-    return (
-      <tbody key={name}>
-        <tr>
-          <td>{item.date}</td>
-          <td>{name}</td>
-          <td>
-            <table className="table-main-second">
-              <tbody>
-                <tr>
-                  <td>{firstFact}</td>
-                </tr>
-                <tr>
-                  <td>{secondFact}</td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    );
-  });
-
-  const btn = btnArr.map((item) => {
-    const { key, name } = item;
-    return (
-      <button
-        type="button"
-        key={name}
-        className="table-btn-item"
-        onClick={() => getResult(key, [...eventsArr])}
-      >
-        {name}
-      </button>
-    );
-  });
-
   return (
     <div className="table">
-      <table className="table-main">
-        {table}
-      </table>
-      <div className="table-btn">
-        {btn}
-      </div>
+      <TableMain
+        eventsArr={eventsArr}
+      />
+      <TableBtns
+        btnArr={btnArr}
+        getResult={getResult}
+        eventsArr={eventsArr}
+      />
     </div>
   );
 };

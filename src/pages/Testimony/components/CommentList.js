@@ -5,28 +5,30 @@ import Stars from './Stars';
 import Slider from './Slider';
 
 export default class CommentList extends Component {
-  // eslint-disable-next-line react/state-in-constructor
-  state = {
-    personData: [
-      {
-        img: person,
-        firstName: 'Sandra Dewi',
-        secondName: 'Jakarta Selatan',
-        alt: 'person'
-      }
-    ],
-    sliderData: [
-      {
-        classStep: 'Testimony-list-comment-slider-previous',
-        classArrow: 'arrow-left',
-        step: 'Previous'
-      },
-      {
-        classStep: 'Testimony-list-comment-slider-next',
-        classArrow: 'arrow-right',
-        step: 'Next'
-      }
-    ]
+  constructor() {
+    super();
+    this.state = {
+      personData: [
+        {
+          img: person,
+          firstName: 'Sandra Dewi',
+          secondName: 'Jakarta Selatan',
+          alt: 'person'
+        }
+      ],
+      sliderData: [
+        {
+          classStep: 'Testimony-list-comment-slider-previous',
+          classArrow: 'arrow-left',
+          step: 'Previous'
+        },
+        {
+          classStep: 'Testimony-list-comment-slider-next',
+          classArrow: 'arrow-right',
+          step: 'Next'
+        }
+      ]
+    };
   }
 
   render() {

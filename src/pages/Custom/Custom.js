@@ -11,35 +11,37 @@ import SmallFlower from '../../components/Flowers/SmallFlower';
 import ModalPersonalized from './components/ModalPersonalized';
 
 export default class Custom extends Component {
-  // eslint-disable-next-line react/state-in-constructor
-  state = {
-    modalState: false,
-    planData: [
-      {
-        clazz: 'plan-num1',
-        src: design,
-        alt: 'design',
-        name: 'Choose Design'
-      },
-      {
-        clazz: 'plan-num2',
-        src: area,
-        alt: 'area',
-        name: 'Area measuring'
-      },
-      {
-        clazz: 'plan-num3',
-        src: budget,
-        alt: 'budget',
-        name: 'Budgeting'
-      },
-      {
-        clazz: 'plan-num4',
-        src: product,
-        alt: 'product',
-        name: 'Production'
-      }
-    ]
+  constructor() {
+    super();
+    this.state = {
+      modalState: false,
+      planData: [
+        {
+          clazz: 'plan-num1',
+          src: design,
+          alt: 'design',
+          name: 'Choose Design'
+        },
+        {
+          clazz: 'plan-num2',
+          src: area,
+          alt: 'area',
+          name: 'Area measuring'
+        },
+        {
+          clazz: 'plan-num3',
+          src: budget,
+          alt: 'budget',
+          name: 'Budgeting'
+        },
+        {
+          clazz: 'plan-num4',
+          src: product,
+          alt: 'product',
+          name: 'Production'
+        }
+      ]
+    };
   }
 
   openModal = () => {
@@ -79,8 +81,8 @@ export default class Custom extends Component {
         classSmallFlower
       } = item;
 
-      if (id === 'custom') {
-        return (
+      return (
+        id === 'custom' ? (
           <div
             id="custom"
             key={id}
@@ -108,9 +110,8 @@ export default class Custom extends Component {
             </button>
             <ModalPersonalized modalState={modalState} />
           </div>
-        );
-      }
-      return null;
+        ) : null
+      );
     });
 
     return (

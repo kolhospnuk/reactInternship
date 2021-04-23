@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import '../scss/form.css';
 
 export default class Form extends Component {
-  // eslint-disable-next-line react/state-in-constructor
-  state = {
-    // eslint-disable-next-line react/no-unused-state
-    email: ''
+  constructor() {
+    super();
+    this.state = {
+      // eslint-disable-next-line react/no-unused-state
+      email: ''
+    };
   }
 
   emailChange = (e) => {

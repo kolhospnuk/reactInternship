@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './scss/makeCocktail.css';
 
-import { withCocktail } from '../../components/hoc-helpers/withCocktail';
+import withCocktail from '../../hoc-helpers/withCocktail';
 import Form from './components/AddForm';
 import Spinner from '../../components/spinner/spinner';
 import CocktailError from '../../components/ErrorsPlace/cocktailError';
@@ -21,13 +21,11 @@ const MakeCocktail = (props) => {
     }
 
     return (
-      // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
       <li
         className={activeCockClass}
+        role="presentation"
         onClick={() => activatedCocktail(item.order)}
-        onKeyDown={() => activatedCocktail(item.order)}
-        draggable
-        // draggable={true}
+        draggable // draggable={true}
         onDragStart={() => dragStartHandler(item)}
         onDragOver={(e) => dragOverHandler(e)}
         onDrop={(e) => dropHandler(e, item)}

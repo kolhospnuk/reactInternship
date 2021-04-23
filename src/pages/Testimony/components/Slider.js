@@ -29,8 +29,8 @@ const Slider = ({ sliderData }) => {
   );
 };
 
-export default Slider;
-
 Slider.propTypes = {
   sliderData: PropTypes.arrayOf(PropTypes.object).isRequired
 };
+
+export default Slider;

@@ -13,35 +13,37 @@ import SmallFlower from '../../components/Flowers/SmallFlower';
 import List from './components/List';
 
 export default class Categories extends Component {
-  // eslint-disable-next-line react/state-in-constructor
-  state = {
-    categoriesData: [
-      {
-        name: 'Desk',
-        img: desk,
-        btn: 'Shop now'
-      },
-      {
-        name: 'Chair',
-        img: chair,
-        btn: 'Shop now'
-      },
-      {
-        name: 'Kitchenware',
-        img: kitchenware,
-        btn: 'Shop now'
-      },
-      {
-        name: 'Book Shelf',
-        img: shelf,
-        btn: 'Shop now'
-      },
-      {
-        name: 'Electronics',
-        img: electronics,
-        btn: 'Shop now'
-      }
-    ]
+  constructor() {
+    super();
+    this.state = {
+      categoriesData: [
+        {
+          name: 'Desk',
+          img: desk,
+          btn: 'Shop now'
+        },
+        {
+          name: 'Chair',
+          img: chair,
+          btn: 'Shop now'
+        },
+        {
+          name: 'Kitchenware',
+          img: kitchenware,
+          btn: 'Shop now'
+        },
+        {
+          name: 'Book Shelf',
+          img: shelf,
+          btn: 'Shop now'
+        },
+        {
+          name: 'Electronics',
+          img: electronics,
+          btn: 'Shop now'
+        }
+      ]
+    };
   }
 
   render() {
@@ -56,8 +58,8 @@ export default class Categories extends Component {
         classSmallFlower
       } = item;
 
-      if (id === 'categories') {
-        return (
+      return (
+        id === 'categories' ? (
           <div
             id="categories"
             key={id}
@@ -75,9 +77,8 @@ export default class Categories extends Component {
             </div>
             <List categoriesData={categoriesData} />
           </div>
-        );
-      }
-      return null;
+        ) : null
+      );
     });
 
     return (

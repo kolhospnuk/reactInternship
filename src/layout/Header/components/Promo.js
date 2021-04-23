@@ -7,9 +7,11 @@ import ModalFurniture from './ModalFurniture';
 import table from '../../../assets/img/header/table.png';
 
 export default class Promo extends Component {
-  // eslint-disable-next-line react/state-in-constructor
-  state = {
-    modalState: false
+  constructor() {
+    super();
+    this.state = {
+      modalState: false
+    };
   }
 
   openModal = () => {

@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import SmallFlower from '../../../components/Flowers/SmallFlower';
 
 export default class MenuListItem extends Component {
-  // eslint-disable-next-line react/state-in-constructor
-  state = {
-    flowerTittle: 'WOODIES'
+  constructor() {
+    super();
+    this.state = {
+      flowerTittle: 'WOODIES'
+    };
   }
 
   openLink = () => {
@@ -16,17 +18,14 @@ export default class MenuListItem extends Component {
     const { listItemArr, i, tittleData } = this.props;
     const { flowerTittle } = this.state;
 
-    const elements = listItemArr[i].map((item, iter) => {
-      if (i === 0 && iter === 0) {
-        return (
-          <SmallFlower
-            key={item}
-            classSmallFlower={tittleData[iter].classSmallFlower}
-            flowerTittle={flowerTittle}
-          />
-        );
-      }
-      return (
+    const elements = listItemArr[i].map((item, iter) => (
+      i === 0 && iter === 0 ? (
+        <SmallFlower
+          key={item}
+          classSmallFlower={tittleData[iter].classSmallFlower}
+          flowerTittle={flowerTittle}
+        />
+      ) : (
         <li
           key={item}
           className="footer-menu-list-item"
@@ -35,8 +34,8 @@ export default class MenuListItem extends Component {
         >
           {item}
         </li>
-      );
-    });
+      )
+    ));
 
     return (
       <>

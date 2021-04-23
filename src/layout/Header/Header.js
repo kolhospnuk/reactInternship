@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './scss/header.css';
 import './scss/mediaHeader.css';
@@ -7,51 +7,48 @@ import SmallFlower from '../../components/Flowers/SmallFlower';
 import NavList from './components/NavList';
 import Promo from './components/Promo';
 
-export default class Header extends Component {
-  render() {
-    const { tittleData } = this.props;
-
-    const elem = tittleData.map((item) => {
-      const {
-        id,
-        flowerTittle,
-        classSmallFlower,
-        classBigFlower
-      } = item;
-
-      if (id === 'header') {
-        return (
-          <div
-            id="header"
-            key={id}
-          >
-            <div className="header-pink-bg" />
-            <nav className="header-nav">
-              <div className="header-nav-woodies">
-                <SmallFlower
-                  flowerTittle={flowerTittle}
-                  classSmallFlower={classSmallFlower}
-                />
-              </div>
-              <NavList />
-            </nav>
-            <Promo
-              classBigFlower={classBigFlower}
-            />
-          </div>
-        );
-      }
-      return null;
-    });
+const Header = ({ tittleData }) => {
+  const elem = tittleData.map((item) => {
+    const {
+      id,
+      flowerTittle,
+      classSmallFlower,
+      classBigFlower
+    } = item;
 
     return (
-      <>
-        {elem}
-      </>
+      id === 'header' ? (
+        <div
+          id="header"
+          key={id}
+        >
+          <div className="header-pink-bg" />
+          <nav className="header-nav">
+            <div className="header-nav-woodies">
+              <SmallFlower
+                flowerTittle={flowerTittle}
+                classSmallFlower={classSmallFlower}
+              />
+            </div>
+            <NavList />
+          </nav>
+          <Promo
+            classBigFlower={classBigFlower}
+          />
+        </div>
+      ) : null
     );
-  }
-}
+  });
+
+  return (
+    <>
+      {elem}
+    </>
+  );
+};
 
 Header.propTypes = {
   tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };
+
+export default Header;

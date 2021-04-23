@@ -21,8 +21,8 @@ export default class About extends Component {
         classBigFlower
       } = item;
 
-      if (id === 'about') {
-        return (
+      return (
+        id === 'about' ? (
           <div
             id="about"
             key={id}
@@ -79,9 +79,8 @@ export default class About extends Component {
             </div>
             <BigFlower classBigFlower={classBigFlower} />
           </div>
-        );
-      }
-      return null;
+        ) : null
+      );
     });
 
     return (

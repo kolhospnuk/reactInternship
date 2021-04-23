@@ -4,15 +4,15 @@ import NavListItem from './NavListItem';
 import ModalSignUp from './ModalSignUp';
 
 export default class NavList extends Component {
-  // eslint-disable-next-line react/state-in-constructor
-  state = {
-    modalState: false
+  constructor() {
+    super();
+    this.state = {
+      modalState: false
+    };
   }
 
   openModal = () => {
-    this.setState((state) => ({
-      modalState: !state.modalState
-    }));
+    this.setState(({ modalState }) => ({ modalState: !modalState }));
   }
 
   render() {

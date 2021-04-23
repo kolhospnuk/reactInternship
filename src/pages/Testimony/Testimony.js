@@ -12,18 +12,20 @@ import CommentList from './components/CommentList';
 import Points from './components/Points';
 
 export default class Testimony extends Component {
-  // eslint-disable-next-line react/state-in-constructor
-  state = {
-    imgListLinks: [
-      {
-        img: room,
-        alt: 'room'
-      },
-      {
-        img: kitchen,
-        alt: 'kitchen'
-      }
-    ]
+  constructor() {
+    super();
+    this.state = {
+      imgListLinks: [
+        {
+          img: room,
+          alt: 'room'
+        },
+        {
+          img: kitchen,
+          alt: 'kitchen'
+        }
+      ]
+    };
   }
 
   render() {
@@ -38,8 +40,8 @@ export default class Testimony extends Component {
         classSmallFlower
       } = item;
 
-      if (id === 'Testimony') {
-        return (
+      return (
+        id === 'Testimony' ? (
           <section
             id="testimony"
             key={id}
@@ -61,9 +63,8 @@ export default class Testimony extends Component {
             </div>
             <Points />
           </section>
-        );
-      }
-      return null;
+        ) : null
+      );
     });
 
     return (
