@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../scss/themeBtn.css';
-import { ThemeConsumer } from '../../../сontext/ThemeContext';
+import MyContext from '../../../сontext/ThemeContext';
 
-const ThemeBtn = () => (
-  <ThemeConsumer>
-    {({ toggleTheme, themeClass, themeNameBtn }) => (
-      <button
-        type="button"
-        onClick={toggleTheme}
-        className={`theme-btn-${themeClass}`}
-      >
-        {themeNameBtn}
-      </button>
-    )}
-  </ThemeConsumer>
-);
+const ThemeBtn = () => {
+  const { toggleTheme, themeClass, themeNameBtn } = useContext(MyContext);
+
+  return (
+    <button
+      type="button"
+      onClick={toggleTheme}
+      className={`theme-btn-${themeClass}`}
+    >
+      {themeNameBtn}
+    </button>
+  );
+};
 
 export default ThemeBtn;

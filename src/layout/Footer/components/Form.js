@@ -1,57 +1,46 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import '../scss/form.css';
 
-export default class Form extends Component {
-  constructor() {
-    super();
-    this.state = {
-      // eslint-disable-next-line react/no-unused-state
-      email: ''
-    };
-  }
+/* Footer Form */
+const Form = () => {
+  const [email, setEmail] = useState('');
+  console.log(email);
 
-  emailChange = (e) => {
-    this.setState({
-      // eslint-disable-next-line react/no-unused-state
-      email: e.target.value
-    });
-  }
-
-  onSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     alert('Email sent');
-  }
+  };
 
-  render() {
-    return (
-      <div className="footer-form">
-        <div className="footer-form-txt">
-          <h3>Subscribe to our newsletter</h3>
-          <span>
-            A monthly digest of the new WOODIES products, hot offers, and
-            <br />
-            resources.
-          </span>
-        </div>
-        <form
-          action="#"
-          onSubmit={this.onSubmit}
-        >
-          <input
-            name="email"
-            type="email"
-            placeholder="Your email address"
-            required
-            onChange={this.emailChange}
-          />
-          <button
-            className="footer-form-btn orange-btn"
-            type="submit"
-          >
-            Subscribe
-          </button>
-        </form>
+  return (
+    <div className="footer-form">
+      <div className="footer-form-txt">
+        <h3>Subscribe to our newsletter</h3>
+        <span>
+          A monthly digest of the new WOODIES products, hot offers, and
+          <br />
+          resources.
+        </span>
       </div>
-    );
-  }
-}
+      <form
+        action="#"
+        onSubmit={onSubmit}
+      >
+        <input
+          name="email"
+          type="email"
+          placeholder="Your email address"
+          required
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button
+          className="footer-form-btn orange-btn"
+          type="submit"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default Form;

@@ -1,30 +1,24 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import '../scss/navList.css';
 import NavListItem from './NavListItem';
-import ModalSignUp from './ModalSignUp';
+import ModalWindow from '../../../components/modalWindow/ModalWindow';
 
-export default class NavList extends Component {
-  constructor() {
-    super();
-    this.state = {
-      modalState: false
-    };
-  }
+/* Header navigation */
+const NavList = () => {
+  const modalWindowName = 'Sing up';
+  const [modalWindow, setModalWindow] = useState(false);
 
-  openModal = () => {
-    this.setState(({ modalState }) => ({ modalState: !modalState }));
-  }
+  return (
+    <>
+      <ul className="header-nav-menu">
+        <NavListItem setModalWindow={() => setModalWindow((modal) => !modal)} />
+      </ul>
+      <ModalWindow
+        modalWindowName={modalWindowName}
+        modalWindow={modalWindow}
+      />
+    </>
+  );
+};
 
-  render() {
-    const { modalState } = this.state;
-
-    return (
-      <>
-        <ul className="header-nav-menu">
-          <NavListItem openModal={this.openModal} />
-        </ul>
-        <ModalSignUp modalState={modalState} />
-      </>
-    );
-  }
-}
+export default NavList;

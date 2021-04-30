@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './scss/categories.css';
 import './scss/mediaCategories.css';
@@ -12,83 +12,75 @@ import electronics from '../../assets/img/categories/electronics.png';
 import SmallFlower from '../../components/Flowers/SmallFlower';
 import List from './components/List';
 
-export default class Categories extends Component {
-  constructor() {
-    super();
-    this.state = {
-      categoriesData: [
-        {
-          name: 'Desk',
-          img: desk,
-          btn: 'Shop now'
-        },
-        {
-          name: 'Chair',
-          img: chair,
-          btn: 'Shop now'
-        },
-        {
-          name: 'Kitchenware',
-          img: kitchenware,
-          btn: 'Shop now'
-        },
-        {
-          name: 'Book Shelf',
-          img: shelf,
-          btn: 'Shop now'
-        },
-        {
-          name: 'Electronics',
-          img: electronics,
-          btn: 'Shop now'
-        }
-      ]
-    };
-  }
+const Categories = ({ tittleData }) => {
+  const categoriesData = [
+    {
+      name: 'Desk',
+      img: desk,
+      btn: 'Shop now'
+    },
+    {
+      name: 'Chair',
+      img: chair,
+      btn: 'Shop now'
+    },
+    {
+      name: 'Kitchenware',
+      img: kitchenware,
+      btn: 'Shop now'
+    },
+    {
+      name: 'Book Shelf',
+      img: shelf,
+      btn: 'Shop now'
+    },
+    {
+      name: 'Electronics',
+      img: electronics,
+      btn: 'Shop now'
+    }
+  ];
 
-  render() {
-    const { categoriesData } = this.state;
-    const { tittleData } = this.props;
-
-    const elem = tittleData.map((item) => {
-      const {
-        id,
-        flowerTittle,
-        tittle,
-        classSmallFlower
-      } = item;
-
-      return (
-        id === 'categories' ? (
-          <div
-            id="categories"
-            key={id}
-          >
-            <div className="section-tittle">
-              <div className="section-tittle-subtitle">
-                <SmallFlower
-                  flowerTittle={flowerTittle}
-                  classSmallFlower={classSmallFlower}
-                />
-              </div>
-              <div className="section-tittle-line categories-line">
-                <h2>{tittle}</h2>
-              </div>
-            </div>
-            <List categoriesData={categoriesData} />
-          </div>
-        ) : null
-      );
-    });
+  const elem = tittleData.map((item) => {
+    const {
+      id,
+      flowerTittle,
+      tittle,
+      classSmallFlower
+    } = item;
 
     return (
-      <>
-        {elem}
-      </>
+      id === 'categories' ? (
+        <div
+          id="categories"
+          key={id}
+        >
+          <div className="section-tittle">
+            <div className="section-tittle-subtitle">
+              <SmallFlower
+                flowerTittle={flowerTittle}
+                classSmallFlower={classSmallFlower}
+              />
+            </div>
+            <div className="section-tittle-line categories-line">
+              <h2>{tittle}</h2>
+            </div>
+          </div>
+          <List categoriesData={categoriesData} />
+        </div>
+      ) : null
     );
-  }
-}
+  });
+
+  return (
+    <>
+      {elem}
+    </>
+  );
+};
 
 Categories.propTypes = {
   tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };
+
+export default Categories;

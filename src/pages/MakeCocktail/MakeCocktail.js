@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './scss/makeCocktail.css';
 
 import withCocktail from '../../hoc-helpers/withCocktail';
-import Form from './components/AddForm';
+import Form from './components/Form';
 import Spinner from '../../components/spinner/spinner';
 import CocktailError from '../../components/ErrorsPlace/cocktailError';
 
@@ -22,6 +22,7 @@ const MakeCocktail = (props) => {
 
     return (
       <li
+        key={item.name}
         className={activeCockClass}
         role="presentation"
         onClick={() => activatedCocktail(item.order)}
@@ -67,7 +68,7 @@ const MakeCocktail = (props) => {
 };
 
 MakeCocktail.propTypes = {
-  cocktailList: PropTypes.arrayOf(PropTypes.string).isRequired,
+  cocktailList: PropTypes.arrayOf(PropTypes.object).isRequired,
   spinnerLoading: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.bool.isRequired,
