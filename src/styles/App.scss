@@ -1,6 +1,6 @@
 
-@import "../../assets/style/reset.css";
-@import '../../assets/style/fonts.css';
+@import "../assets/style/reset.css";
+@import '../assets/style/fonts.css';
 
 * {
   box-sizing: border-box;
@@ -72,5 +72,24 @@ footer {
 
 .dark {
   background-color: #7a7878;
+}
+
+@media (max-width: 1200px) {
+
+  .container-global {
+    max-width: none;
+  }
+
+  .container {
+    max-width: 892px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .container {
+    max-width: none;
+    padding: 0 10px;
+  }
 }
 
