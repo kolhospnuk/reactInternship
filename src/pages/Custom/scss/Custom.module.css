@@ -1,11 +1,11 @@
 /* Tittles for sections */
 /* Section Custom */
-#custom {
+.custom {
   height: 453px;
   margin-top: 120px;
 }
 
-.custom-line h2:before {
+.customLine h2:before {
   content: "";
   width: 65px;
 }
@@ -17,7 +17,10 @@
   justify-content: space-around;
   margin-right: 18px;
 }
-.plan-item-img:before {
+.planItem {
+  border: black;
+}
+.planItemImg:before {
   content: "1";
   position: relative;
   left: -35px;
@@ -27,17 +30,17 @@
   vertical-align: middle;
   color: rgba(249, 189, 189, 0.25);
 }
-.plan-item-img img {
+.planItemImg img {
   margin-left: -43px;
 }
-.plan-item-txt {
+.planItemTxt {
   text-align: center;
   margin-top: 24px;
   font-size: 24px;
   line-height: 33px;
   color: #000000;
 }
-.plan-num2:before {
+.planNum2:before {
   content: "2";
   position: relative;
   left: -35px;
@@ -48,7 +51,7 @@
   color: rgba(249, 189, 189, 0.25);
   top: 30px;
 }
-.plan-num3:before {
+.planNum3:before {
   content: "3";
   position: relative;
   left: -35px;
@@ -59,7 +62,7 @@
   color: rgba(249, 189, 189, 0.25);
   top: 29px;
 }
-.plan-num4:before {
+.planNum4:before {
   content: "4";
   position: relative;
   left: -35px;
@@ -71,11 +74,54 @@
   top: 29px;
 }
 
-.custom-btn {
+.customBtn {
   display: block;
   margin: 64px auto;
   width: 212px;
   height: 50px;
+}
+
+@media (max-width: 1200px) {
+  .customLine h2:before {
+    width: 16px;
+  }
+}
+@media (max-width: 992px) {
+  /* Section Custom */
+  .custom {
+    margin-top: 30px;
+  }
+
+  .plan {
+    margin-top: 20px;
+  }
+  .planItemTxt {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .customBtn {
+    margin: 50px auto;
+    width: 180px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  /* Tittles for sections */
+  .sectionTittleSubtitle span {
+    font-size: 21px;
+  }
+  .sectionTittleLine h2 {
+    font-size: 39px;
+  }
+  .sectionTittleLine h2:before {
+    width: 195px;
+  }
+
+  .customLine h2:before {
+    width: 16px;
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */

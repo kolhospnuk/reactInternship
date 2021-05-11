@@ -1,0 +1,137 @@
+
+@import '../../../styles/mixins';
+
+/* Section Custom */
+
+.custom {
+  height: 453px;
+  margin-top: 120px;
+}
+
+.customLine h2:before {
+  content: "";
+  width: 65px;
+}
+
+.plan {
+  position: relative;
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 18px;
+
+  &Item {
+    border: black; //change style!!!
+    &Img {
+      &:before {
+        content: '1';
+        @include customNum;
+      }
+
+      img {
+        margin-left: -43px;
+      }
+    }
+
+    &Txt {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 24px;
+      line-height: 33px;
+      color: #000000;
+    }
+  }
+
+  &Num2 {
+    &:before {
+      content: '2';
+      @include customNum;
+      top: 30px;
+    }
+  }
+
+  &Num3 {
+    &:before {
+      content: '3';
+      @include customNum;
+      top: 29px;
+    }
+  }
+
+  &Num4 {
+    &:before {
+      content: '4';
+      @include customNum;
+      top: 29px;
+    }
+  }
+}
+
+.customBtn {
+  display: block;
+  margin: 64px auto;
+  width: 212px;
+  height: 50px;
+}
+
+
+@media (max-width: 1200px) {
+
+  .customLine h2:before {
+    width: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  /* Section Custom */
+
+  .custom {
+    margin-top: 30px;
+  }
+
+  .plan {
+    margin-top: 20px;
+
+    &Item {
+      &Txt {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  .customBtn {
+    margin: 50px auto;
+    width: 180px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  /* Tittles for sections */
+
+  .section {
+    &Tittle {
+      &Subtitle {
+        span {
+          font-size: 21px;
+        }
+      }
+
+      &Line {
+        h2 {
+          font-size: 39px;
+
+          &:before {
+            width: 195px;
+          }
+        }
+      }
+    }
+  }
+
+  .customLine h2:before {
+    width: 16px;
+  }
+}
