@@ -1,31 +1,31 @@
 /* Tittles for sections */
 /* Styles for small flower */
-.small-flower {
+.smallFlower {
   display: inline-block;
   width: 36px;
   height: 33px;
   padding-top: 9px;
 }
-.small-flower-item {
+.smallFlower-item {
   display: inline-block;
   width: 12.5px;
   height: 14.3px;
   border: 1px solid rgba(137, 121, 66, 0.5);
   border-radius: 50% 0;
 }
-.small-flower-item:nth-child(1), .small-flower-item:nth-child(4) {
+.smallFlower-item:nth-child(1), .smallFlower-item:nth-child(4) {
   width: 14.3px;
   height: 12.5px;
   border-radius: 0 50%;
   margin-top: 1px;
 }
-.small-flower-item:nth-child(2) {
+.smallFlower-item:nth-child(2) {
   margin-left: 1px;
 }
-.small-flower-item:nth-child(3) {
+.smallFlower-item:nth-child(3) {
   margin-left: 1px;
 }
-.small-flower-item:nth-child(4) {
+.smallFlower-item:nth-child(4) {
   margin-top: 0;
   margin-left: 2px;
 }

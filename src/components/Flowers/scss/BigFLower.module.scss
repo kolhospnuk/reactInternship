@@ -1,23 +1,23 @@
 
-@import "../../../assets/style/mixins";
+@import "../../../styles/mixins";
 
 /* Styles for big flower */
 
-.big-flower {
+.bigFlower {
   position: absolute;
   width: 382px;
   height: 382px;
   left: 523px;
   top: 420px;
 
-  &-about {
+  &About {
     left: -166px;
     top: 412px;
     overflow: hidden;
     background-position: 0 50%;
   }
 
-  &-item {
-    @include big-flower
+  &Item {
+    @include bigFlower
   }
 }

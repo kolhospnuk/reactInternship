@@ -2,7 +2,7 @@
 
 /*Footer section*/
 
-#footer {
+.footer {
   height: 455px;
   margin-top: 120px;
   background: url('../../../assets/img/footer/footer-bg1.jpg') left top no-repeat,
@@ -15,10 +15,7 @@
     color: #8D8D8D;
     text-align: center;
   }
-}
-
-.footer {
-  &-form {
+  &Form {
     width: 100%;
     height: 174px;
     display: flex;
@@ -27,7 +24,7 @@
     padding: 0 104px 0 107px;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 
-    &-txt {
+    &Txt {
       color: #000000;
 
       h3 {
@@ -72,7 +69,7 @@
     }
   }
 
-  &-line {
+  &Line {
     width: 708px;
     height: 0;
     margin-top: 33px;
@@ -80,19 +77,19 @@
     border: 1px solid #C4C4C4;
   }
 
-  &-menu {
+  &Menu {
     margin: 24px 336px 0 107px;
     display: flex;
     justify-content: space-between;
 
-    &-list {
+    &List {
       margin-left: -2px;
       font-weight: 400;
       font-size: 14px;
       line-height: 21px;
       color: #8D8D8D;
 
-      &-item {
+      &Item {
         margin-top: 16px;
 
         a {
@@ -126,5 +123,123 @@
         }
       }
     }
+  }
+}
+
+
+@media (max-width: 1200px) {
+
+  /* Section Footer */
+
+  .footer {
+    margin-top: 100px;
+    &Form {
+      form {
+        button {
+          width: 80px;
+          font-size: 15px;
+        }
+
+        input {
+          width: 190px;
+          font-size: 15px;
+        }
+      }
+
+      &Txt {
+        h3 {
+          font-size: 17px;
+        }
+
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+
+    &Menu {
+      margin-right: 290px;
+
+      &List {
+        font-size: 12px;
+
+        :first-child {
+          h3 {
+            font-size: 21px;
+            letter-spacing: .16em;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  /* Section Footer */
+
+  .footer {
+    margin-top: 0;
+    &Form {
+      form {
+
+        button {
+          width: 70px;
+          height: 35px;
+          font-size: 14px;
+        }
+
+        input {
+          width: 175px;
+          height: 35px;
+          font-size: 14px;
+        }
+      }
+
+      &Txt {
+        max-width: 235px;
+
+        h3 {
+          font-size: 17px;
+        }
+
+        span {
+          font-size: 15px;
+
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &Menu {
+      margin-right: 107px;
+
+      &-list {
+        font-size: 12px;
+        line-height: 20px;
+
+        :first-child {
+          margin-top: 0;
+          h3 {
+            font-size: 18px;
+            line-height: 33px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background: url('../../../assets/img/footer/footer-bg2.jpg') center center/cover no-repeat;
+  }
+
+  footer {
+    margin-right: 10px;
   }
 }

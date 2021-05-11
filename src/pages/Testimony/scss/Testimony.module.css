@@ -1,3 +1,14 @@
+/* Section Testimony */
+.testimony {
+  height: 489px;
+  margin-top: 120px;
+}
+
+.testimony-line h2:before {
+  content: "";
+  width: 240px;
+}
+
 @media (max-width: 1200px) {
   /* Section Testimony */
   #testimony {
@@ -46,4 +57,4 @@
   }
 }
 
-/*# sourceMappingURL=meadiaTestimony.css.map */
+/*# sourceMappingURL=testimony.css.map */

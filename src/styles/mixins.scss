@@ -1,5 +1,5 @@
 
-@mixin small-flower {
+@mixin smallFlower {
   display: inline-block;
   width: 12.5px;
   height: 14.3px;
@@ -23,7 +23,7 @@
   }
 }
 
-@mixin big-flower {
+@mixin bigFlower {
   display: inline-block;
   width: 159px;
   height: 182px;
@@ -49,7 +49,7 @@
   }
 }
 
-@mixin subtitle-section {
+@mixin subtitleSection {
   font-weight: 700;
   font-size: 36px;
   line-height: 49px;
@@ -58,7 +58,7 @@
   margin-left: 2px;
 }
 
-@mixin tittle-line {
+@mixin tittleLine {
   font-weight: 800;
   font-size: 72px;
   line-height: 98px;
@@ -75,25 +75,25 @@
 
 /* Tittles for sections */
 
-@mixin tittle-section {
-  .section-tittle {
+@mixin tittleSection {
+  .sectionTittle {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    &-subtitle {
+    &Subtitle {
       span {
-        @include subtitle-section;
+        @include subtitleSection;
       }
     }
 
     &-line h2 {
-      @include tittle-line;
+      @include tittleLine;
     }
   }
 }
 
-@mixin custom-num {
+@mixin customNum {
   position: relative;
   left: -35px;
   top: 32px;
