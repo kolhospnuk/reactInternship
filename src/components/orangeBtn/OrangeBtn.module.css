@@ -1,8 +1,9 @@
 .orangeBtn {
   border-radius: 4px;
+  border: none;
   font-size: 16px;
   font-weight: 700;
-  border: none;
+  font-family: Nunito, sans-serif;
   color: #FFFFFF;
   background: #DAA520;
 }
@@ -10,13 +11,18 @@
   opacity: 80%;
   background-color: #DAA520;
 }
-
 /* Header, navigation menuList */
 .headerPromoTxtBtn {
   width: 175px;
   height: 50px;
   margin-top: 16px;
-  font-family: Nunito, sans-serif;
+}
+
+/* Custom section */
+.customBtn {
+  width: 212px;
+  height: 50px;
+  margin-top: 64px;
 }
 
 /*Footer section*/

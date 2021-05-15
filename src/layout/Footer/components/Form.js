@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from '../scss/Form.module.css';
 import OrangeBtn from '../../../components/orangeBtn/OrangeBtn';
+import ModalWindow from '../../../components/modalWindow/ModalWindow';
 
 /* Footer Form */
 const Form = () => {
-  const { footerForm, footerFormTxt } = styles;
+  const [modalWindow, setModalWindow] = useState(false);
   const [email, setEmail] = useState('');
+  const { t } = useTranslation();
+  const {
+    subscribe, monthly, resources, yourEmail, nameBtn, modalWindowName
+  } = t('footer', { returnObjects: true });
+  const { footerForm, footerFormTxt } = styles;
   console.log(email);
 
   const onSubmit = (e) => {
@@ -16,11 +23,11 @@ const Form = () => {
   return (
     <div className={footerForm}>
       <div className={footerFormTxt}>
-        <h3>Subscribe to our newsletter</h3>
+        <h3>{subscribe}</h3>
         <span>
-          A monthly digest of the new WOODIES products, hot offers, and
+          {monthly}
           <br />
-          resources.
+          {resources}
         </span>
       </div>
       <form
@@ -30,13 +37,18 @@ const Form = () => {
         <input
           name="email"
           type="email"
-          placeholder="Your email address"
+          placeholder={yourEmail}
           required
           onChange={(e) => setEmail(e.target.value)}
         />
         <OrangeBtn
-          // setModalWindow={setModalWindow}
-          nameBtn="Subscribe"
+          className="footer"
+          setModalWindow={setModalWindow}
+          nameBtn={nameBtn}
+        />
+        <ModalWindow
+          modalWindowName={modalWindowName}
+          modalWindow={modalWindow}
         />
       </form>
     </div>

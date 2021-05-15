@@ -1,0 +1,24 @@
+/* Section Custom */
+.planItem {
+  counter-increment: num;
+}
+.planItem:before {
+  content: counter(num);
+  position: absolute;
+  padding-top: 40px;
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 96px;
+  vertical-align: middle;
+  color: rgba(249, 189, 189, 0.25);
+}
+.planItemTxt {
+  font-weight: 700;
+  text-align: center;
+  margin-top: 24px;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
+}
+
+/*# sourceMappingURL=PlanListItem.module.css.map */

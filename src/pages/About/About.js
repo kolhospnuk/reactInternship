@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from './scss/About.module.css';
 
 import plates from '../../assets/img/custom/plates.png';
@@ -7,6 +8,11 @@ import SectionTittle from '../../components/sectionTittle/SectionTittle';
 
 const About = () => {
   const tittleId = 0;
+  const { t } = useTranslation();
+  const {
+    woodies, isHome, modern, theAnswer, withShapes,
+    customizedFurn, made, getItEasy, dwelling
+  } = (t('about', { returnObjects: true }));
   const {
     about, customized, customizedImg, dishes, dishesImg, dishesImgBg, dishesTxt
   } = styles;
@@ -24,32 +30,34 @@ const About = () => {
         </div>
         <div className={dishesTxt}>
           <h3>
-            WOODIES is the&nbsp;
+            {woodies}
+            &nbsp;
             <span>
-              home of
+              {isHome}
               <br />
-              modern wooden furniture
+              {modern}
             </span>
           </h3>
           <h4>
-            the answer to your need for furniture
+            {theAnswer}
             <br />
-            with shapes, sizes and colors.
+            {withShapes}
           </h4>
         </div>
       </div>
       <div className={customized}>
         <h3>
-          Customized furniture&nbsp;
+          {customizedFurn}
+          &nbsp;
           <span>
-            made just for you
+            {made}
             <br />
           </span>
         </h3>
         <h4>
-          Get it easy to adjust furniture to the shape and size of your
+          {getItEasy}
           <br />
-          dwelling or business.
+          {dwelling}
         </h4>
         <div className={customizedImg}>
           <img src={spoons} alt="spoons" />

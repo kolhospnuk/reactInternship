@@ -111,7 +111,67 @@ const txtEn = {
     { flowerTittle: 'How to custom', tittle: 'HOW IT WORKS' },
     { flowerTittle: 'What we have', tittle: 'CATEGORIES' },
     { flowerTittle: 'What they say', tittle: 'TESTIMONY' }
-  ]
+  ],
+  about: {
+    woodies: 'WOODIES',
+    isHome: 'is the home of',
+    modern: 'modern wooden furniture',
+    theAnswer: 'the answer to your need for furniture',
+    withShapes: 'with shapes, sizes and colors.',
+    customizedFurn: 'Customized furniture',
+    made: 'made just for you',
+    getItEasy: 'Get it easy to adjust furniture to the shape and size of your',
+    dwelling: 'dwelling or business.'
+  },
+  custom: {
+    modalWindowName: 'Custom',
+    planData: [
+      {
+        alt: 'design',
+        name: 'Choose Design'
+      },
+      {
+        alt: 'area',
+        name: 'Area measuring'
+      },
+      {
+        alt: 'budget',
+        name: 'Budgeting'
+      },
+      {
+        alt: 'product',
+        name: 'Production'
+      }
+    ]
+  },
+  categories: {
+    cartData: [
+      {
+        name: 'Desk',
+      },
+      {
+        name: 'Chair'
+      },
+      {
+        name: 'Kitchenware'
+      },
+      {
+        name: 'Book Shelf'
+      },
+      {
+        name: 'Electronics'
+      }
+    ],
+    shopBtn: 'Shop now'
+  },
+  footer: {
+    subscribe: 'Subscribe to our newsletter',
+    monthly: 'A monthly digest of the new WOODIES products,',
+    resources: 'hot offers, and resources.',
+    yourEmail: 'Your email address',
+    nameBtn: 'Subscribe',
+    modalWindowName: 'Subscribe'
+  }
 };
 
 export default txtEn;

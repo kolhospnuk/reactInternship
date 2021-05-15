@@ -1,42 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from '../scss/PlanList.module.css';
+import PlanListItem from './PlanListItem';
 
-const PlanList = ({ planData }) => {
-  const {
-    plan, planItem, planItemTxt
-  } = styles;
-  const itemList = planData.map((item, i) => {
-    const {
-      src,
-      alt,
-      name
-    } = item;
-
-    return (
-      <li
-        className={planItem}
-        key={name}
-      >
-        <div className={`${planItem}${i + 1}`}>
-          <img src={src} alt={alt} />
-        </div>
-        <div className={planItemTxt}>{name}</div>
-      </li>
-    );
-  });
-
+const PlanList = () => {
   return (
-    <div className={plan}>
+    <div className={styles.plan}>
       <ul>
-        {itemList}
+        <PlanListItem />
       </ul>
     </div>
   );
-};
-
-PlanList.propTypes = {
-  planData: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default PlanList;

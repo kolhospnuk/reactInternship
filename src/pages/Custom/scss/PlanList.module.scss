@@ -1,7 +1,3 @@
-@import '../../../styles/mixins';
-
-/* Section Custom */
-
 
 .plan {
   ul {
@@ -9,94 +5,13 @@
     justify-content: space-around;
     margin-top: 64px;
   }
+}
 
-  &Item {
-    &1 {
-      &:before {
-        content: '1';
-        @include customNum;
-      }
-    }
-    &2 {
-      &:before {
-        content: '2';
-        @include customNum;
-        top: 30px;
-      }
-    }
+@media (max-width: 992px) {
 
-    &3 {
-      &:before {
-        content: '3';
-        @include customNum;
-        top: 29px;
-      }
-    }
+  /* Section Custom */
 
-    &4 {
-      &:before {
-        content: '4';
-        @include customNum;
-        top: 29px;
-      }
-    }
-
-    img {
-      margin-left: -43px;
-    }
-
-    &Txt {
-      font-weight: 700;
-      text-align: center;
-      margin-top: 24px;
-      font-size: 24px;
-      line-height: 33px;
-      color: #000000;
-    }
+  .plan {
+    margin-top: 20px;
   }
 }
-  //}
-
-  //.customBtn {
-  //  display: block;
-  //  margin: 64px auto;
-  //  width: 212px;
-  //  height: 50px;
-  //}
-
-
-  //@media (max-width: 1200px) {
-  //
-  //  .customLine h2:before {
-  //    width: 16px;
-  //  }
-  //}
-
-  //@media (max-width: 992px) {
-  //
-  //  /* Section Custom */
-  //
-  //  .plan {
-  //    margin-top: 20px;
-  //
-  //    &Item {
-  //      &Txt {
-  //        margin-top: 20px;
-  //        font-size: 20px;
-  //        line-height: 25px;
-  //      }
-  //    }
-  //  }
-
-    //.customBtn {
-    //  margin: 50px auto;
-    //  width: 180px;
-    //  height: 44px;
-    //  font-size: 14px;
-    //}
-    //
-    //.customLine h2:before {
-    //  width: 16px;
-    //}
-//  }
-//}
