@@ -1,0 +1,19 @@
+
+.btnTheme {
+  margin: 20px;
+  padding: 5px;
+  border: 2px solid gray;
+  border-radius: 4px;
+  &:hover {
+    opacity: 70%;
+  }
+}
+.light {
+  background-color: #dad7d7;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: #dad6d6;
+}

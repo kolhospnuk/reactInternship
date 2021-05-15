@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"menuList.css"}
+{"version":3,"sourceRoot":"","sources":["MenuList.module.scss"],"names":[],"mappings":"AAAA;AAGE;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;;AAKJ;EAGI;IACE;;EAEA;IACE;;EAGE;IACE;IACA;;;AAQZ;EAGI;IACE;;EAEA;IACE;IACA;;EAEA;IACE;;EAEA;IACE;IACA","file":"MenuList.module.css"}

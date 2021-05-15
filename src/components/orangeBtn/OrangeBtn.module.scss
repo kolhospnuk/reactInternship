@@ -1,0 +1,61 @@
+
+.orangeBtn {
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  color: #FFFFFF;
+  background: #DAA520;
+
+  &:hover {
+    opacity: 80%;
+    background-color: #DAA520;
+  }
+}
+
+
+/* Header, navigation menuList */
+
+.headerPromoTxtBtn {
+  width: 175px;
+  height: 50px;
+  margin-top: 16px;
+  font-family: Nunito, sans-serif;
+}
+
+
+/*Footer section*/
+
+.footerForm form button {
+  width: 120px;
+  height: 40px;
+  background: #DAA520;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+
+@media (max-width: 1200px) {
+
+  /* Section Footer */
+
+  .footerForm form button {
+    width: 80px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  /* Section Footer */
+
+  .footerForm form button {
+    width: 70px;
+    height: 35px;
+    font-size: 14px;
+  }
+}

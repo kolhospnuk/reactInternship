@@ -1,0 +1,26 @@
+.tableMain {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 4px solid #F9BDBD;
+  border-collapse: collapse;
+}
+.tableMain tr {
+  border-bottom: 2px solid black;
+}
+.tableMain th {
+  font-weight: bold;
+  padding: 7px;
+  background: #F9BDBD;
+  text-align: left;
+}
+.tableMain td {
+  padding: 7px;
+}
+.tableMainSecond tr {
+  border: none;
+}
+.tableMainSecond td {
+  padding-left: 0;
+}
+
+/*# sourceMappingURL=TableMain.module.css.map */

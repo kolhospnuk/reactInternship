@@ -1,9 +1,9 @@
 import React from 'react';
-import '../scss/points.css';
+import styles from '../scss/Points.module.css';
 
 const Points = () => (
-  <div className="testimony-points">
-    <ul className="testimony-points-list">
+  <div className={styles.testimonyPoints}>
+    <ul className={styles.testimonyPointsList}>
       <li />
       <li />
       <li />

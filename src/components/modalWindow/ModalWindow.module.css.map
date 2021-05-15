@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["modalWindow.scss"],"names":[],"mappings":"AACA;EACE;EACA;EACA;EACA;EACA;EACA;;AACE;EACE;EACA;;;AAIN;EACE","file":"modalWindow.css"}
+{"version":3,"sourceRoot":"","sources":["ModalWindow.module.scss"],"names":[],"mappings":"AACA;EACE;EACA;EACA;EACA;EACA;EACA;;AACE;EACE;EACA;;;AAIN;EACE","file":"ModalWindow.module.css"}

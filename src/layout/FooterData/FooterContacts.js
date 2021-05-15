@@ -1,11 +1,11 @@
 import React from 'react';
-import './footerData.css';
+import styles from './FooterData.module.css';
 
-const FooterData = () => (
-  <div className="footer">
-    <ul className="data">
-      <li className="data-item">Anton Momot</li>
-      <li className="data-item">
+const FooterContacts = () => (
+  <div className={styles.footer}>
+    <ul className={styles.data}>
+      <li className={styles.dataItem}>Anton Momot</li>
+      <li className={styles.dataItem}>
         <a
           href="https://github.com/kolhospnuk"
           rel="noreferrer"
@@ -14,7 +14,7 @@ const FooterData = () => (
           GitHub
         </a>
       </li>
-      <li className="data-item">
+      <li className={styles.dataItem}>
         <a
           href="https://dribbble.com/shots/11018704-Woodies-Furniture-Online-Shop-Landing-Page"
           rel="noreferrer"
@@ -27,4 +27,4 @@ const FooterData = () => (
   </div>
 );
 
-export default FooterData;
+export default FooterContacts;

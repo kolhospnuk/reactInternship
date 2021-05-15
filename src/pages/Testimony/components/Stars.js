@@ -1,6 +1,6 @@
 import React from 'react';
 import * as shortid from 'shortid';
-import '../scss/stars.css';
+import '../scss/Stars.module.css';
 
 import star from '../../../assets/icons/star.svg';
 

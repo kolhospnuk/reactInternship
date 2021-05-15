@@ -1,0 +1,34 @@
+.table {
+  &Main {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 4px solid #F9BDBD;
+    border-collapse: collapse;
+
+    tr {
+      border-bottom: 2px solid black;
+    }
+
+    th {
+      font-weight: bold;
+      padding: 7px;
+      background: #F9BDBD;
+      text-align: left;
+    }
+
+    td {
+      padding: 7px;
+    }
+
+    &Second {
+
+      tr {
+        border: none;
+      }
+
+      td {
+        padding-left: 0;
+      }
+    }
+  }
+}

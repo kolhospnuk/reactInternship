@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import './scss/custom.css';
-import './scss/mediaCustom.css';
+import styles from './scss/Custom.module.css';
 
 import design from '../../assets/icons/design.svg';
 import product from '../../assets/icons/product.svg';
 import budget from '../../assets/icons/budget.svg';
 import area from '../../assets/icons/area.svg';
-import SmallFlower from '../../components/Flowers/SmallFlower';
 import ModalWindow from '../../components/modalWindow/ModalWindow';
+import SectionTittle from '../../components/sectionTittle/SectionTittle';
+import OrangeBtn from '../../components/orangeBtn/OrangeBtn';
+import PlanList from './components/PlanList';
 
-const Custom = ({ tittleData }) => {
+const Custom = () => {
+  const tittleId = 1;
+  const {
+    custom
+  } = styles;
+  // PlanNum ???
   const modalWindowName = 'Custom';
   const planData = [
     {
@@ -41,80 +46,25 @@ const Custom = ({ tittleData }) => {
 
   const [modalWindow, setModalWindow] = useState(false);
 
-  const planItem = planData.map((item) => {
-    const {
-      clazz,
-      src,
-      alt,
-      name
-    } = item;
-
-    return (
-      <div
-        className="plan-item"
-        key={name}
-      >
-        <div className={`plan-item-img ${clazz}`}>
-          <img src={src} alt={alt} />
-        </div>
-        <div className="plan-item-txt">{name}</div>
-      </div>
-    );
-  });
-
-  const elem = tittleData.map((item) => {
-    const {
-      id,
-      flowerTittle,
-      tittle,
-      classSmallFlower
-    } = item;
-
-    return (
-      id === 'custom' ? (
-        <div
-          id="custom"
-          key={id}
-        >
-          <div className="section-tittle">
-            <div className="section-tittle-subtitle">
-              <SmallFlower
-                flowerTittle={flowerTittle}
-                classSmallFlower={classSmallFlower}
-              />
-            </div>
-            <div className="section-tittle-line custom-line">
-              <h2>{tittle}</h2>
-            </div>
-          </div>
-          <div className="plan">
-            {planItem}
-          </div>
-          <button
-            type="button"
-            className="custom-btn orange-btn"
-            onClick={() => setModalWindow((modal) => !modal)}
-          >
-            Get Personalized Now
-          </button>
-          <ModalWindow
-            modalWindowName={modalWindowName}
-            modalWindow={modalWindow}
-          />
-        </div>
-      ) : null
-    );
-  });
-
   return (
-    <>
-      {elem}
-    </>
+    <div
+      className={custom}
+      key={tittleId}
+    >
+      <SectionTittle
+        tittleId={tittleId}
+      />
+      <PlanList planData={planData} />
+      <OrangeBtn
+        setModalWindow={setModalWindow}
+        nameBtn="Get Personalized Now"
+      />
+      <ModalWindow
+        modalWindowName={modalWindowName}
+        modalWindow={modalWindow}
+      />
+    </div>
   );
-};
-
-Custom.propTypes = {
-  tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default Custom;

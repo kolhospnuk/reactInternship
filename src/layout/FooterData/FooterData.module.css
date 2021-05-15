@@ -9,6 +9,9 @@
   border-right: #DAA520;
   text-align: center;
 }
+.footer .dataItem {
+  border: black;
+}
 .footer li {
   margin-top: 15px;
 }
@@ -19,4 +22,4 @@
   color: #DAA520;
 }
 
-/*# sourceMappingURL=footerData.css.map */
+/*# sourceMappingURL=FooterData.module.css.map */

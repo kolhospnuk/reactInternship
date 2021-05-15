@@ -1,3 +1,14 @@
+.categoriesList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
 
+@media (max-width: 992px) {
+  /* Section Categories */
+  .categoriesList {
+    margin-top: 20px;
+  }
+}
 
-/*# sourceMappingURL=list.css.map */
+/*# sourceMappingURL=List.module.css.map */

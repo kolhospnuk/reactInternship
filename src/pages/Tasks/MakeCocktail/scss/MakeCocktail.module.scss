@@ -1,0 +1,50 @@
+
+.cocktail {
+  margin-top: 30px;
+  min-height: 150px;
+  padding: 20px 30px;
+  background-color: #F9BDBD;
+  border-top: black solid 3px;
+  &Header {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: #403f3f;
+  }
+
+  li {
+    h3 {
+      font-weight: 600;
+      margin-top: 15px;
+      text-align: center;
+    }
+  }
+  //&Item {
+  //  list-style: none;
+  //  margin-top: 20px;
+  //  text-align: center;
+  //  font-weight: 400;
+  //  font-style: italic;
+  //  font-size: 22px;
+  //  &:hover {
+  //    cursor: pointer;
+  //  }
+  //}
+  //&Tittle {
+  //  font-weight: 800;
+  //}
+
+  &Img {
+    img {
+      display: inline-block;
+      width: 20%;
+      height: 20%;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+  }
+}
+
+.active {
+  color: #c10f0f;
+}

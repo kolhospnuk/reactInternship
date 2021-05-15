@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../../styles/mixins.scss","small.scss"],"names":[],"mappings":"AA2EA;ACxEA;AAEA;EACE;EACA;EACA;EACA;;AAEA;EDTA;EACA;EACA;EACA;EACA;;AACA;EACE;EACA;EACA;EACA;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;EACA","file":"small.css"}
+{"version":3,"sourceRoot":"","sources":["SmallFlower.module.scss","../../../styles/mixins.scss"],"names":[],"mappings":"AAGA;AAEA;EACE;EACA;EACA;EACA;;AAEA;ECTA;EACA;EACA;EACA;EACA;;AACA;EACE;EACA;EACA;EACA;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;EACA","file":"SmallFlower.module.css"}

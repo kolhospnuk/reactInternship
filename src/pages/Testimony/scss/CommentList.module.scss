@@ -1,16 +1,12 @@
 
-.testimony-list {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 47px;
-
-  &-comment {
+.testimonyList {
+  &Comment {
     width: 42.5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    &-txt {
+    &Txt {
       height: 88%;
       padding-left: 17px;
       border-radius: 0 80px;
@@ -24,7 +20,7 @@
         color: #3E3F43;
       }
 
-      &-person {
+      &Person {
         margin-top: 16px;
 
         img {

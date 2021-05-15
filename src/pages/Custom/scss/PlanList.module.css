@@ -1,0 +1,62 @@
+/* Section Custom */
+.plan ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 64px;
+}
+.planItem1:before {
+  content: "1";
+  position: relative;
+  left: -35px;
+  top: 32px;
+  font-weight: 600;
+  font-size: 96px;
+  vertical-align: middle;
+  color: rgba(249, 189, 189, 0.25);
+}
+.planItem2:before {
+  content: "2";
+  position: relative;
+  left: -35px;
+  top: 32px;
+  font-weight: 600;
+  font-size: 96px;
+  vertical-align: middle;
+  color: rgba(249, 189, 189, 0.25);
+  top: 30px;
+}
+.planItem3:before {
+  content: "3";
+  position: relative;
+  left: -35px;
+  top: 32px;
+  font-weight: 600;
+  font-size: 96px;
+  vertical-align: middle;
+  color: rgba(249, 189, 189, 0.25);
+  top: 29px;
+}
+.planItem4:before {
+  content: "4";
+  position: relative;
+  left: -35px;
+  top: 32px;
+  font-weight: 600;
+  font-size: 96px;
+  vertical-align: middle;
+  color: rgba(249, 189, 189, 0.25);
+  top: 29px;
+}
+.planItem img {
+  margin-left: -43px;
+}
+.planItemTxt {
+  font-weight: 700;
+  text-align: center;
+  margin-top: 24px;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
+}
+
+/*# sourceMappingURL=PlanList.module.css.map */

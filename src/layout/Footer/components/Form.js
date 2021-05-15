@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import '../scss/form.css';
+import styles from '../scss/Form.module.css';
+import OrangeBtn from '../../../components/orangeBtn/OrangeBtn';
 
 /* Footer Form */
 const Form = () => {
+  const { footerForm, footerFormTxt } = styles;
   const [email, setEmail] = useState('');
   console.log(email);
 
@@ -12,8 +14,8 @@ const Form = () => {
   };
 
   return (
-    <div className="footer-form">
-      <div className="footer-form-txt">
+    <div className={footerForm}>
+      <div className={footerFormTxt}>
         <h3>Subscribe to our newsletter</h3>
         <span>
           A monthly digest of the new WOODIES products, hot offers, and
@@ -32,12 +34,10 @@ const Form = () => {
           required
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button
-          className="footer-form-btn orange-btn"
-          type="submit"
-        >
-          Subscribe
-        </button>
+        <OrangeBtn
+          // setModalWindow={setModalWindow}
+          nameBtn="Subscribe"
+        />
       </form>
     </div>
   );

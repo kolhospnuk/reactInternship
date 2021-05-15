@@ -1,0 +1,61 @@
+
+.sectionTittle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &Subtitle {
+    span {
+      font-weight: 700;
+      font-size: 36px;
+      color: #3E3F43;
+      margin-left: 9px;
+    }
+    img {
+      margin-top: -20px;
+    }
+  }
+
+  &Line h2 {
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 98px;
+    color: rgba(34, 34, 34, 0.1);
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 46px;
+      vertical-align: super;
+      border: 1px solid #000000;
+      background-color: black;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+  /* Tittle for section */
+
+  .sectionTittle {
+    &Subtitle {
+      span {
+        font-size: 21px;
+      }
+    }
+
+    &Line {
+      h2 {
+        font-size: 39px;
+
+        &:before {
+          width: 195px;
+        }
+      }
+    }
+  }
+
+  .categoriesLine h2:before {
+    width: 110px;
+  }
+}

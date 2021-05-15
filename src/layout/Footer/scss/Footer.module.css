@@ -11,51 +11,6 @@
   color: #8D8D8D;
   text-align: center;
 }
-.footerForm {
-  width: 100%;
-  height: 174px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 104px 0 107px;
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-}
-.footerFormTxt {
-  color: #000000;
-}
-.footerFormTxt h3 {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-}
-.footerFormTxt span {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-}
-.footerForm form input {
-  float: left;
-  padding-left: 16px;
-  width: 328px;
-  height: 40px;
-  border: 1px solid #DAA520;
-  border-radius: 4px 0 0 4px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #AFAFAF;
-}
-.footerForm form button {
-  width: 120px;
-  height: 40px;
-  background: #DAA520;
-  border-radius: 0 4px 4px 0;
-  border: none;
-  font-weight: 400;
-  font-size: 16px;
-  text-align: center;
-  color: #FFFFFF;
-}
 .footerLine {
   width: 708px;
   height: 0;
@@ -63,75 +18,11 @@
   margin-left: 107px;
   border: 1px solid #C4C4C4;
 }
-.footerMenu {
-  margin: 24px 336px 0 107px;
-  display: flex;
-  justify-content: space-between;
-}
-.footerMenuList {
-  margin-left: -2px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  color: #8D8D8D;
-}
-.footerMenuListItem {
-  margin-top: 16px;
-}
-.footerMenuListItem a {
-  color: #8D8D8D;
-}
-.footerMenuListItem a:hover {
-  color: #000000;
-}
-.footerMenuListItem:first-child {
-  margin-top: 9px;
-  font-weight: 600;
-  font-size: 18px;
-  color: #333333;
-}
-.footerMenuList:first-child {
-  margin-top: -9px;
-  line-height: 19px;
-}
-.footerMenuList:first-child h3 {
-  display: inline;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 30px;
-  letter-spacing: 0.25em;
-  color: #3E3F43;
-  padding-left: 3px;
-}
 
 @media (max-width: 1200px) {
   /* Section Footer */
   .footer {
     margin-top: 100px;
-  }
-  .footerForm form button {
-    width: 80px;
-    font-size: 15px;
-  }
-  .footerForm form input {
-    width: 190px;
-    font-size: 15px;
-  }
-  .footerFormTxt h3 {
-    font-size: 17px;
-  }
-  .footerFormTxt span {
-    font-size: 15px;
-  }
-  .footerMenu {
-    margin-right: 290px;
-  }
-  .footerMenuList {
-    font-size: 12px;
-  }
-  .footerMenuList :first-child h3 {
-    font-size: 21px;
-    letter-spacing: 0.16em;
   }
 
   footer {
@@ -143,42 +34,6 @@
   .footer {
     margin-top: 0;
   }
-  .footerForm form button {
-    width: 70px;
-    height: 35px;
-    font-size: 14px;
-  }
-  .footerForm form input {
-    width: 175px;
-    height: 35px;
-    font-size: 14px;
-  }
-  .footerFormTxt {
-    max-width: 235px;
-  }
-  .footerFormTxt h3 {
-    font-size: 17px;
-  }
-  .footerFormTxt span {
-    font-size: 15px;
-  }
-  .footerFormTxt span br {
-    display: none;
-  }
-  .footerMenu {
-    margin-right: 107px;
-  }
-  .footerMenu-list {
-    font-size: 12px;
-    line-height: 20px;
-  }
-  .footerMenu-list :first-child {
-    margin-top: 0;
-  }
-  .footerMenu-list :first-child h3 {
-    font-size: 18px;
-    line-height: 33px;
-  }
 
   .footer {
     background: url("../../../assets/img/footer/footer-bg2.jpg") center center/cover no-repeat;
@@ -189,4 +44,4 @@
   }
 }
 
-/*# sourceMappingURL=footer.css.map */
+/*# sourceMappingURL=Footer.module.css.map */

@@ -1,10 +1,13 @@
 import React from 'react';
-import '../scss/commentList.css';
+import styles from '../scss/CommentList.module.css';
 import person from '../../../assets/img/testimony/person.png';
 import Stars from './Stars';
 import Slider from './Slider';
 
 const CommentList = () => {
+  const {
+    testimonyListComment, testimonyListCommentTxt, testimonyListCommentTxtPerson
+  } = styles;
   const personData = [
     {
       img: person,
@@ -33,9 +36,9 @@ const CommentList = () => {
   } = personData[0];
 
   return (
-    <div className="testimony-list-comment">
-      <div className="testimony-list-comment-txt">
-        <div className="testimony-list-comment-txt-stars">
+    <div className={testimonyListComment}>
+      <div className={testimonyListCommentTxt}>
+        <div className={testimonyListCommentTxtPerson}>
           <Stars />
         </div>
         <span>
@@ -47,7 +50,7 @@ const CommentList = () => {
           <br />
           newsletter. Litterally everything is great. Thank you!
         </span>
-        <div className="testimony-list-comment-txt-person">
+        <div className={testimonyListCommentTxtPerson}>
           <img src={img} alt={alt} />
           <span>
             {firstName}

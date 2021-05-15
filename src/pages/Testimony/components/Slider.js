@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../scss/slider.css';
+import '../scss/Slider.module.css';
 
 const Slider = ({ sliderData }) => {
   const element = sliderData.map((item) => {

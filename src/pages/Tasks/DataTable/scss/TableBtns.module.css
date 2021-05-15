@@ -1,0 +1,19 @@
+.tableBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.tableBtnItem {
+  width: 15%;
+  margin-right: 8px;
+  background: #F9BDBD;
+  font-family: Nunito, sans-serif;
+  font-weight: 600;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+.tableBtnItem:hover {
+  opacity: 70%;
+}
+
+/*# sourceMappingURL=TableBtns.module.css.map */

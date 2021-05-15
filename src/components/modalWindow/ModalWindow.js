@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './modalWindow.css';
+import styles from './ModalWindow.module.css';
 
 const ModalWindow = ({ modalWindowName, modalWindow }) => {
-  let clazz = 'modal';
+  let clazz = styles.modal;
 
   if (modalWindow) {
     clazz = `${clazz} open`;

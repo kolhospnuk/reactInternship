@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["commentList.scss"],"names":[],"mappings":"AACA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;;AAEA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA","file":"commentList.css"}
+{"version":3,"sourceRoot":"","sources":["CommentList.module.scss"],"names":[],"mappings":"AAEE;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;;AAEA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA","file":"CommentList.module.css"}

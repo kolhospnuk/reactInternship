@@ -1,17 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import './scss/testimony.css';
-import './scss/meadiaTestimony.css';
+import styles from './scss/Testimony.module.css';
 
 import room from '../../assets/img/testimony/room.png';
 import kitchen from '../../assets/img/testimony/kitchen.png';
 
-import SmallFlower from '../../components/Flowers/SmallFlower';
 import ImgList from './components/ImgList';
 import CommentList from './components/CommentList';
 import Points from './components/Points';
+import SectionTittle from '../../components/sectionTittle/SectionTittle';
 
-const Testimony = ({ tittleData }) => {
+const Testimony = () => {
+  const tittleId = 3;
+  const { testimonyList, testimony } = styles;
   const imgListLinks = [
     {
       img: room,
@@ -23,50 +23,19 @@ const Testimony = ({ tittleData }) => {
     }
   ];
 
-  const elem = tittleData.map((item) => {
-    const {
-      id,
-      flowerTittle,
-      tittle,
-      classSmallFlower
-    } = item;
-
-    return (
-      id === 'Testimony' ? (
-        <section
-          id="testimony"
-          key={id}
-        >
-          <div className="section-tittle">
-            <div className="section-tittle-subtitle">
-              <SmallFlower
-                flowerTittle={flowerTittle}
-                classSmallFlower={classSmallFlower}
-              />
-            </div>
-            <div className="section-tittle-line testimony-line">
-              <h2>{tittle}</h2>
-            </div>
-          </div>
-          <div className="testimony-list">
-            <ImgList imgListLinks={imgListLinks} />
-            <CommentList />
-          </div>
-          <Points />
-        </section>
-      ) : null
-    );
-  });
-
   return (
-    <>
-      {elem}
-    </>
+    <section
+      className={testimony}
+      key={tittleId}
+    >
+      <SectionTittle tittleId={tittleId} />
+      <div className={testimonyList}>
+        <ImgList imgListLinks={imgListLinks} />
+        <CommentList />
+      </div>
+      <Points />
+    </section>
   );
-};
-
-Testimony.propTypes = {
-  tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default Testimony;

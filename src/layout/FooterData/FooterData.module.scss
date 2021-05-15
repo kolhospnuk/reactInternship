@@ -9,6 +9,10 @@
   .data {
     border-right: #DAA520;
     text-align: center;
+
+    &Item {
+      border: black; // change STYLE!!!
+    }
   }
 
   li {

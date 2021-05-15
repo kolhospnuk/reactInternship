@@ -73,25 +73,25 @@
   }
 }
 
-/* Tittles for sections */
-
-@mixin tittleSection {
-  .sectionTittle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &Subtitle {
-      span {
-        @include subtitleSection;
-      }
-    }
-
-    &-line h2 {
-      @include tittleLine;
-    }
-  }
-}
+///* Tittles for sections */
+//
+//@mixin tittleSection {
+//  .sectionTittle {
+//    display: flex;
+//    justify-content: space-between;
+//    align-items: center;
+//
+//    &Subtitle {
+//      span {
+//        @include subtitleSection;
+//      }
+//    }
+//
+//    &Line h2 {
+//      @include tittleLine;
+//    }
+//  }
+//}
 
 @mixin customNum {
   position: relative;

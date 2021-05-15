@@ -1,47 +1,46 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import '../scss/promo.css';
+import { useTranslation } from 'react-i18next';
+import styles from '../scss/Promo.module.css';
 
-import BigFlower from '../../../components/Flowers/BigFlower';
 import table from '../../../assets/img/header/table.png';
 import ModalWindow from '../../../components/modalWindow/ModalWindow';
+import OrangeBtn from '../../../components/orangeBtn/OrangeBtn';
 
-const Promo = ({ classBigFlower }) => {
-  const modalWindowName = 'Promo';
+const Promo = () => {
   const [modalWindow, setModalWindow] = useState(false);
+  const { t } = useTranslation();
+  const {
+    areYou, wooden, forYour, thisIs, right, nameBtn, modalWindowName
+  } = (t('header', { returnObjects: true }));
+  const {
+    headerPromo, headerPromoTxt, headerPromoTxtFurniture,
+    headerPromoTxtPlace, headerPromoImg
+  } = styles;
 
   return (
-    <div className="header-promo">
-      <div className="header-promo-txt">
-        <h3 className="header-promo-txt-furniture">
-          Are you looking for
-          <br />
+    <div className={headerPromo}>
+      <div className={headerPromoTxt}>
+        <h3 className={headerPromoTxtFurniture}>
+          {areYou}
+          &nbsp;
           <span>
-            wooden furniture
+            {wooden}
           </span>
-          <br />
-          for your place?
+          &nbsp;
+          {forYour}
         </h3>
-        <h2 className="header-promo-txt-place">
-          This is the
+        <h2 className={headerPromoTxtPlace}>
+          {thisIs}
           <br />
-          Right Place
+          {right}
         </h2>
-        <button
-          type="button"
-          className="header-promo-txt-btn orange-btn"
-          onClick={() => setModalWindow((modal) => !modal)}
-        >
-          Explore Furniture
-        </button>
-      </div>
-      <div className="header-promo-img">
-        <BigFlower
-          classBigFlower={classBigFlower}
+        <OrangeBtn
+          setModalWindow={setModalWindow}
+          nameBtn={nameBtn}
         />
-        <div className="header-promo-img-table">
-          <img src={table} alt={table} />
-        </div>
+      </div>
+      <div className={headerPromoImg}>
+        <img src={table} alt={table} />
       </div>
       <ModalWindow
         modalWindowName={modalWindowName}
@@ -49,10 +48,6 @@ const Promo = ({ classBigFlower }) => {
       />
     </div>
   );
-};
-
-Promo.propTypes = {
-  classBigFlower: PropTypes.string.isRequired
 };
 
 export default Promo;

@@ -1,21 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './scss/small.css';
+import './scss/SmallFlower.module.css';
 
-const SmallFlower = ({ classSmallFlower, flowerTittle }) => (
+const SmallFlower = ({ flowerTittle }) => (
   <>
-    <div className="small-flower">
-      <div className={classSmallFlower} />
-      <div className={classSmallFlower} />
-      <div className={classSmallFlower} />
-      <div className={classSmallFlower} />
+    <div className="smallFlower">
+      <div className="smallFlowerItem" />
+      <div className="smallFlowerItem" />
+      <div className="smallFlowerItem" />
+      <div className="smallFlowerItem" />
     </div>
     <span>{flowerTittle}</span>
   </>
 );
 
 SmallFlower.propTypes = {
-  classSmallFlower: PropTypes.string.isRequired,
   flowerTittle: PropTypes.string.isRequired
 };
 

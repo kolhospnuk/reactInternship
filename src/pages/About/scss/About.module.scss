@@ -1,26 +1,22 @@
 
-@import '../../../assets/style/mixins';
-
 /* Section About */
 
-#about {
+.about {
   position: relative;
   height: 950px;
   margin-top: 120px;
 }
-
-@include tittle-section;
 
 .dishes {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
 
-  &-img {
+  &Img {
     position: relative;
     width: 37.9%;
 
-    &-bg {
+    &Bg {
       position: absolute;
       width: 76.9%;
       height: 100%;
@@ -35,9 +31,9 @@
     }
   }
 
-  &-txt {
+  &Txt {
     margin-top: 104px;
-    padding-right: 12px;
+    padding-right: 13px;
     font-weight: 800;
     font-size: 36px;
     line-height: 49px;
@@ -45,6 +41,9 @@
 
     h3 {
       font-weight: 600;
+      span {
+        font-weight: 800;
+      }
     }
 
     h4 {
@@ -79,7 +78,7 @@
     line-height: 33px;
   }
 
-  &-img {
+  &Img {
     position: absolute;
     width: 29.5%;
     right: -100px;
@@ -96,7 +95,7 @@
 
   /* Section About */
 
-  #about {
+  .about {
     margin-top: 100px;
   }
 
@@ -104,32 +103,11 @@
     margin-top: 35px;
   }
 
-  .customized-img {
+  .customizedImg {
     right: -21px;
   }
 
-  /* Big flower */
-
-  .big-flower {
-    left: 392px;
-    top: 349px;
-
-    &-item {
-      width: 126px;
-      height: 146px;
-
-      &:nth-child(1), &:nth-child(4) {
-        width: 146px;
-        height: 126px;
-      }
-    }
-
-    &-about {
-      left: -130px;
-    }
-  }
-
-  .section-tittle-line h2:before {
+  .sectionTittleLine h2:before {
     width: 265px;
   }
 }
@@ -138,7 +116,7 @@
 
   /* Section About */
 
-  #about {
+  .about {
     margin-top: 40px;
     height: 750px;
   }
@@ -146,7 +124,7 @@
   .dishes {
     margin-top: 15px;
 
-    &-txt {
+    &Txt {
       margin-top: 70px;
       padding-right: 0;
 
@@ -181,44 +159,23 @@
       line-height: 27px;
     }
 
-    &-img {
+    &Img {
       top: -87px;
       right: -11px;
-    }
-  }
-
-  /* Big flower */
-
-  .big-flower {
-    left: 325px;
-    top: 311px;
-
-    &-item {
-      width: 111px;
-      height: 134px;
-
-      &:nth-child(1), &:nth-child(4) {
-        width: 130px;
-        height: 109px;
-      }
-    }
-
-    &-about {
-      left: -130px;
     }
   }
 
   /* Tittles for sections */
 
   .section {
-    &-tittle {
-      &-subtitle {
+    &Tittle {
+      &Subtitle {
         span {
           font-size: 21px;
         }
       }
 
-      &-line {
+      &Line {
         h2 {
           font-size: 39px;
 

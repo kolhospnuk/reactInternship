@@ -1,0 +1,61 @@
+/* Right arrow(section name - Testimony) */
+.arrowLeft div {
+  position: relative;
+  display: block;
+  top: 8px;
+  width: 32px;
+  left: 0;
+  border: 1px solid #C4C4C4;
+  background-color: #C4C4C4;
+}
+.arrowLeft ::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  top: -3px;
+  right: 26px;
+  transform: rotate(-45deg);
+  border: 1px solid #C4C4C4;
+  background-color: #C4C4C4;
+}
+.arrowLeft ::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  top: 1px;
+  right: 25px;
+  transform: rotate(45deg);
+  border: 1px solid #C4C4C4;
+  background-color: #C4C4C4;
+}
+.arrowRight div {
+  position: relative;
+  display: block;
+  top: 8px;
+  width: 32px;
+  left: 100px;
+  border: 1px solid #3E3F43;
+  background-color: #3E3F43;
+}
+.arrowRight ::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  top: -3px;
+  right: -3px;
+  transform: rotate(45deg);
+  border: 1px solid #3E3F43;
+  background-color: #3E3F43;
+}
+.arrowRight ::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  top: 1px;
+  right: -3px;
+  transform: rotate(-45deg);
+  border: 1px solid #3E3F43;
+  background-color: #3E3F43;
+}
+
+/*# sourceMappingURL=%20ArrowStyle.module.css.map */

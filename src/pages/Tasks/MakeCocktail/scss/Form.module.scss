@@ -1,0 +1,31 @@
+
+.cocktail {
+  &Form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    &Input {
+      border-radius: 3px;
+      border: none;
+      background-color: #dcd7d7;
+      //&Active {
+      //  border: #c10f0f solid 3px;
+      //}
+      &:focus {
+        border: #003b40 solid 1px;
+      }
+    }
+    &Btn {
+      padding: 5px 15px;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      border-radius: 3px;
+      border: none;
+      background-color: #003b40;
+      &:hover {
+        opacity: 80%;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import * as shortid from 'shortid';
 import PropTypes from 'prop-types';
+import styles from '../scss/List.module.css';
 
 import ListItem from './ListItem';
 
@@ -14,7 +15,7 @@ const List = ({ categoriesData }) => {
   ));
 
   return (
-    <div className="categories-list">
+    <div className={styles.categoriesList}>
       {elements}
     </div>
   );

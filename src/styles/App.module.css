@@ -21,43 +21,8 @@ body {
   margin: 0 auto;
 }
 
-/* Footer */
-footer {
-  margin: 30px 0 60px 0;
-  float: right;
-  font-weight: 600;
-  font-size: 28px;
-  color: #313235;
-}
-footer .data {
-  border-right: #DAA520;
-  text-align: center;
-}
-footer li {
-  margin-top: 15px;
-}
-footer a {
-  color: #8D8D8D;
-}
-footer a:hover {
-  color: #DAA520;
-}
-
-/* All orange Flowers and buttons */
-.orange {
-  border-color: #DAA520;
-}
-.orange-btn {
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: 700;
-  border: none;
-  color: #FFFFFF;
-  background: #DAA520;
-}
-.orange-btn:hover {
-  opacity: 80%;
-  background-color: #DAA520;
+.light {
+  background-color: white;
 }
 
 .dark {
@@ -65,10 +30,6 @@ footer a:hover {
 }
 
 @media (max-width: 1200px) {
-  .container-global {
-    max-width: none;
-  }
-
   .container {
     max-width: 892px;
   }
@@ -80,4 +41,4 @@ footer a:hover {
   }
 }
 
-/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=App.module.css.map */

@@ -1,0 +1,27 @@
+.cocktailForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.cocktailFormInput {
+  border-radius: 3px;
+  border: none;
+  background-color: #dcd7d7;
+}
+.cocktailFormInput:focus {
+  border: #003b40 solid 1px;
+}
+.cocktailFormBtn {
+  padding: 5px 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 3px;
+  border: none;
+  background-color: #003b40;
+}
+.cocktailFormBtn:hover {
+  opacity: 80%;
+}
+
+/*# sourceMappingURL=Form.module.css.map */

@@ -1,1 +1,117 @@
+const txtUa = {
+  btnsLng: [
+    { lng: 'англ' },
+    { lng: 'укр' },
+  ],
+  woodies: 'ДЕРЕВИНА',
+  myProject: 'Мій проект - це сімейний бізнес з виготовлення дерев’яних меблів',
+  task: {
+    eventsArr: [
+      {
+        date: 'Дата',
+        events: {
+          name: 'Подія',
+          firstFact: 'Факт'
+        }
+      },
+      {
+        date: 1993,
+        events: {
+          name: 'Народився в Кропивницькому',
+          firstFact: 'Ім`я - Антон',
+          secondFact: 'Прізвище - Момот'
+        }
+      },
+      {
+        date: 2000,
+        events: {
+          name: 'Навчання в школі №26',
+          firstFact: 'Навчання в молодшій школі',
+          secondFact: 'Навчання в школі'
+        }
+      },
+      {
+        date: 2015,
+        events: {
+          name: 'Вступ на військову кафедру',
+          firstFact: 'Дуже тяжко',
+          secondFact: 'Я сильний чоловік'
+        }
+      },
+      {
+        date: 2010,
+        events: {
+          name: 'Вступ до Льотної академії',
+          firstFact: 'Факультет пошуку та рятування',
+          secondFact: 'Студентська команда по футболу'
+        }
+      },
+      {
+        date: 2017,
+        events: {
+          name: 'Одружився',
+          firstFact: 'Жінку звати Анна',
+          secondFact: 'Я щасливий'
+        }
+      }
+    ],
+    btnArr: [
+      {
+        name: 'Додаты пункт'
+      },
+      {
+        name: 'Видалити пункт'
+      },
+      {
+        name: 'Сортування'
+      },
+      {
+        name: 'Метод сортування'
+      }
+    ],
+    EnterOne: 'Введіть інгрідієнт алкогольного коктейлю (тільки латинськими літерами, наприклад: martini)',
+    EnterCocktail: 'Введіть коктейль...',
+    Enter: 'Ввести',
+    Ctrl: 'Натисніть Ctrl+q, якщо хочете виділити перший коктейль'
+  },
+  header: {
+    navListTittles: [
+      {
+        name: 'Головна',
+        link: '#Header'
+      },
+      {
+        name: 'Про нас',
+        link: '#About'
+      },
+      {
+        name: 'Як ми працюємо',
+        link: '#Custom'
+      },
+      {
+        name: 'Категорії',
+        link: '#Categories'
+      },
+      {
+        name: 'Коментарі',
+        link: '#Testimony'
+      }
+    ],
+    signUp: 'Зараєструватись',
+    areYou: 'Шукаєте',
+    wooden: 'дерев’яні меблі',
+    forYour: 'для своєї оселі?',
+    thisIs: 'Тоді вам',
+    right: 'до нас',
+    nameBtn: 'Наші меблі',
+    modalWindowName: 'Promo'
+  },
+  sectionsTittles: [
+    { flowerTittle: 'Хто ми', tittle: 'ПРО НАС' },
+    { flowerTittle: 'Як зробити замовлення', tittle: 'ЯК ЦЕ ПРАЦЮЄ' },
+    { flowerTittle: 'Наш асортимент', tittle: 'КАТЕГОРІЇ' },
+    { flowerTittle: 'Що про нас говорять', tittle: 'ВІДГУКИ' }
+  ]
+};
 
+export default txtUa;

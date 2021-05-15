@@ -3,58 +3,52 @@
   height: 489px;
   margin-top: 120px;
 }
+.testimonyList {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 47px;
+}
 
-.testimony-line h2:before {
+.testimonyLine h2:before {
   content: "";
   width: 240px;
 }
 
 @media (max-width: 1200px) {
   /* Section Testimony */
-  #testimony {
+  .testimony {
     margin-top: 100px;
   }
 
-  .testimony-list-comment-txt-stars {
+  .testimonyListCommentTxtStars {
     margin-top: 28px;
   }
 
-  .testimony-line h2:before {
+  .testimonyLine h2:before {
     width: 180px;
   }
 }
 @media (max-width: 992px) {
   /* Section Testimony */
-  #testimony {
+  .testimony {
     margin-top: 0;
   }
 
-  .testimony-list-comment-txt-stars {
+  .testimonyListCommentTxtStars {
     margin-top: 10px;
     padding-bottom: 5px;
   }
-  .testimony-list-comment-txt-person {
+  .testimonyListCommentTxtPerson {
     margin-top: 0;
   }
-  .testimony-list-comment span {
+  .testimonyListComment span {
     font-size: 12px;
     line-height: 15px;
   }
 
-  /* Tittles for sections */
-  .section-tittle-subtitle span {
-    font-size: 21px;
-  }
-  .section-tittle-line h2 {
-    font-size: 39px;
-  }
-  .section-tittle-line h2:before {
-    width: 195px;
-  }
-
-  .testimony-line h2:before {
+  .testimonyLine h2:before {
     width: 140px;
   }
 }
 
-/*# sourceMappingURL=testimony.css.map */
+/*# sourceMappingURL=Testimony.module.css.map */

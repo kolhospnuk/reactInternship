@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import '../scss/menuList.css';
+import styles from '../scss/MenuList.module.css';
 import MenuListItem from './MenuListItem';
 
 /* Footer component */
-const MenuList = ({ tittleData }) => {
+const MenuList = () => {
+  const { footerMenuList, footerMenu } = styles;
   const listItemArr = [
     ['WOODIES', '(012) 8967453', 'woodies@gmail.com', 'Jakarta, Indonesia'],
     ['Product', 'Furnitures', 'Packages', 'Services'],
@@ -16,25 +16,20 @@ const MenuList = ({ tittleData }) => {
   const elements = listItemArr.map((item, i) => (
     <ul
       key={item}
-      className="footer-menu-list"
+      className={footerMenuList}
     >
       <MenuListItem
         listItemArr={listItemArr}
         i={i}
-        tittleData={tittleData}
       />
     </ul>
   ));
 
   return (
-    <div className="footer-menu">
+    <div className={footerMenu}>
       {elements}
     </div>
   );
-};
-
-MenuList.propTypes = {
-  tittleData: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default MenuList;

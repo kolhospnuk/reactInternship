@@ -1,20 +1,32 @@
 import React, { useState } from 'react';
-import '../scss/navList.css';
+import { useTranslation } from 'react-i18next';
+import styles from '../scss/NavList.module.css';
+
 import NavListItem from './NavListItem';
 import ModalWindow from '../../../components/modalWindow/ModalWindow';
 
 /* Header navigation */
 const NavList = () => {
-  const modalWindowName = 'Sing up';
   const [modalWindow, setModalWindow] = useState(false);
+  const { t } = useTranslation();
+  const signUpBtn = t('header.signUp');
+  const { headerNavMenu, headerNavMenuBtn } = styles;
 
   return (
     <>
-      <ul className="header-nav-menu">
-        <NavListItem setModalWindow={() => setModalWindow((modal) => !modal)} />
+      <ul className={headerNavMenu}>
+        <NavListItem />
       </ul>
+      <button
+        type="button"
+        key={signUpBtn}
+        className={headerNavMenuBtn}
+        onClick={() => setModalWindow((modal) => !modal)}
+      >
+        {signUpBtn}
+      </button>
       <ModalWindow
-        modalWindowName={modalWindowName}
+        modalWindowName={signUpBtn}
         modalWindow={modalWindow}
       />
     </>

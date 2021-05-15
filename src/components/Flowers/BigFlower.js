@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './scss/big.css';
+import './scss/BigFLower.module.css';
 
 const BigFlower = ({ classBigFlower }) => (
   <div className={classBigFlower}>

@@ -1,20 +1,20 @@
-.testimony-points {
+.testimonyPoints {
   float: right;
   margin-top: 23px;
 }
-.testimony-points-list {
+.testimonyPointsList {
   display: flex;
   justify-content: flex-end;
 }
-.testimony-points-list li {
+.testimonyPointsList li {
   width: 40px;
   height: 8px;
   margin-left: 8px;
   border-radius: 8px;
   background: #E5E5E5;
 }
-.testimony-points-list li:first-child {
+.testimonyPointsList li:first-child {
   background: #DAA520;
 }
 
-/*# sourceMappingURL=points.css.map */
+/*# sourceMappingURL=Points.module.css.map */

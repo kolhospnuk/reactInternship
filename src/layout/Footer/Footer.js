@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './scss/footer.css';
-import './scss/meadiaFooter.css';
+import styles from './scss/Footer.module.css';
 import Form from './components/Form';
 import MenuList from './components/MenuList';
 
 const Footer = ({ tittleData }) => (
-  <div id="footer">
+  <div className={styles.footer}>
     <Form />
-    <div className="footer-line" />
+    <div className={styles.footerLine} />
     <MenuList tittleData={tittleData} />
     <h4>© 2020 WOODIES</h4>
   </div>
