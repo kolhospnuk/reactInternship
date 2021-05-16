@@ -22,7 +22,7 @@ const Custom = () => {
       />
       <PlanList />
       <OrangeBtn
-        className="custom"
+        classBtn="customBtn"
         setModalWindow={setModalWindow}
         nameBtn="Get Personalized Now"
       />

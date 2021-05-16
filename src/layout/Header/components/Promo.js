@@ -35,6 +35,7 @@ const Promo = () => {
           {right}
         </h2>
         <OrangeBtn
+          classBtn="headerBtn"
           setModalWindow={setModalWindow}
           nameBtn={nameBtn}
         />

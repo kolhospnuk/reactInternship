@@ -42,7 +42,7 @@ const Form = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <OrangeBtn
-          className="footer"
+          classBtn="footerBtn"
           setModalWindow={setModalWindow}
           nameBtn={nameBtn}
         />

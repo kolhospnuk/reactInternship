@@ -20,7 +20,7 @@
 
 /* Header, navigation menuList */
 
-.headerPromoTxtBtn {
+:global(.headerBtn) {
   width: 175px;
   height: 50px;
   margin-top: 16px;
@@ -28,15 +28,17 @@
 
 /* Custom section */
 
-.customBtn {
+:global(.customBtn) {
   width: 212px;
   height: 50px;
+  display: block;
+  margin: 0 auto;
   margin-top: 64px;
 }
 
 /*Footer section*/
 
-.footerForm form button {
+:global(.footerBtn) {
   width: 120px;
   height: 40px;
   background: #DAA520;
