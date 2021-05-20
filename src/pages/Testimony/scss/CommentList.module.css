@@ -11,6 +11,11 @@
   border: 1px solid #A8DCEC;
   background: #FFFFFF;
 }
+.testimonyListCommentTxt:before {
+  content: url(star.svg);
+  position: absolute;
+  display: inline-block;
+}
 .testimonyListCommentTxt span {
   font-weight: 600;
   font-size: 14px;

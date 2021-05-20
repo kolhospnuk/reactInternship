@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import styles from '../scss/NavListItem.module.css';
 
 /* Header navigation */
@@ -10,7 +11,7 @@ const NavListItem = () => {
 
   const contentList = tittles.map((item) => (
     <li className={headerNavMenuItem}>
-      <a key={item.name} href={item.link}>{item.name}</a>
+      <Link key={item.name} to={item.link}>{item.name}</Link>
     </li>
   ));
 

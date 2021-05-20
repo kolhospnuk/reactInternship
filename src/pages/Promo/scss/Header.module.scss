@@ -2,6 +2,7 @@
 
 .header {
   position: relative;
+  height: 800px;
 
   &PinkBg {
     position: absolute;
@@ -23,9 +24,6 @@
       display: flex;
       margin-left: 80px;
       padding-top: 10px;
-      &:before {
-        content: url(flowerOrange.png);
-      }
 
       span {
         padding-left: 8px;

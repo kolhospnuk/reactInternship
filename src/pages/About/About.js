@@ -7,8 +7,8 @@ import spoons from '../../assets/img/custom/spoons.png';
 import SectionTittle from '../../components/sectionTittle/SectionTittle';
 
 const About = () => {
-  const tittleId = 0;
   const { t } = useTranslation();
+  const { flowerTittle, tittle } = (t('about', { returnObjects: true }));
   const {
     woodies, isHome, modern, theAnswer, withShapes,
     customizedFurn, made, getItEasy, dwelling
@@ -20,9 +20,12 @@ const About = () => {
   return (
     <div
       className={about}
-      key={tittleId}
+      key={flowerTittle}
     >
-      <SectionTittle tittleId={tittleId} />
+      <SectionTittle
+        flowerTittle={flowerTittle}
+        tittle={tittle}
+      />
       <div className={dishes}>
         <div className={dishesImg}>
           <div className={dishesImgBg} />

@@ -1,40 +1,39 @@
 /*Footer section*/
 
-.footer {
-  &Menu {
-    &List {
-      &Item {
-        margin-top: 16px;
+.menu {
+  &List {
 
-        a {
-          color: #8D8D8D;
+    &Item {
+      margin-top: 16px;
 
-          &:hover {
-            color: #000000;
-          }
-        }
+      a {
+        color: #8D8D8D;
 
-        &:first-child {
-          margin-top: 9px;
-          font-weight: 600;
-          font-size: 18px;
-          color: #333333;
+        &:hover {
+          color: #000000;
         }
       }
 
       &:first-child {
-        margin-top: -9px;
-        line-height: 19px;
+        margin-top: 9px;
+        font-weight: 600;
+        font-size: 18px;
+        color: #333333;
+      }
+    }
 
-        h3 {
-          display: inline;
-          font-weight: 600;
-          font-size: 24px;
-          line-height: 30px;
-          letter-spacing: 0.25em;
-          color: #3E3F43;
-          padding-left: 3px;
-        }
+    &:first-child {
+      margin-top: -9px;
+      line-height: 19px;
+
+      h3 {
+        display: inline;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.25em;
+        color: #3E3F43;
+        padding-left: 3px;
       }
     }
   }

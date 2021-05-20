@@ -77,24 +77,28 @@ const txtEn = {
   header: {
     navListTittles: [
       {
+        name: 'Tasks',
+        link: '/tasks'
+      },
+      {
         name: 'Home',
-        link: '#Header'
+        link: '/promo'
       },
       {
         name: 'About Us',
-        link: '#About'
+        link: '/about'
       },
       {
         name: 'How it works',
-        link: '#Custom'
+        link: '/custom'
       },
       {
         name: 'Categories',
-        link: '#Categories'
+        link: '/categories'
       },
       {
         name: 'Testimony',
-        link: '#Testimony'
+        link: '/testimony'
       }
     ],
     signUp: 'SIGN UP',
@@ -106,14 +110,10 @@ const txtEn = {
     nameBtn: 'Explore furniture',
     modalWindowName: 'Promo'
   },
-  sectionsTittles: [
-    { flowerTittle: 'Who we are', tittle: 'ABOUT US' },
-    { flowerTittle: 'How to custom', tittle: 'HOW IT WORKS' },
-    { flowerTittle: 'What we have', tittle: 'CATEGORIES' },
-    { flowerTittle: 'What they say', tittle: 'TESTIMONY' }
-  ],
   about: {
     woodies: 'WOODIES',
+    flowerTittle: 'Who we are',
+    tittle: 'ABOUT US',
     isHome: 'is the home of',
     modern: 'modern wooden furniture',
     theAnswer: 'the answer to your need for furniture',
@@ -124,6 +124,8 @@ const txtEn = {
     dwelling: 'dwelling or business.'
   },
   custom: {
+    flowerTittle: 'How to custom',
+    tittle: 'HOW IT WORKS',
     modalWindowName: 'Custom',
     planData: [
       {
@@ -145,6 +147,8 @@ const txtEn = {
     ]
   },
   categories: {
+    flowerTittle: 'What we have',
+    tittle: 'CATEGORIES',
     cartData: [
       {
         name: 'Desk',
@@ -164,13 +168,24 @@ const txtEn = {
     ],
     shopBtn: 'Shop now'
   },
+  testimony: {
+    flowerTittle: 'What they say',
+    tittle: 'TESTIMONY'
+  },
   footer: {
     subscribe: 'Subscribe to our newsletter',
     monthly: 'A monthly digest of the new WOODIES products,',
     resources: 'hot offers, and resources.',
     yourEmail: 'Your email address',
     nameBtn: 'Subscribe',
-    modalWindowName: 'Subscribe'
+    modalWindowName: 'Subscribe',
+    listItemArr: [
+      ['WOODIES', '(012) 8967453', 'woodies@gmail.com', 'Jakarta, Indonesia'],
+      ['Product', 'Furnitures', 'Packages', 'Services'],
+      ['Resources', 'Blog', 'FAQs', 'Contact Us'],
+      ['Company', 'About Us', 'Jobs', 'Our Team'],
+      ['Follow Us', 'Facebook', 'Instagram', 'Twitter']
+    ]
   }
 };
 

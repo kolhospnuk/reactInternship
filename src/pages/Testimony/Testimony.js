@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from './scss/Testimony.module.css';
 
 import room from '../../assets/img/testimony/room.png';
@@ -10,7 +11,9 @@ import Points from './components/Points';
 import SectionTittle from '../../components/sectionTittle/SectionTittle';
 
 const Testimony = () => {
-  const tittleId = 3;
+  const { t } = useTranslation();
+  const { flowerTittle, tittle } = (t('testimony', { returnObjects: true }));
+
   const { testimonyList, testimony } = styles;
   const imgListLinks = [
     {
@@ -26,9 +29,12 @@ const Testimony = () => {
   return (
     <section
       className={testimony}
-      key={tittleId}
+      key={flowerTittle}
     >
-      <SectionTittle tittleId={tittleId} />
+      <SectionTittle
+        flowerTittle={flowerTittle}
+        tittle={tittle}
+      />
       <div className={testimonyList}>
         <ImgList imgListLinks={imgListLinks} />
         <CommentList />

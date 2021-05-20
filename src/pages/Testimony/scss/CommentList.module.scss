@@ -12,6 +12,19 @@
       border-radius: 0 80px;
       border: 1px solid #A8DCEC;
       background: #FFFFFF;
+      &:before {
+        content: url(star.svg);
+        position: absolute;
+        display: inline-block;
+      }
+      //&:before {
+      //  content: url(star.svg);
+      //  display: inline-block;
+      //}
+      //&:before {
+      //  content: url(star.svg);
+      //  display: inline-block;
+      //}
 
       span {
         font-weight: 600;

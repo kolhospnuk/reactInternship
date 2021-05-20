@@ -9,16 +9,17 @@ import PlanList from './components/PlanList';
 
 const Custom = () => {
   const [modalWindow, setModalWindow] = useState(false);
-  const tittleId = 1;
   const { t } = useTranslation();
+  const { flowerTittle, tittle } = (t('custom', { returnObjects: true }));
 
   return (
     <div
       className={styles.custom}
-      key={tittleId}
+      key={flowerTittle}
     >
       <SectionTittle
-        tittleId={tittleId}
+        flowerTittle={flowerTittle}
+        tittle={tittle}
       />
       <PlanList />
       <OrangeBtn

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../scss/CommentList.module.css';
 import person from '../../../assets/img/testimony/person.png';
-import Stars from './Stars';
+// import Stars from './Stars';
 import Slider from './Slider';
 
 const CommentList = () => {
@@ -39,7 +39,7 @@ const CommentList = () => {
     <div className={testimonyListComment}>
       <div className={testimonyListCommentTxt}>
         <div className={testimonyListCommentTxtPerson}>
-          <Stars />
+          {/* <Stars /> */}
         </div>
         <span>
           My experience with WOODIES is a complete success,

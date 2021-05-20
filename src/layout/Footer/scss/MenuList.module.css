@@ -1,10 +1,10 @@
 /*Footer section*/
-.footerMenu {
+.menu {
   margin: 24px 336px 0 107px;
   display: flex;
   justify-content: space-between;
 }
-.footerMenuList {
+.menuList {
   margin-left: -2px;
   font-weight: 400;
   font-size: 14px;
@@ -13,29 +13,29 @@
 }
 
 @media (max-width: 1200px) {
-  .footerMenu {
+  .menu {
     margin-right: 290px;
   }
-  .footerMenuList {
+  .menuList {
     font-size: 12px;
   }
-  .footerMenuList :first-child h3 {
+  .menuList :first-child h3 {
     font-size: 21px;
     letter-spacing: 0.16em;
   }
 }
 @media (max-width: 992px) {
-  .footerMenu {
+  .menu {
     margin-right: 107px;
   }
-  .footerMenuList {
+  .menuList {
     font-size: 12px;
     line-height: 20px;
   }
-  .footerMenuList :first-child {
+  .menuList :first-child {
     margin-top: 0;
   }
-  .footerMenuList :first-child h3 {
+  .menuList :first-child h3 {
     font-size: 18px;
     line-height: 33px;
   }

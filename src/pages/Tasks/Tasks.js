@@ -4,8 +4,8 @@ import styles from './scss/Tasks.module.css';
 
 import BtnTheme from './components/BtnTheme';
 import DataTable from './DataTable/DataTable';
-import MakeCocktail from './MakeCocktail/MakeCocktail';
 import BtnLng from './components/BtnLng';
+import MakeCocktail from './MakeCocktail/MakeCocktail';
 
 const Tasks = () => {
   const { t } = useTranslation();

@@ -7,7 +7,7 @@ import styles from '../scss/Form.module.css';
 const Form = ({ addCocktail, spinnerLoading }) => {
   const { t } = useTranslation();
   const {
-    cocktailForm, cocktailFormInput, cocktailFormBtn
+    cocktailForm, cocktailFormLabel, cocktailFormInput, cocktailFormBtn, cocktailFormSmall
   } = styles;
   const [name, setName] = useState('');
 
@@ -19,22 +19,32 @@ const Form = ({ addCocktail, spinnerLoading }) => {
 
   return (
     <form
-      className={cocktailForm}
       onSubmit={onSubmit}
     >
-      <input
-        className={cocktailFormInput}
-        type="text"
-        onChange={(e) => setName(e.target.value)}
-        placeholder={t('task.EnterCocktail')}
-        value={name}
-      />
-      <button
-        type="button"
-        className={cocktailFormBtn}
-      >
-        {t('task.Enter')}
-      </button>
+      <div className={cocktailForm}>
+        <label
+          className={cocktailFormLabel}
+          htmlFor={t('task.EnterOne')}
+        >
+          {t('task.EnterOne')}
+        </label>
+        <input
+          className={cocktailFormInput}
+          type="text"
+          onChange={(e) => setName(e.target.value)}
+          placeholder={t('task.EnterCocktail')}
+          value={name}
+        />
+        <button
+          type="button"
+          className={cocktailFormBtn}
+        >
+          {t('task.Enter')}
+        </button>
+        <small className={cocktailFormSmall}>
+          {t('task.Ctrl')}
+        </small>
+      </div>
     </form>
   );
 };

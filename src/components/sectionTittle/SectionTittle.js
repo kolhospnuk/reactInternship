@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
-import styles from './SectionTittle.module.css';
+import styles from './scss/SectionTittle.module.css';
 import flower from '../../assets/icons/flower.png';
 
-const SectionTittle = ({ tittleId }) => {
-  const { t } = useTranslation();
-  const { flowerTittle, tittle } = (t('sectionsTittles', { returnObjects: true }))[tittleId];
+const SectionTittle = ({ flowerTittle, tittle }) => {
   const { sectionTittle, sectionTittleSubtitle, sectionTittleLine } = styles;
+
   return (
     <div className={sectionTittle}>
       <div className={sectionTittleSubtitle}>
@@ -22,7 +20,8 @@ const SectionTittle = ({ tittleId }) => {
 };
 
 SectionTittle.propTypes = {
-  tittleId: PropTypes.string.isRequired
+  flowerTittle: PropTypes.string.isRequired,
+  tittle: PropTypes.string.isRequired
 };
 
 export default SectionTittle;

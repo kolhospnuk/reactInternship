@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styles from './styles/App.module.css';
 import MyContext from './сontext/ThemeContext';
 
@@ -10,6 +11,7 @@ import Testimony from './pages/Testimony/Testimony';
 import Footer from './layout/Footer/Footer';
 import Tasks from './pages/Tasks/Tasks';
 import FooterContacts from './layout/FooterData/FooterContacts';
+import Promo from './pages/Promo/Promo';
 
 const App = () => {
   const {
@@ -34,22 +36,25 @@ const App = () => {
   };
 
   return (
-    <>
-      <MyContext.Provider value={themeData}>
-        <div className={`${app} ${themeData.themeClass}`}>
-          <Tasks />
-          <Header />
-          <div className={container}>
-            <About />
-            <Custom />
-            <Categories />
-            <Testimony />
+    <Router>
+      <>
+        <MyContext.Provider value={themeData}>
+          <div className={`${app} ${themeData.themeClass}`}>
+            <Header />
+            <Route path="/promo" exact component={Promo} />
+            <div className={container}>
+              <Route path="/tasks" component={Tasks} />
+              <Route path="/about" component={About} />
+              <Route path="/custom" component={Custom} />
+              <Route path="/categories" component={Categories} />
+              <Route path="/testimony" component={Testimony} />
+            </div>
+            <Footer />
+            <FooterContacts />
           </div>
-          <Footer />
-          <FooterContacts />
-        </div>
-      </MyContext.Provider>
-    </>
+        </MyContext.Provider>
+      </>
+    </Router>
   );
 };
 

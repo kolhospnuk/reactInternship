@@ -1,18 +1,23 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from './scss/Categories.module.css';
 
 import List from './components/List';
 import SectionTittle from '../../components/sectionTittle/SectionTittle';
 
 const Categories = () => {
-  const tittleId = 2;
+  const { t } = useTranslation();
+  const { flowerTittle, tittle } = (t('categories', { returnObjects: true }));
 
   return (
     <div
       className={styles.categories}
-      key={tittleId}
+      key={flowerTittle}
     >
-      <SectionTittle tittleId={tittleId} />
+      <SectionTittle
+        flowerTittle={flowerTittle}
+        tittle={tittle}
+      />
       <List />
     </div>
   );

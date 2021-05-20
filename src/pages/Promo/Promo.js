@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import styles from '../scss/Promo.module.css';
+import styles from './scss/Promo.module.css';
 
-import table from '../../../assets/img/header/table.png';
-import ModalWindow from '../../../components/modalWindow/ModalWindow';
-import OrangeBtn from '../../../components/orangeBtn/OrangeBtn';
+import table from '../../assets/img/header/table.png';
+import ModalWindow from '../../components/modalWindow/ModalWindow';
+import OrangeBtn from '../../components/orangeBtn/OrangeBtn';
 
 const Promo = () => {
   const [modalWindow, setModalWindow] = useState(false);

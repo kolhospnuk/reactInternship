@@ -1,24 +1,24 @@
 /*Footer section*/
-.footerMenuListItem {
+.menuListItem {
   margin-top: 16px;
 }
-.footerMenuListItem a {
+.menuListItem a {
   color: #8D8D8D;
 }
-.footerMenuListItem a:hover {
+.menuListItem a:hover {
   color: #000000;
 }
-.footerMenuListItem:first-child {
+.menuListItem:first-child {
   margin-top: 9px;
   font-weight: 600;
   font-size: 18px;
   color: #333333;
 }
-.footerMenuList:first-child {
+.menuList:first-child {
   margin-top: -9px;
   line-height: 19px;
 }
-.footerMenuList:first-child h3 {
+.menuList:first-child h3 {
   display: inline;
   font-weight: 600;
   font-size: 24px;

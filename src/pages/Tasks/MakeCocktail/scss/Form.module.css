@@ -1,9 +1,12 @@
-.cocktailForm {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+.cocktailFormLabel {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  color: #403f3f;
 }
 .cocktailFormInput {
+  margin-top: 20px;
+  height: 32px;
   border-radius: 3px;
   border: none;
   background-color: #dcd7d7;
@@ -14,7 +17,7 @@
 .cocktailFormBtn {
   padding: 5px 15px;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   border-radius: 3px;
   border: none;
@@ -22,6 +25,11 @@
 }
 .cocktailFormBtn:hover {
   opacity: 80%;
+}
+.cocktailFormSmall {
+  display: block;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=Form.module.css.map */

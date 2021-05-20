@@ -18,6 +18,7 @@ i18n
     },
     debug: true,
     fallbackLng: ['en', 'ua'],
+    lng: 'en',
     // options: {
     //   order: ['localStorage'],
     //   caches: ['localStorage', 'cookie']

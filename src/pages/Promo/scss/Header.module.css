@@ -1,6 +1,7 @@
 /* Header, navigation menuList */
 .header {
   position: relative;
+  height: 800px;
 }
 .headerPinkBg {
   position: absolute;
@@ -21,9 +22,6 @@
   display: flex;
   margin-left: 80px;
   padding-top: 10px;
-}
-.headerNavWoodies:before {
-  content: url(flowerOrange.png);
 }
 .headerNavWoodies span {
   padding-left: 8px;

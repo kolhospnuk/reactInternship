@@ -1,0 +1,26 @@
+.headerNavMenuItem a {
+  margin-left: 48px;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(34, 34, 34, 0.75);
+}
+.headerNavMenuItem a:hover {
+  color: #DAA520;
+}
+
+@media (max-width: 1200px) {
+  /* Header, navigation menuList */
+  .headerNavMenuItem a {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  /* Header, navigation menuList */
+  .headerNavMenuItem a {
+    margin-left: 13px;
+    font-size: 13px;
+  }
+}
+
+/*# sourceMappingURL=NavListItem.module.css.map */

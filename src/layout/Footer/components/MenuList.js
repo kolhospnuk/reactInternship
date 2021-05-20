@@ -1,22 +1,18 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from '../scss/MenuList.module.css';
 import MenuListItem from './MenuListItem';
 
 /* Footer component */
 const MenuList = () => {
-  const { footerMenuList, footerMenu } = styles;
-  const listItemArr = [
-    ['WOODIES', '(012) 8967453', 'woodies@gmail.com', 'Jakarta, Indonesia'],
-    ['Product', 'Furnitures', 'Packages', 'Services'],
-    ['Resources', 'Blog', 'FAQs', 'Contact Us'],
-    ['Company', 'About Us', 'Jobs', 'Our Team'],
-    ['Follow Us', 'Facebook', 'Instagram', 'Twitter']
-  ];
+  const { t } = useTranslation();
+  const { menuList, menu } = styles;
+  const listItemArr = (t('footer.listItemArr', { returnObjects: true }));
 
   const elements = listItemArr.map((item, i) => (
     <ul
       key={item}
-      className={footerMenuList}
+      className={menuList}
     >
       <MenuListItem
         listItemArr={listItemArr}
@@ -26,7 +22,7 @@ const MenuList = () => {
   ));
 
   return (
-    <div className={footerMenu}>
+    <div className={menu}>
       {elements}
     </div>
   );

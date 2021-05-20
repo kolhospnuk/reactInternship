@@ -77,24 +77,28 @@ const txtUa = {
   header: {
     navListTittles: [
       {
+        name: 'Tasks',
+        link: '/tasks'
+      },
+      {
         name: 'Головна',
-        link: '#Header'
+        link: '/promo'
       },
       {
         name: 'Про нас',
-        link: '#About'
+        link: '/about'
       },
       {
         name: 'Як ми працюємо',
-        link: '#Custom'
+        link: '/custom'
       },
       {
         name: 'Категорії',
-        link: '#Categories'
+        link: '/categories'
       },
       {
         name: 'Коментарі',
-        link: '#Testimony'
+        link: '/testimony'
       }
     ],
     signUp: 'Зараєструватись',
@@ -106,13 +110,9 @@ const txtUa = {
     nameBtn: 'Наші меблі',
     modalWindowName: 'Promo'
   },
-  sectionsTittles: [
-    { flowerTittle: 'Хто ми', tittle: 'ПРО НАС' },
-    { flowerTittle: 'Як зробити замовлення', tittle: 'ЯК ЦЕ ПРАЦЮЄ' },
-    { flowerTittle: 'Наш асортимент', tittle: 'КАТЕГОРІЇ' },
-    { flowerTittle: 'Що про нас говорять', tittle: 'ВІДГУКИ' }
-  ],
   about: {
+    flowerTittle: 'Хто ми',
+    tittle: 'ПРО НАС',
     woodies: 'ДЕРЕВИНА',
     isHome: 'це',
     modern: 'сучасні дерев`янні мебелі',
@@ -124,6 +124,8 @@ const txtUa = {
     dwelling: 'житла або бізнесу.'
   },
   custom: {
+    flowerTittle: 'Як зробити замовлення',
+    tittle: 'ЯК ЦЕ ПРАЦЮЄ',
     modalWindowName: 'Замовлення',
     planData: [
       {
@@ -145,6 +147,8 @@ const txtUa = {
     ]
   },
   categories: {
+    flowerTittle: 'Наш асортимент',
+    tittle: 'КАТЕГОРІЇ',
     cartData: [
       {
         name: 'Стіл'
@@ -164,13 +168,24 @@ const txtUa = {
     ],
     shopBtn: 'Придбати'
   },
+  testimony: {
+    flowerTittle: 'Що про нас говорять',
+    tittle: 'ВІДГУКИ'
+  },
   footer: {
     subscribe: 'Підписуйтесь на нашу розсилку',
     monthly: 'Щомісячний дайджест нових продуктів ДЕРЕВИНИ,',
     resources: 'гарячих пропозицій та ресурсів.',
     yourEmail: 'Ваша пошта',
     nameBtn: 'Підписатись',
-    modalWindowName: 'Підписатись'
+    modalWindowName: 'Підписатись',
+    listItemArr: [
+      ['Деревина', '(012) 8967453', 'woodies@gmail.com', 'Джакарта, Індонезія'],
+      ['Асортимент', 'Меблі', 'Packages', 'Послуги'],
+      ['Ресурси', 'Блог', 'Питання', 'Контакти'],
+      ['Компанія', 'Про нас', 'Вакансії', 'Наша команда'],
+      ['Переходь', 'Facebook', 'Instagram', 'Twitter']
+    ]
   }
 };
 
