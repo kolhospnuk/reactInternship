@@ -8,5 +8,8 @@
   width: 15%;
   margin-top: 20px;
 }
+.listItem:hover {
+  width: 16%;
+}
 
 /*# sourceMappingURL=MakeCocktailList.module.css.map */
