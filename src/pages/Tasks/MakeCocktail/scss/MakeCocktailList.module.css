@@ -1,0 +1,12 @@
+.list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.listItem {
+  width: 15%;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=MakeCocktailList.module.css.map */

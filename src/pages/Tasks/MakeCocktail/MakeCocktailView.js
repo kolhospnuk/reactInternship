@@ -2,45 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './scss/MakeCocktailView.module.css';
 
-import Spinner from '../../../components/spinner/spinner';
-import CocktailError from '../../../components/ErrorsPlace/CocktailError';
 import Form from './components/Form';
+import MakeCocktailList from './components/MakeCocktailList';
 
 const MakeCocktailView = (props) => {
+  const { cocktail } = styles;
   const {
-    active, cocktailImg, cocktail, cocktailListClass, cocktailListClassItem
-  } = styles;
-  const {
-    cocktailList, loading, error, activatedCocktail, addCocktail,
-    dragStartHandler, dragOverHandler, dropHandler, sortLi, spinnerLoading
+    loading, error, activatedCocktail, dragStartHandler, sortLi,
+    dragOverHandler, dropHandler, addCocktail, spinnerLoading
   } = props;
-
-  const cocktails = cocktailList.sort(sortLi).map((item) => {
-    return (
-      <li
-        key={item.name}
-        className={item.active ? `${cocktailListClassItem} ${active}` : cocktailListClassItem}
-        role="presentation"
-        onClick={() => activatedCocktail(item.order)}
-        draggable // draggable={true}
-        onDragStart={() => dragStartHandler(item)}
-        onDragOver={(e) => dragOverHandler(e)}
-        onDrop={(e) => dropHandler(e, item)}
-      >
-        {item.name}
-        <div className={cocktailImg}>
-          <img
-            src={item.img}
-            alt="img"
-          />
-        </div>
-      </li>
-    );
-  });
-
-  const errorMessage = error ? <CocktailError /> : null;
-  const spinner = loading ? <Spinner /> : null;
-  const content = !(loading || error) ? <>{cocktails}</> : null;
 
   return (
     <div className={cocktail}>
@@ -48,17 +18,24 @@ const MakeCocktailView = (props) => {
         addCocktail={addCocktail}
         spinnerLoading={spinnerLoading}
       />
-      <ul className={cocktailListClass}>
-        {errorMessage}
-        {spinner}
-        {content}
-      </ul>
+      <MakeCocktailList
+        loading={loading}
+        activatedCocktail={activatedCocktail}
+        dragStartHandler={dragStartHandler}
+        dragOverHandler={dragOverHandler}
+        dropHandler={dropHandler}
+        sortLi={sortLi}
+        addCocktail={addCocktail}
+        spinnerLoading={spinnerLoading}
+        error={error}
+      />
     </div>
   );
 };
 
+export default MakeCocktailView;
+
 MakeCocktailView.propTypes = {
-  cocktailList: PropTypes.arrayOf(PropTypes.object).isRequired,
   addCocktail: PropTypes.func.isRequired,
   spinnerLoading: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
@@ -69,5 +46,3 @@ MakeCocktailView.propTypes = {
   dropHandler: PropTypes.func.isRequired,
   sortLi: PropTypes.func.isRequired
 };
-
-export default MakeCocktailView;

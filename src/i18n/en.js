@@ -82,7 +82,7 @@ const txtEn = {
       },
       {
         name: 'Home',
-        link: '/promo'
+        link: '/'
       },
       {
         name: 'About Us',

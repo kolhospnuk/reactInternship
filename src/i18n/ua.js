@@ -82,7 +82,7 @@ const txtUa = {
       },
       {
         name: 'Головна',
-        link: '/promo'
+        link: '/'
       },
       {
         name: 'Про нас',

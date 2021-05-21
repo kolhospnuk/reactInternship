@@ -1,0 +1,16 @@
+.cocktailTittle {
+  font-weight: 700;
+}
+.cocktailTittleActive {
+  color: red;
+}
+
+.listItemImg {
+  margin-right: 1px;
+}
+.listItemImg img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=MakeCocktailListItem.module.css.map */
