@@ -1,0 +1,16 @@
+
+.cocktailTittle {
+  font-weight: 700;
+  &Active {
+    color: red;
+  }
+}
+
+.listItemImg {
+  margin-top: 5px;
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+

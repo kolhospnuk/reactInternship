@@ -37,23 +37,21 @@ const App = () => {
 
   return (
     <Router>
-      <>
-        <MyContext.Provider value={themeData}>
-          <div className={`${app} ${themeData.themeClass}`}>
-            <Header />
-            <Route path="/promo" exact component={Promo} />
-            <div className={container}>
-              <Route path="/tasks" component={Tasks} />
-              <Route path="/about" component={About} />
-              <Route path="/custom" component={Custom} />
-              <Route path="/categories" component={Categories} />
-              <Route path="/testimony" component={Testimony} />
-            </div>
-            <Footer />
-            <FooterContacts />
+      <MyContext.Provider value={themeData}>
+        <div className={`${app} ${themeData.themeClass}`}>
+          <Header />
+          <Route path="/" exact component={Promo} />
+          <div className={container}>
+            <Route path="/tasks" component={Tasks} />
+            <Route path="/about" component={About} />
+            <Route path="/custom" component={Custom} />
+            <Route path="/categories" component={Categories} />
+            <Route path="/testimony" component={Testimony} />
           </div>
-        </MyContext.Provider>
-      </>
+          <Footer />
+          <FooterContacts />
+        </div>
+      </MyContext.Provider>
     </Router>
   );
 };

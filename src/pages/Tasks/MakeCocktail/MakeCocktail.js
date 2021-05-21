@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import CocktailService from './components/CocktailService';
 import MakeCocktailView from './MakeCocktailView';
+import CREATE_COCKTAIL_LIST from '../../../store/makeCocktail/types';
 
-const MakeCocktail = () => {
-  const [cocktailList, setCocktailList] = useState([]);
+const MakeCocktail = ({ cocktailCreate, cocktailList }) => {
   const [currentCocktail, setCurrentCocktail] = useState(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -32,10 +34,8 @@ const MakeCocktail = () => {
           return null;
         });
 
-        setCocktailList(cocktailArr);
+        cocktailCreate(cocktailArr);
         setLoading(loading);
-        console.log(cocktailArr);
-        console.log(cocktailList);
       })
       .catch(showError);
   };
@@ -48,7 +48,7 @@ const MakeCocktail = () => {
 
     const newArr = [...before, elem, ...after];
 
-    setCocktailList(newArr);
+    cocktailCreate(newArr);
   }
 
   useEffect(() => {
@@ -92,7 +92,7 @@ const MakeCocktail = () => {
       return li;
     });
 
-    setCocktailList(newArr);
+    cocktailCreate(newArr);
   };
 
   const dragOverHandler = (e) => {
@@ -101,7 +101,6 @@ const MakeCocktail = () => {
 
   return (
     <MakeCocktailView
-      cocktailList={cocktailList}
       loading={loading}
       activatedCocktail={activatedCocktail}
       dragStartHandler={dragStartHandler}
@@ -115,4 +114,26 @@ const MakeCocktail = () => {
   );
 };
 
-export default MakeCocktail;
+const mapStateToProps = (state) => {
+  return {
+    cocktailList: state.makeCocktail.cocktailList
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    cocktailCreate: (newCocktailList) => {
+      dispatch({
+        type: CREATE_COCKTAIL_LIST,
+        payload: newCocktailList
+      });
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MakeCocktail);
+
+MakeCocktail.propTypes = {
+  cocktailCreate: PropTypes.func.isRequired,
+  cocktailList: PropTypes.arrayOf(PropTypes.object).isRequired
+};
