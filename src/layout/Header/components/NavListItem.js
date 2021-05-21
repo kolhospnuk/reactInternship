@@ -9,9 +9,9 @@ const NavListItem = () => {
   const tittles = (t('header.navListTittles', { returnObjects: true }));
   const { headerNavMenuItem } = styles;
 
-  const contentList = tittles.map((item) => (
-    <li className={headerNavMenuItem}>
-      <Link key={item.name} to={item.link}>{item.name}</Link>
+  const contentList = tittles.map(({ name, link }) => (
+    <li className={headerNavMenuItem} key={name}>
+      <Link to={link}>{name}</Link>
     </li>
   ));
 

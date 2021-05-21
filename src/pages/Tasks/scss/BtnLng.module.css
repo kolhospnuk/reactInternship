@@ -1,3 +1,12 @@
+.btnClass {
+  width: 60px;
+  height: 30px;
+  border: 1px gray dashed;
+  background: linear-gradient(to bottom, #c51028, #f1eded);
+}
 
+.ukr {
+  background: linear-gradient(to bottom, #2f2ff7, #dec50b);
+}
 
 /*# sourceMappingURL=BtnLng.module.css.map */

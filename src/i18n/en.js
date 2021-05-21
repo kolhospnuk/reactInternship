@@ -1,5 +1,5 @@
 const txtEn = {
-  btnsLng: [
+  btnLng: [
     { lng: 'en' },
     { lng: 'ua' },
   ],

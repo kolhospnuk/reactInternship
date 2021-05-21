@@ -1,16 +1,21 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import styles from '../scss/BtnLng.module.css';
 
 const BtnLng = () => {
   const { i18n, t } = useTranslation();
-  const btnsLng = (t('btnsLng', { returnObjects: true }));
+  const btnLng = (t('btnLng', { returnObjects: true }));
+  const {
+    btnClass, ukr
+  } = styles;
 
   const changeLng = (lang) => {
     i18n.changeLanguage(lang);
   };
 
-  const btn = btnsLng.map((item) => (
+  const btn = btnLng.map((item, i) => (
     <button
+      className={i === 0 ? btnClass : `${btnClass} ${ukr}`}
       type="button"
       onClick={() => changeLng(item.lng)}
     >

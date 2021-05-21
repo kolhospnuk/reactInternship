@@ -1,5 +1,5 @@
 const txtUa = {
-  btnsLng: [
+  btnLng: [
     { lng: 'англ' },
     { lng: 'укр' },
   ],
@@ -77,7 +77,7 @@ const txtUa = {
   header: {
     navListTittles: [
       {
-        name: 'Tasks',
+        name: 'Завдання',
         link: '/tasks'
       },
       {

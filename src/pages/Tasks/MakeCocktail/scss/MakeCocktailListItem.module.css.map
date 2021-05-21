@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"MakeCocktailListItem.module.css"}
-=======
 {"version":3,"sourceRoot":"","sources":["MakeCocktailListItem.module.scss"],"names":[],"mappings":"AACA;EACE;;AACA;EACE;;;AAIJ;EACE;;AACA;EACE;EACA","file":"MakeCocktailListItem.module.css"}
->>>>>>> assignment15
