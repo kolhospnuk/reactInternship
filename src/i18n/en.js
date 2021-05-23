@@ -6,14 +6,14 @@ const txtEn = {
   woodies: 'WOODIES',
   myProject: 'My project is a family business to make wooden furniture',
   task: {
+    tableHeader: {
+      date: 'Date',
+      events: {
+        name: 'Events',
+        firstFact: 'Facts'
+      }
+    },
     eventsArr: [
-      {
-        date: 'Date',
-        events: {
-          name: 'Events',
-          firstFact: 'Facts'
-        }
-      },
       {
         date: 1993,
         events: {

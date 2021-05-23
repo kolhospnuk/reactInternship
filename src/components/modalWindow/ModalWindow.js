@@ -3,14 +3,10 @@ import PropTypes from 'prop-types';
 import styles from './ModalWindow.module.css';
 
 const ModalWindow = ({ modalWindowName, modalWindow }) => {
-  let clazz = styles.modal;
-
-  if (modalWindow) {
-    clazz = `${clazz} open`;
-  }
+  const { modal, open } = styles;
 
   return (
-    <div className={clazz}>
+    <div className={modalWindow ? `${modal} ${open}` : modal}>
       <h3>{modalWindowName}</h3>
     </div>
   );

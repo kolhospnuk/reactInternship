@@ -37,7 +37,7 @@ export default MakeCocktailView;
 
 MakeCocktailView.propTypes = {
   addCocktail: PropTypes.func.isRequired,
-  spinnerLoading: PropTypes.bool.isRequired,
+  spinnerLoading: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.bool.isRequired,
   activatedCocktail: PropTypes.func.isRequired,

@@ -15,7 +15,7 @@ const MakeCocktail = ({ cocktailCreate, cocktailList }) => {
     setLoading(false);
   };
 
-  const addCocktail = (name) => {
+  const addCocktail = (name = 'Sex on the Beach') => {
     const cocktailArr = [];
 
     const service = new CocktailService();
@@ -57,6 +57,7 @@ const MakeCocktail = ({ cocktailCreate, cocktailList }) => {
         activatedCocktail(0);
       }
     });
+    addCocktail();
   }, []);
 
   const spinnerLoading = (res) => {

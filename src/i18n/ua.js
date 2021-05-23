@@ -6,14 +6,14 @@ const txtUa = {
   woodies: 'ДЕРЕВИНА',
   myProject: 'Мій проект - це сімейний бізнес з виготовлення дерев’яних меблів',
   task: {
+    tableHeader: {
+      date: 'Дата',
+      events: {
+        name: 'Подія',
+        firstFact: 'Факт'
+      }
+    },
     eventsArr: [
-      {
-        date: 'Дата',
-        events: {
-          name: 'Подія',
-          firstFact: 'Факт'
-        }
-      },
       {
         date: 1993,
         events: {
