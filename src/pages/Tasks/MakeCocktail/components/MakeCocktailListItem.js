@@ -20,7 +20,7 @@ const MakeCocktailListItem = ({ name, active, img }) => {
 export default MakeCocktailListItem;
 
 MakeCocktailListItem.propTypes = {
-  img: PropTypes.arrayOf(PropTypes.object).isRequired,
+  img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   active: PropTypes.bool.isRequired
 };

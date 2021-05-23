@@ -5,21 +5,20 @@ import styles from '../scss/BtnLng.module.css';
 const BtnLng = () => {
   const { i18n, t } = useTranslation();
   const btnLng = (t('btnLng', { returnObjects: true }));
-  const {
-    btnClass, ukr
-  } = styles;
+  const { btnClass, ukr } = styles;
 
-  const changeLng = (lang) => {
-    i18n.changeLanguage(lang);
+  const changeLng = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
-  const btn = btnLng.map((item, i) => (
+  const btn = btnLng.map(({ lng }, i) => (
     <button
+      key={lng}
       className={i === 0 ? btnClass : `${btnClass} ${ukr}`}
       type="button"
-      onClick={() => changeLng(item.lng)}
+      onClick={() => changeLng(lng)}
     >
-      {item.lng}
+      {lng}
     </button>
   ));
 
